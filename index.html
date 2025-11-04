@@ -14,16 +14,17 @@
 
 
     <div class="content">
-    <!-- Inicio -->
     <div id="home" class="section active">
-        <h1> ¡Que gusto verte! </h1>
-        <p style="text-align:center; font-size: 25px"> Nodie, tu pausa ideal para relajarte</p>
-          <h1> Palabras Para Ti: </h1>
+        <h1 class="animated-text"> ¡Que gusto verte! </h1>
+        <p style="text-align:center; font-size: 25px"> Nodie, tu pausa ideal para relajarte <br> <br>
+         </p>
+          <h1 class="animated-text"> Palabras Para Ti: </h1>
         <div class="cards" class="consejo-box" class="consejo-card" >
-            <div class="card"><img src="sleeper duck.png"><p id="consejo-texto">Las alarmas no solo son para cuando duermes, también cuando estás activo y quieres sonidos relajantes</p></div>
+            <div class="card"><img src="sleeper duck.png"><p id="consejo-texto">Las alarmas no solo son para cuando duermes, también cuando estás activo y quieres sonidos relajantes (revisa ayuda antes de hablar con nodie)</p></div>
             
         </div>
     </div>
+    
     <div id="nodie" class="section">
     <h1> Nodie</h1>
     <iframe 
@@ -31,10 +32,11 @@
         style="width:100%; height:440px; border:none; border-radius:15px;" 
         title="Chatbot Nodie">
     </iframe>
+
 </div>
 
 
-    <!-- Alarmas -->
+ 
     <div id="alarm" class="section">
         <h1> Alarmas</h1>
         <div class="alarm-container">
@@ -56,7 +58,7 @@
     </div>
 
 
-    <!-- Eventos -->
+  
     <div id="events" class="section">
     <h1>Pendientes</h1>
     <div class="event-form">
@@ -71,7 +73,7 @@
 
 
 
-    <!-- Configuración -->
+   
     <div id="settings" class="section">
         <h1></h1>
         <div class="config-item">
@@ -82,9 +84,9 @@
                 
             </select>
         </div>
-        <!-- Banco de preguntas siempre visible -->
+        
 <div id="questions-help">
-    <h2 style="font-family: times new roman; font-size:25px">Nodie es demasiado específico, intenta usar:</h2>
+    <h2 style="font-family: poppins; font-size:25px">Nodie es demasiado específico, intenta usar:</h2>
     <ul class="holis" style="list-style-type: disc; padding-left: 20px; color: #000;">
        <li>holi uwu amigo</li>
 <li>buenas tardes</li>
@@ -161,8 +163,8 @@
 <li>tengo hambre</li>
 <li>no dormí</li>
 <li>no he tomado agua</li>
-
-        <!-- Agrega más <li></li> según necesites -->
+<li>Algo lindo </li>
+ <li> Adivinanza </li>
     </ul>
 </div>
 
@@ -171,7 +173,7 @@
 </div>
 
 
-<!-- Menú inferior -->
+
 <div class="menu">
     <button onclick="showSection('home')"><span>Inicio</span></button>
     <button onclick="showSection('alarm')"><span>Alarmas</span></button>
@@ -183,17 +185,17 @@
 <div id="alarmMessage"></div>
 
 <script>
-// Manejo de secciones
+
 function showSection(id){
     document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
 }
 
-// Tema oscuro/claro
+
 const themeSelect=document.getElementById('themeSelect');
 themeSelect.addEventListener('change',()=>{ document.body.classList.toggle('dark',themeSelect.value==='dark'); });
 
-// Alarmas
+
 let alarms=[], activeAudios={};
 const alarmList=document.getElementById('alarmList');
 
@@ -261,15 +263,14 @@ function removeAlarm(id){
     renderAlarms();
 }
 
-// Mensaje visual de alarma
 function showAlarmMessage(msg){
     const div=document.getElementById('alarmMessage');
     div.style.display='block';
     div.innerText=msg;
-    setTimeout(()=>div.style.display='none',30000); // se oculta después de 30s
+    setTimeout(()=>div.style.display='none',30000); 
 }
 
-// Revisar alarmas cada segundo
+
 setInterval(()=>{
     const now=new Date();
     const currentTime=now.toTimeString().slice(0,5);
@@ -277,24 +278,23 @@ setInterval(()=>{
         if(alarm.active && alarm.time===currentTime && !alarm.ringing){
             alarm.ringing=true;
             playSound(alarm.id,alarm.sound);
-            showAlarmMessage(`¡Alarma! 🐥 Hora: ${alarm.time}`);
+            showAlarmMessage(`¡Alarma!  Hora: ${alarm.time}`);
             setTimeout(()=>alarm.ringing=false,60000);
         }
     });
 },1000);
 
-// Eventos
 const eventList = document.getElementById('eventList');
 const addBtn = document.getElementById('addEvent');
 
-// Función para cargar eventos desde localStorage al iniciar
+
 function loadEvents() {
     const events = JSON.parse(localStorage.getItem('events')) || [];
-    eventList.innerHTML = ''; // limpiar lista
+    eventList.innerHTML = ''; 
     events.forEach((ev, index) => addEventCard(ev, index));
 }
 
-// Función para crear una tarjeta de evento
+
 function addEventCard(ev, index) {
     const div = document.createElement('div');
     div.className = 'card';
@@ -306,7 +306,7 @@ function addEventCard(ev, index) {
     eventList.appendChild(div);
 }
 
-// Función para agregar evento
+
 addBtn.addEventListener('click', () => {
     const name = document.getElementById('eventName').value.trim();
     const start = document.getElementById('eventStart').value;
@@ -325,7 +325,7 @@ addBtn.addEventListener('click', () => {
     document.getElementById('eventEnd').value = '';
 });
 
-// Función para eliminar eventos usando delegación de eventos
+
 eventList.addEventListener('click', (e) => {
     if (!e.target.classList.contains('delete-btn')) return;
     const index = e.target.getAttribute('data-index');
@@ -335,13 +335,13 @@ eventList.addEventListener('click', (e) => {
     loadEvents();
 });
 
-// Cargar eventos al inicio
+
 loadEvents();
 
 </script>
 
 <style>
-    /* Estilos responsivos */
+    
         @media screen and (max-width: 768px) {
             .lower_navbar_content {
                 flex-direction: column;
@@ -362,7 +362,7 @@ loadEvents();
   const consejos = [
 
    "Si solo tienes 30 minutos libres, es mejor relajarte y no dormir",
-"Nada se compara con contar tu día a una persona real",
+"Nada se compara con contarle tu día a una persona real",
 "Evita dormir justo antes de tus actividades, podrías sentirte más cansado después",
 "Un descanso corto puede ayudarte a recuperar energía y concentración",
 "Lo estás haciendo bien",
@@ -421,7 +421,7 @@ loadEvents();
     }, 400);
   }
 
-  // Cambio automático cada 5 segundos
+  
   setInterval(cambiarConsejo, 9000);
 </script>
 <script>

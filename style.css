@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'nunito';
 }
 body {
     background: linear-gradient(to bottom, #fffae3, #d0f0fd);

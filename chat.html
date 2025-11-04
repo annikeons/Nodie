@@ -14,10 +14,10 @@
     <title>Nodie</title>
     <style>
 
- /* Estilos CSS para dar formato a la interfaz del chat */
+ /* formato a la interfaz del chat */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0; /* Eliminar el margen predeterminado del cuerpo para abarcar toda la ventana */
+            font-family: quicksand;
+            margin: 0; 
         }
         .chat-icon {
             position: fixed;
@@ -25,10 +25,10 @@
             right: 20px;
             cursor: pointer;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 50px; /* Ajustar el ancho de la imagen */
-            height: 50px; /* Ajustar la altura de la imagen */
-            border-radius: 50%; /* Hacer que la imagen sea circular */
-            z-index: 1001; /* Asegurar que la imagen del chat esté sobre el chat-container */
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            z-index: 1001; 
         }
         .chat-container {
             width: 360px;
@@ -37,12 +37,12 @@
             border: 1px solid #ccc;
             border-radius: 10px;
             height: 360px;
-            overflow-y: auto; /* Cambiar a auto para habilitar la barra de desplazamiento vertical si es necesario */
+            overflow-y: auto; 
             position: fixed;
             bottom: 20px;
-            right: 80px; /* Ajustar la posición a la derecha para evitar superposiciones */
-            display: none; /* Ocultar inicialmente el área del chat */
-            z-index: 1000; /* Ajustar el índice z para asegurar que esté por encima de otros elementos */
+            right: 80px; 
+            display: none; 
+            z-index: 1000; 
             
              background-image: url(fondii.jpeg);
     background-size: cover;
@@ -52,10 +52,10 @@
 
         @media screen and (max-width: 767px) {
     .chat-container {
-        width: 70%; /* Puedes ajustar el ancho según tus necesidades */
+        width: 70%;
         margin: 0 auto;
         right: auto;
-        left: 50%; /* Centrar el chat en dispositivos móviles */
+        left: 50%; 
         transform: translateX(-50%);
     }
 }
@@ -65,16 +65,16 @@
         .chat-header {
             text-align: center;
             margin-bottom: 10px;
-            padding-bottom: 10px; /* Agregado para asegurar que el texto no se corte */
-            border-bottom: 1px solid #ccc; /* Agregado para agregar un borde inferior */
+            padding-bottom: 10px; 
+            border-bottom: 1px solid #ccc; 
         }
         .chat-box {
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 10px;
-            max-height: calc(100% - 60px); /* Limitar la altura del chat-box al 100% del contenedor, menos el espacio para el encabezado */
-            box-sizing: border-box; /* Incluir el relleno y el borde en la altura total */
-            overflow-y: auto; /* Habilitar la barra de desplazamiento vertical si es necesario */
+            max-height: calc(100% - 60px); 
+            box-sizing: border-box; 
+            overflow-y: auto; 
         }
         .user-message {
             text-align: right;
@@ -85,14 +85,14 @@
             color:moccasin;
         }
         #chat-form {
-            margin-top: 10px; /* Añadir espacio encima del formulario */
-            display: flex; /* Utilizar flexbox para alinear elementos internos */
+            margin-top: 10px; 
+            display: flex; 
         }
         #user-message {
-            flex: 1; /* Hacer que el campo de entrada ocupe el espacio disponible */
+            flex: 1; 
         }
         #chat-form button {
-            margin-left: 10px; /* Añadir espacio a la izquierda del botón */
+            margin-left: 10px; 
         }
         .imagen-redonda {
             border-radius: 50%;
@@ -110,7 +110,7 @@
             -webkit-box-shadow: 6px 5px 24px #666666;
             -moz-box-shadow: 6px 5px 24px #666666;
             box-shadow: 6px 5px 24px #666666;
-            font-family: Arial;
+            font-family: quicksand;
             color: #fafafa;
             font-size: 12px;
             padding: 12px;
@@ -151,7 +151,7 @@
         <header>
             
         <div class="header-title">
-          <div id="main-title">Habla con Nodie<span> <br>Seguro tiene algo lindo que decirte</span></div>
+          <div id="main-title" class="animated-text" style="color:black;">Habla con Nodie <br>Seguro tiene algo lindo que decirte</div>
           <div id="sub-title"></div>
           <div id="search-bar">
           </div>
@@ -908,7 +908,7 @@
 {
   "tag": "love",
   "patterns": [
-    "te quiero","Te Quiero","TE QUIERO","tE qUieRo",
+    "te quiero","Te Quiero","TE QUIERO","tE quiero",
     "te quiero mucho","Te Quiero Mucho","TE QUIERO MUCHO",
     "tqm","TQM","tQm","TqM",
     "i love you","I Love You","I LOVE YOU",
@@ -1043,13 +1043,133 @@
   ]
 },
 
+{
+  "tag": "adivinanzas",
+  "patterns": [
+    "quiero una adivinanza",
+    "dame un acertijo",
+    "hazme una adivinanza",
+    "cuéntame un acertijo",
+    "adivinanza", "Adivinanza", "ADIVINANZA", "adivINANZA", "Adi", "ADI", "adi", "aDi", "AdI", "ADi", "adiNanza", "ADinanza"
+  ],
+  "responses": [
+    "Blanca por dentro, verde por fuera. Si quieres que te lo diga, espera 🍐 //pera",
+    "Roja, verde o amarilla, dulce y crujiente. ¡Adivina cuál es! 🍎 //manzana",
+    "Se pisa y se florece, y huele rico al jardín 🌸 //apisonaflor",
+    "Es amarillo y curvado, con piel y fruta dentro 🍌 //plátano",
+    "Tiene corona y es dulce por dentro, tropical es su sabor 🍍 //piña",
+    "Pequeña y morada, en racimos suele estar 🍇 //uva",
+    "Es redonda, roja y con semillas por dentro 🍓 //fresa",
+    "Verde por fuera, roja por dentro y con pepitas 🍉 //sandía",
+    "Pequeña, naranja y muy jugosa 🍊 //mandarina",
+    "Es blanca, dura por fuera y dulce por dentro 🥥 //coco",
+    "Amarilla y ácida, da sabor a bebidas 🍋 //limón",
+    "Es naranja y dulce, viene en zanahoria 🥕 //zanahoria",
+    "Se usa en ensaladas, verde y crujiente 🥬 //lechuga",
+    "Blanca y larga, en sopa se come mucho 🧄 //ajo",
+    "Rojo y pequeño, picante en la comida 🌶️ //ají",
+    "Es marrón, dulce y en postres se usa 🍫 //chocolate",
+    "Se come en tostadas, amarillo y cremoso 🥚 //huevo",
+    "Es verde y redondo, con hueso adentro 🥑 //aguacate",
+    "Se pela y es dulce, naranja y pequeña 🍑 //durazno",
+    "Verde y con hojas, aromática en la comida 🌿 //albahaca",
+    "Se abre y tiene perlas dentro 🦪 //ostra",
+    "Se pesca y es plateada, rica en omega 🐟 //salmón",
+    "Es dulce y se hace miel de ella 🍯 //abeja",
+    "Se toma caliente, negro o con leche ☕ //café",
+    "Se pela y se come cocida, amarilla o morada 🥔 //papa",
+    "Es roja y jugosa, se hace salsa con ella 🍅 //tomate",
+    "Se bebe fría, es jugosa y refrescante 🍹 //limonada",
+    "Es redonda y se usa en pizza 🍕 //queso",
+    "Se encuentra en el campo y da leche 🐄 //vaca",
+    "Es redonda, amarilla y brilla en el cielo ☀️ //sol"
+  ]
+},
+
+{
+  "tag": "alarma_explicacion",
+  "patterns": [
+    "por qué es una alarma",
+    "para qué sirve esto",
+    "esto es una alarma",
+    "qué hace esta alarma",
+    "alarma", "Alarma", "ALARMA", "aLARma", "aLarma", "Aalarma", "alarMA", "ALarma", "alARma", "alARMA"
+  ],
+  "responses": [
+    "En realidad no es una alarma 😄, es más bien una herramienta para distraerte un rato y disfrutar música relajante 🎶💛",
+    "No te preocupes, no es alarma de emergencia 🚨. Es solo un momentito de calma y buena vibra con música suave 🕊️",
+    "Más que alarma, es tu recordatorio de pausa y relax 💆‍♂️🎵 ¡Aprovecha para respirar!"
+  ]
+},
+{
+  "tag": "conversacion_respuesta",
+  "patterns": [
+    "por qué no mantienes conversación",
+    "porque no hablas mucho",
+    "pq no hablas",
+    "xq no conversas",
+    "por qué eres callado",
+    "porque eres tímido",
+    "pq no hablas conmigo",
+    "xq no me respondes",
+    "pq no hablas",
+    "porque no mantienes conversación",
+    "PORQUE", "PORQUE?", "PQ", "PQ?", "XQ", "XQ?", "por que", "por que?", "Por Qué"
+  ],
+  "responses": [
+    "Jeje, es que soy un poquito tímido, pero me esfuerzo por hablar.",
+    "No es que no quiera conversar, es que a veces me da vergüenza.",
+    "Shh… estoy pensando en algo súper profundo… o tal vez en pizza.",
+    "Hablar mucho cansa… a veces necesito un descansito.",
+    "Soy más de escuchar que de hablar… pero prometo prestar atención.",
+    "¡Ups! Me pillaste, es que estoy practicando mi misterio de pato.",
+    "No es timidez, es estrategia: mantener el suspenso siempre es divertido."
+  ]
+},
+{
+  "tag": "secret",
+  "patterns": ["compare", "comare","clancy","Clancy", "caremono", "Caremono"],
+  "responses": ["cua", "comare", "keloke","wasap", "jp","complicao", "awelito jp"]
+},
+{
+  "tag": "rawfearmovesme",
+  "patterns": ["puñga"],
+  "responses": ["malpario"]
+},
+
+{
+  "tag": "gone",
+  "patterns": [
+    "dame cosas lindas",
+    "quiero cosas lindas",
+    "algo lindo",
+    "algo bonito",
+    "cosas tiernas",
+    "quiero cosas tiernas",
+    "dame cosas tiernas",
+    "algo tierno",
+    "algo lindo porfa",
+    "cosas lindas por favor",
+    "Cosas lindas", "COSAS LINDAS", "Cosas Tiernas", "cosas tiernas", "algo lindo", "ALGO BONITO", "algo bonito"
+  ],
+  "responses": [
+    "Aquí tienes algo lindo para ti: una sonrisa gigante y un abrazo virtual.",
+    "Te envío un mensaje tierno: recuerda que eres increíble y valioso.",
+    "Algo bonito: cada día es una nueva oportunidad para ser feliz.",
+    "Un recordatorio tierno: cuídate y haz cosas que te hagan sonreír.",
+    "Aquí va algo lindo: imagina un gatito durmiendo plácidamente a tu lado."
+  ]
+},
+
+
+
 
     ];
 
   
 
 
-    
+    //para el json
     function predictIntent(message) {
     message = message.toLowerCase();
     let bestMatchIndex = -1;
@@ -1136,13 +1256,13 @@ function addMessage(sender, message) {
         addMessage("user", userMessage);
         document.getElementById("user-message").value = "";
 
-        // Realizar la predicción de la intención directamente en el navegador
+        //predixion
         const intent = predictIntent(userMessage);
 
-        // Obtener la respuesta basada en la intención
+        
         const botResponse = getResponse(intent);
 
-        // Mostrar la respuesta del bot
+        
         addMessage("bot", botResponse);
     }
 
@@ -1164,7 +1284,7 @@ function addMessage(sender, message) {
     }
 
     
-    // Función de similitud de texto (algoritmo de comparación de cadenas)
+   
     
     function similarText(first, second) {
         first = first || '';
@@ -1205,9 +1325,7 @@ function addMessage(sender, message) {
  
 
 
-  // Función para gestionar versiones del modelo
   function manageModelVersions() {
-      // Aquí puedes realizar la lógica para gestionar versiones del modelo
       console.log("Gestionando versiones del modelo...");}
   
   
