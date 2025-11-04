@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodie</title>
+    <link rel="stylesheet" href="stylex.css">
+    <link rel="shortcut icon" href="sleeper duck.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ffd500">
+
+</head>
+<body>
+
+
+    <div class="content">
+    <!-- Inicio -->
+    <div id="home" class="section active">
+        <h1> ¡Que gusto verte! </h1>
+        <p style="text-align:center; font-size: 25px"> Nodie, tu pausa ideal para relajarte</p>
+          <h1> Palabras Para Ti: </h1>
+        <div class="cards" class="consejo-box" class="consejo-card" >
+            <div class="card"><img src="sleeper duck.png"><p id="consejo-texto">Las alarmas no solo son para cuando duermes, también cuando estás activo y quieres sonidos relajantes</p></div>
+            
+        </div>
+    </div>
+    <div id="nodie" class="section">
+    <h1> Nodie</h1>
+    <iframe 
+        src="chat.html" 
+        style="width:100%; height:440px; border:none; border-radius:15px;" 
+        title="Chatbot Nodie">
+    </iframe>
+</div>
+
+
+    <!-- Alarmas -->
+    <div id="alarm" class="section">
+        <h1> Alarmas</h1>
+        <div class="alarm-container">
+            <label>Hora:</label>
+            <input type="time" id="alarmTime">
+            <label>Sonido:</label>
+            <select id="alarmSound">
+                <option value="sound1">Sonido 1 (elf meditation)</option>
+                <option value="sound2">Sonido 2 (forest)</option>
+                <option value="sound3">Sonido 3 (a very brady special)</option>
+                <option value="sound3">Sonido 4 (ancient wonds)</option>
+                <option value="sound3">Sonido 5 (isolation waltz)</option>
+                <option value="sound3">Sonido 6 (connecting rainbows)</option>
+            </select>
+            <label><input type="checkbox" id="alarmActive"> Activar alarma</label>
+            <button id="addAlarm">Agregar alarma</button>
+            <div class="alarm-list" id="alarmList"></div>
+        </div>
+    </div>
+
+
+    <!-- Eventos -->
+    <div id="events" class="section">
+    <h1>Pendientes</h1>
+    <div class="event-form">
+        <input type="text" id="eventName" placeholder="Nombre del evento">
+        <input type="time" id="eventStart" placeholder="Inicio">
+        <input type="time" id="eventEnd" placeholder="Fin">
+        <button id="addEvent">Agregar Pendiente</button>
+    </div>
+    <div class="cards" id="eventList"></div>
+</div>
+
+
+
+
+    <!-- Configuración -->
+    <div id="settings" class="section">
+        <h1></h1>
+        <div class="config-item">
+            <label>Modo:</label>
+            <select id="themeSelect">
+                <option value="light"> Modo Claro</option>
+                <option value="dark">Modo Oscuro</option>
+                
+            </select>
+        </div>
+        <!-- Banco de preguntas siempre visible -->
+<div id="questions-help">
+    <h2 style="font-family: times new roman; font-size:25px">Nodie es demasiado específico, intenta usar:</h2>
+    <ul class="holis" style="list-style-type: disc; padding-left: 20px; color: #000;">
+       <li>holi uwu amigo</li>
+<li>buenas tardes</li>
+<li>hola nodie</li>
+<li>me siento muy triste</li>
+<li>hoy estoy bajoneado</li>
+<li>no tengo ánimos</li>
+<li>hoy estoy feliz</li>
+<li>me siento genial</li>
+<li>hoy fue un buen día</li>
+<li>puedo contarte algo?</li>
+<li>hoy quiero desahogarme</li>
+<li>te cuento algo que me pasó?</li>
+<li>okis uwu</li>
+<li>perfecto!</li>
+<li>ya entendí</li>
+<li>chau uwu</li>
+<li>nos vemos más tarde</li>
+<li>hasta pronto</li>
+<li>quiero música relajante</li>
+<li>playlist para relajarme</li>
+<li>quiero algo tranquilo</li>
+<li>canta algo uwu</li>
+<li>nodie canta una canción</li>
+<li>quiero una canción</li>
+<li>cuéntame una historia</li>
+<li>quiero escuchar una historia</li>
+<li>tienes una historia?</li>
+<li>cuéntame una historia de aventura</li>
+<li>quiero aventura</li>
+<li>una aventura nodie</li>
+<li>una historia de amor</li>
+<li>cuéntame algo bonito</li>
+<li>quiero escuchar algo romántico</li>
+<li>una historia de miedo</li>
+<li>cuéntame algo de terror</li>
+<li>algo de suspenso</li>
+<li>una historia graciosa</li>
+<li>cuéntame algo divertido</li>
+<li>una patoaventura</li>
+<li>miedo</li>
+<li>miedo terror</li>
+<li>MIEDO TERROR</li>
+<li>uwu</li>
+<li>owo</li>
+<li>7w7</li>
+<li>por qué te llamas nodie</li>
+<li>qué significa nodie</li>
+<li>quién es nodie</li>
+<li>nodie?</li>
+<li>NODIE</li>
+<li>nodie</li>
+<li>me siento tonto</li>
+<li>ya no doy más</li>
+<li>me siento inútil</li>
+<li>gracias</li>
+<li>muchas gracias</li>
+<li>thank you</li>
+<li>te quiero mucho</li>
+<li>te amo</li>
+<li>tqm nodie</li>
+<li>me quieres?</li>
+<li>me quieres mucho?</li>
+<li>me quieres </li>
+<li>estoy estresado</li>
+<li>tengo mucho estrés</li>
+<li>me siento abrumada</li>
+<li>tengo ansiedad</li>
+<li>me cuesta dormir</li>
+<li>estoy nerviosa</li>
+<li>cuéntame un chiste</li>
+<li>hazme reír</li>
+<li>quiero reírme</li>
+<li>tengo hambre</li>
+<li>no dormí</li>
+<li>no he tomado agua</li>
+
+        <!-- Agrega más <li></li> según necesites -->
+    </ul>
+</div>
+
+    </div>
+   
+</div>
+
+
+<!-- Menú inferior -->
+<div class="menu">
+    <button onclick="showSection('home')"><span>Inicio</span></button>
+    <button onclick="showSection('alarm')"><span>Alarmas</span></button>
+    <button onclick="showSection('events')"><span>Pendientes</span></button>
+    <button onclick="showSection('settings')"><span>Ayuda</span></button>
+    <button onclick="showSection('nodie')"><span>Nodie</span></button>
+</div>
+
+<div id="alarmMessage"></div>
+
+<script>
+// Manejo de secciones
+function showSection(id){
+    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+
+// Tema oscuro/claro
+const themeSelect=document.getElementById('themeSelect');
+themeSelect.addEventListener('change',()=>{ document.body.classList.toggle('dark',themeSelect.value==='dark'); });
+
+// Alarmas
+let alarms=[], activeAudios={};
+const alarmList=document.getElementById('alarmList');
+
+document.getElementById('addAlarm').addEventListener('click',()=>{
+    const time=document.getElementById('alarmTime').value;
+    const sound=document.getElementById('alarmSound').value;
+    const active=document.getElementById('alarmActive').checked;
+    if(!time) return alert("Selecciona una hora");
+    const id=Date.now();
+    alarms.push({id,time,sound,active,ringing:false});
+    renderAlarms();
+});
+
+function playSound(alarmId,sound){
+    if(activeAudios[alarmId]) return;
+    const audio=new Audio();
+    switch(sound){
+        case 'sound1': audio.src='https://freepd.com/music/Wind%20of%20the%20Rainforest.mp3'; break;
+        case 'sound2': audio.src='https://freepd.com/music/Elf%20Meditation.mp3'; break;
+        case 'sound3': audio.src='https://freepd.com/music/A%20Very%20Brady%20Special.mp3'; break;
+        case 'sound4': audio.src='https://freepd.com/music/Ancient%20Winds.mp3'; break;
+         case 'sound5': audio.src='https://freepd.com/music/Isolation%20Waltz.mp3'; break;
+          case 'sound6': audio.src='https://freepd.com/music/Connecting%20Rainbows.mp3'; break;
+    }
+
+    audio.loop=true;
+    audio.play().catch(e=>console.log("Error audio:",e));
+    activeAudios[alarmId]=audio;
+}
+
+function stopAlarm(alarmId){
+    if(activeAudios[alarmId]){
+        activeAudios[alarmId].pause();
+        delete activeAudios[alarmId];
+    }
+}
+
+function renderAlarms(){
+    alarmList.innerHTML='';
+    alarms.forEach(alarm=>{
+        const div=document.createElement('div');
+        div.className='alarm-item';
+        div.innerHTML=`
+            <span>${alarm.time} - ${alarm.sound} - ${alarm.active?'Activada':'Desactivada'}</span>
+            <button onclick="removeAlarm(${alarm.id})">Quitar</button>
+            <label style="margin-left:10px;">
+                <input type="checkbox" ${alarm.active?'checked':''} onchange="toggleAlarm(${alarm.id},this.checked)">
+                Activar
+            </label>
+            <button style="margin-left:5px;" onclick="stopAlarm(${alarm.id})">Detener</button>
+        `;
+        alarmList.appendChild(div);
+    });
+}
+
+function toggleAlarm(id,status){
+    const alarm=alarms.find(a=>a.id===id);
+    if(alarm) alarm.active=status;
+    renderAlarms();
+}
+
+function removeAlarm(id){
+    alarms=alarms.filter(a=>a.id!==id);
+    stopAlarm(id);
+    renderAlarms();
+}
+
+// Mensaje visual de alarma
+function showAlarmMessage(msg){
+    const div=document.getElementById('alarmMessage');
+    div.style.display='block';
+    div.innerText=msg;
+    setTimeout(()=>div.style.display='none',30000); // se oculta después de 30s
+}
+
+// Revisar alarmas cada segundo
+setInterval(()=>{
+    const now=new Date();
+    const currentTime=now.toTimeString().slice(0,5);
+    alarms.forEach(alarm=>{
+        if(alarm.active && alarm.time===currentTime && !alarm.ringing){
+            alarm.ringing=true;
+            playSound(alarm.id,alarm.sound);
+            showAlarmMessage(`¡Alarma! 🐥 Hora: ${alarm.time}`);
+            setTimeout(()=>alarm.ringing=false,60000);
+        }
+    });
+},1000);
+
+// Eventos
+const eventList = document.getElementById('eventList');
+const addBtn = document.getElementById('addEvent');
+
+// Función para cargar eventos desde localStorage al iniciar
+function loadEvents() {
+    const events = JSON.parse(localStorage.getItem('events')) || [];
+    eventList.innerHTML = ''; // limpiar lista
+    events.forEach((ev, index) => addEventCard(ev, index));
+}
+
+// Función para crear una tarjeta de evento
+function addEventCard(ev, index) {
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.innerHTML = `
+        <img src="agenda.png">
+        <p>${ev.name}: ${ev.start} - ${ev.end}</p>
+        <button class="delete-btn" data-index="${index}">❎</button>
+    `;
+    eventList.appendChild(div);
+}
+
+// Función para agregar evento
+addBtn.addEventListener('click', () => {
+    const name = document.getElementById('eventName').value.trim();
+    const start = document.getElementById('eventStart').value;
+    const end = document.getElementById('eventEnd').value;
+
+    if (!name || !start || !end) return alert("Completa todos los campos");
+
+    const events = JSON.parse(localStorage.getItem('events')) || [];
+    events.push({ name, start, end });
+    localStorage.setItem('events', JSON.stringify(events));
+
+    loadEvents();
+
+    document.getElementById('eventName').value = '';
+    document.getElementById('eventStart').value = '';
+    document.getElementById('eventEnd').value = '';
+});
+
+// Función para eliminar eventos usando delegación de eventos
+eventList.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('delete-btn')) return;
+    const index = e.target.getAttribute('data-index');
+    const events = JSON.parse(localStorage.getItem('events')) || [];
+    events.splice(index, 1); // eliminar evento
+    localStorage.setItem('events', JSON.stringify(events));
+    loadEvents();
+});
+
+// Cargar eventos al inicio
+loadEvents();
+
+</script>
+
+<style>
+    /* Estilos responsivos */
+        @media screen and (max-width: 768px) {
+            .lower_navbar_content {
+                flex-direction: column;
+            }
+
+            .lower_navbar .logo {
+                margin-bottom: 10px;
+            }
+
+            .dropdown-menu {
+                width: 100%;
+            }
+
+            
+        }
+</style>
+<script>
+  const consejos = [
+
+   "Si solo tienes 30 minutos libres, es mejor relajarte y no dormir",
+"Nada se compara con contar tu día a una persona real",
+"Evita dormir justo antes de tus actividades, podrías sentirte más cansado después",
+"Un descanso corto puede ayudarte a recuperar energía y concentración",
+"Lo estás haciendo bien",
+"Eres valiente",
+"Si te sientes agotado, una pausa breve puede marcar la diferencia",
+"Recuerda que descansar también es avanzar",
+"Tómate un momento para respirar y pensar en ti",
+"No tienes que hacerlo todo hoy, ve paso a paso",
+"Escucha a tu cuerpo, él sabe cuándo necesita un respiro",
+"A veces lo mejor que puedes hacer es detenerte un momento",
+"No se trata de hacer más, sino de hacerlo con calma",
+"Descansar no es perder el tiempo, es recuperarlo",
+"Tu bienestar también es importante",
+"Una mente tranquila puede con cualquier reto",
+"Hoy también cuenta, aunque solo hayas avanzado un poco",
+"Permítete un momento de silencio, te hará bien",
+"No siempre tienes que estar al máximo, está bien bajar el ritmo",
+"Estás creciendo, aprendiendo y avanzando, aunque no siempre lo notes",
+"Cuidarte también es parte del progreso",
+"El descanso es parte del camino, no una pausa del destino",
+"Confía en que estás haciendo lo correcto",
+"A veces descansar es la mejor forma de seguir",
+"Tu esfuerzo vale, aunque nadie lo vea",
+"Cada día es una nueva oportunidad para intentarlo mejor",
+"Hablar con alguien puede ayudarte más de lo que imaginas",
+"No estás sola, siempre hay alguien dispuesto a escucharte",
+"A veces compartir lo que sientes alivia más que cualquier descanso",
+"Una buena conversación puede cambiarte el día",
+"Contar lo que te pasa no te hace débil, te hace humana",
+"No todo se soluciona en silencio, hablar también sana",
+"Buscar compañía cuando lo necesitas es una forma de cuidarte",
+"Hablar con alguien de confianza puede aclarar tu mente",
+"Las palabras compartidas alivian el corazón",
+"No te guardes todo, hablar también libera",
+"A veces solo necesitas que alguien te escuche de verdad",
+"Conectar con alguien puede traer calma a tu día",
+"Tu voz también merece ser escuchada",
+"No estás sola, hay personas que se preocupan por ti",
+"Compartir lo que vives hace más ligero el camino",
+"Una charla sincera puede devolverte la paz",
+"Hablar con alguien real te recuerda que no todo se resuelve sola",
+"A veces el mejor descanso es una buena conversación",
+"Hablar también es una forma de sanar",
+"No tienes que cargar sola con todo lo que sientes"
+  ];
+
+  let indice = 0;
+  const texto = document.getElementById("consejo-texto");
+
+  function cambiarConsejo() {
+    texto.style.opacity = 0;
+    setTimeout(() => {
+      indice = (indice + 1) % consejos.length;
+      texto.textContent = consejos[indice];
+      texto.style.opacity = 1;
+    }, 400);
+  }
+
+  // Cambio automático cada 5 segundos
+  setInterval(cambiarConsejo, 9000);
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+  .then(() => console.log('Service Worker registrado correctamente'))
+  .catch(err => console.log('Error al registrar Service Worker:', err));
+}
+</script>
+
+
+</body>
+
+</html>
