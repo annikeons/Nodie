@@ -1,0 +1,564 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font: 1em Roboto;
+}
+
+
+.p-text {
+    font-size: 50px; 
+}
+
+@media (max-width: 768px) {
+    .p-text {
+        font-size: 520px; }
+}
+
+
+
+
+
+
+
+
+
+/* Estilos de encabezado */
+header {
+    width: 100%;
+    height: 100vh;
+    background: url("images/fondi2.png");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/* Estilos de barra de navegación superior */
+nav {
+    width: 100%;
+    height: auto;
+    color: #fff;
+    z-index: 999;
+}
+
+.upper_navbar {
+    background-color: #112255; 
+}
+
+.menu1 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.menu1 ul {
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+}
+
+.menu1 ul li {
+    list-style-type: none;
+    display: inline-block;
+    line-height: 40px;
+    padding: 0px 20px;
+}
+
+.menu1 ul li a {
+    color: #fff;
+    font-size: 10pt;
+    text-decoration: none;
+}
+
+.menu1 ul li:hover {
+    background-color: #0a9cc9;
+    transition: 0.3s;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/* Estilos de barra de navegación inferior */
+.lower_navbar {
+    width: 100%;
+    height: 70px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.lower_navbar_content {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.lower_navbar .logo {
+    float: right;
+    height: 50px;
+    padding: 10px 0px;
+}
+
+.lower_navbar .logo img {
+    width: auto;
+    height: 100%;
+}
+
+.lower_navbar .dropdown-menu {
+    width: 40%;
+}
+
+.lower_navbar .dropdown-menu, .lower_navbar .dropdown-menu ul {
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lower_navbar .dropdown-menu li a, .lower_navbar .dropdown-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.lower_navbar .dropdown-menu li {
+    display: inline-block;
+    padding: 25px 0;
+    transition: 0.3s;
+}
+
+.lower_navbar .dropdown-menu li:hover {
+    background: #444;
+}
+
+.lower_navbar .dropdown-menu li a {
+    padding: 20px;
+}
+
+.lower_navbar .dropdown-menu ul {
+    display: none;
+    margin-top: 25px;
+}
+
+.lower_navbar .dropdown-menu ul li {
+    padding: 15px 0px;
+    display: block;
+    background: #000;
+}
+
+.lower_navbar .dropdown-menu ul li:hover {
+    background: #333;
+}
+
+.lower_navbar .dropdown-menu li:hover ul {
+    display: block;
+}
+
+.fas {
+    padding-left: 8px;
+}
+
+/* Estilos del título del encabezado */
+.header-title {
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    height: 300px;
+    font-family: Roboto;
+    color: white;
+    top: 40%; /* Ajustado al 40% para mover un poco más arriba */
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Agregado para hacer el texto más pequeño en dispositivos móviles */
+    @media (max-width: 767px) {
+        font-size: 40px;
+    }
+}
+
+#main-title {
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 60px;
+    text-shadow: 5px 5px 10px black;
+
+    /* Agregado para hacer el texto más pequeño en dispositivos móviles */
+    @media (max-width: 767px) {
+        font-size: 30px;
+    }
+}
+
+#sub-title {
+    font-family: Nunito;
+    font-size: 25px;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    margin: 10px 0 20px 0;
+    text-shadow: 5px 5px 10px black;
+
+    /* Agregado para hacer el texto más pequeño en dispositivos móviles */
+    @media (max-width: 767px) {
+        font-size: 18px;
+    }
+}
+
+#main-title span {
+    font-weight: 700;
+}
+/* Estilos de la barra de búsqueda */
+#search-bar {
+    margin: 30px 0;
+    padding: 20px auto;
+    display: inline-flex;
+}
+
+#search-bar input {
+    padding: 0 20px;
+    line-height: 50px;
+    width: 480px;
+    border: none;
+    font-size: 18px;
+    font-family: Roboto;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+#search-bar input:focus {
+    background: rgba(255, 255, 255, 1);
+}
+
+#search-bar button {
+    background: rgba(28, 175, 38, 0.6);
+    border: none;
+    width: 110px;
+    line-height: 50px;
+}
+
+#search-bar button:hover {
+    cursor: pointer;
+    background: rgba(28, 175, 38, 1);
+}
+
+#search-bar button .fa-search {
+    vertical-align: middle;
+    color: #fff;
+}
+
+
+/* Estilos del botón del título */
+#title-button {
+    margin: 30px;
+}
+
+#title-botton:hover {
+    color: #fff;
+}
+
+#title-button a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 40px;
+    transition: 0.4s;
+}
+
+#title-button a:hover {
+    color: #fff;
+    background: transparent;
+}
+
+/* Estilos de la sección de imágenes */
+.image-set {
+    width: 90%;
+    margin: 70px auto;
+}
+
+.image-set .image-box {
+    position: relative;
+    text-align: center;
+    display: inline-flex;
+}
+
+.image-set img {
+    width: 300px;
+    height: auto;
+}
+
+.image-set .image-box .image-content {
+    position: absolute;
+    overflow: hidden;
+    bottom: 1%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0%;
+    transition: .5s ease;
+}
+
+.image-set .image-box .image-content .text {
+    position: absolute;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: auto;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.image-set .image-box .image-content .text a {
+    text-decoration: none;
+}
+
+.image-set .image-box .image-content .text h1 {
+    color: #fff;
+    font-family: Nunito;
+    font-size: 50px;
+}
+
+.image-set .image-box:hover .image-content {
+    cursor: pointer;
+    height: 25%;
+    transition: 0.5s;
+}
+
+/* Estilos de las atracciones principales */
+.top-attractions {
+    width: 100%;
+    height: auto
+}
+
+
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font: 1em Roboto;
+}
+
+/* Estilos de la sección de las principales atracciones */
+.top-attractions-back {
+    width: 100%;
+    background: rgba(0,0,0,0.65);
+}
+
+.top-attractions-content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0px 0 40px 0;
+}
+
+.attractions-topic {
+    width: 90%; 
+    margin: 0 auto;
+    padding: 15px 0;
+    background: #182C61;
+    border-radius: 0 0 50px 50px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+}
+
+.attractions-topic h1 {
+    font-family: Nunito;
+    font-size: 4vw; 
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Estilos para Sinharaja y Sri Padaya */
+.sinharaja, .sri-padaya {
+    padding: 2vw;
+    border-bottom: 3px dashed #fff;
+}
+
+.sinharaja-content h3, .sri-padaya-content h3 {
+    color: #fff;
+    font-family: Nunito;
+    letter-spacing: 1px;
+}
+
+.sinharaja-content, .sri-padaya-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sinharaja-para, .sri-padaya-para {
+    width: 100%; 
+}
+
+.sinharaja-para p, .sri-padaya-para p {
+    font-size: 2vw; 
+    text-align: justify;
+    font-family: Nunito;
+    color: #999;
+}
+
+
+
+@media (max-width: 768px) {
+    .sinharaja-para p, .sri-padaya-para p {
+        font-size: 18px; /* Tamaño de letra más grande para dispositivos móviles */
+    }
+}
+
+.sinharaja-para a, .sri-padaya-para a {
+    color: #fff;
+    font-size: 1.5vw;
+    text-decoration: none;
+    padding: 1vw 2vw;
+    border: 2px solid #fff;
+    border-radius: 15px 0 15px 0; 
+    transition: 0.4s;
+}
+
+/* Estilos para las imágenes de Sinharaja y Sri Padaya */
+.sinharaja-image, .sri-padaya-image {
+    width: 100%;
+    padding: 5vw 0; 
+}
+
+.sinharaja-image img, .sri-padaya-image img {
+    width: 100%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+    transition: 0.4s;
+}
+
+/* Estilos para el separador vertical */
+.vertical-divider1, .vertical-divider2 {
+    margin: 5vw 0 0 0;
+    border-top: 3px dashed #fff;
+}
+
+/* Estilos para la sección de acceso y noticias turísticas */
+.access-section {
+    width: 100%; 
+    margin: 5vw auto; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.tourism-news-carousal-div {
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el slider */
+#slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slider figure {
+    width: 400%;
+    position: relative;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+#slider figure img {
+    width: 25%;
+    float: left;
+}
+
+/* Estilos para la sección de reserva de alojamiento */
+.book-accommodation-div {
+    width: 100%; 
+    margin: 0;
+    padding: 0 5vw; 
+}
+
+/* Estilos para el botón de colapso y su contenido */
+button.collapse {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: Nunito;
+    font-size: 2vw;
+    margin: 0;
+    padding: 1vw 2vw;
+    text-align: left;
+    background: #ddd;
+    cursor: pointer;
+    transition: background 0.2s linear;
+}
+
+.collapse-content {
+    padding: 0 2vw; 
+    line-height: 3vw; 
+    border-left: 2px solid #eee; 
+    border-right: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    max-height: 0;
+    overflow: hidden;
+    background: whitesmoke;
+    transition: max-height 0.2s ease-in-out;
+}
+
+
+.footer {
+    background:url("images/fondo3.jpg");
+}
+
+.footer-content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2vw 0;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.footer-refs-content-1, .footer-refs-content-2, .footer-refs-content-3 {
+    width: 100%; 
+    margin-bottom: 2vw; 
+}
+
+.footer-refs-content-1 h5, .footer-refs-content-2 h5, .footer-refs-content-3 h5 {
+    padding-bottom: 1vw; 
+    border-bottom: 2px solid #fff;
+}
+
+.lower-footer {
+    width: 100%;
+    color: #fff;
+    font-size: 1.5vw; 
+    font-family: Roboto;
+    font-weight: 300;
+    background-image: url("images/fondo3.jpg");
+}
+
+.lower-footer-content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1vw 0;
+    display: flex;
+    justify-content: space-between; 
+}
+
+#footer-align-left {
+    width: 70%; 
+    padding: 1vw 0;
+}
+
+#footer-align-right {
+    text-align: center; 
+    width: 100%; 
+    padding: 1vw 0;
+}
+
+#footer-align-right a {
+    padding: 1vw 2vw; 
+    color: #fff;
+    transition: 0.3s;
+}
+
+#footer-align-right a:hover {
+    color: #43b9e0;
+}
+
+.DROPI {
+    font-size: 5vw; 
+}

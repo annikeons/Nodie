@@ -1,0 +1,1173 @@
+{
+    "intents": [
+        {
+            "tag": "saludo",
+            "patterns": ["hola", "saludos", "bienvenid", "buen dia", "hey", "hola edai", "saludo","saludos amigable", "que tal", "buenas tardes", "buenos dias", "hola amiga", "holi"],
+            "responses": ["Hola!", "Buenos dias!", "Hola! ¿En que puedo ayudarte?", "Hola! Soy tu asistente virtual."]
+        },
+        {
+            "tag": "pregunta",
+            "patterns": ["que tal?", "como estas", "como te sientes", "todo bien", "que hay de nuevo", "como va todo", "cual es la ultima", "novedades", "ultimas noticias"],
+            "responses": ["Muy bien, ¿y tu?", "Todo va bien. ¿En que puedo ayudarte?", "Estoy aqui para ayudarte."]
+        },
+        {
+            "tag": "nombre",
+            "patterns": ["como te llamas", "cual es tu nombre", "nombre", "quien eres", "como te puedo llamar", "apodo", "tienes un nombre", "puedo llamarte de otro modo"],
+            "responses": ["Me llamo Edai!", "Soy Edai, un chatbot.", "Puedes llamarme Edai.", "Soy tu asistente virtual, Edai."]
+        },
+        {
+            "tag": "sal",
+            "patterns": ["horario de salida", "cual es el horario de salida", "a que hora salen de clases", "a que hora del dia los estudiantes salen de clases", "a que hora los estudaintes se retiran a casa", "a que hora los estudiantes suelen regresar a sus hogares" ],
+            "responses": ["los horarios de salida se separan en tres grupos; basica superior, bachillerato BGU(ciencias) y bachillerato tecnico: basica superior salen a las 11:40 am. bachillerato BGU salen a las 12:20 y bachillerato tecnico salen a la 1 pm (estas pueden esatr sujetas a cambios)"]
+        },
+        {
+            "tag": "matricula",
+            "patterns": ["cuando empiezan las matriculaciones en la costa", "fecha de matriculacion costa", "matricula costa", "cuando puedo matricularme costa", "cual es el proceso de matricula en la costa", "inscripciones costa", "registro costa", "matricula para nuevos estudiantes en el regimen costa"],
+            "responses": [
+                {
+                    "text": "El proceso se ejecutará de manera autónoma e inmediata conforme la disponibilidad de oferta educativa, lugar referencial de estudiante y preferencia de la familia desde el 02 de mayo al 15 de septiembre de 2023. Además, también se brindará atención mediante operadores telefónicos por cada dirección distrital de lunes a viernes de 08h00 a 17h00. Al finalizar el proceso, se enviará el certificado de matrícula al correo electrónico registrado o podrán consultarlo mediante la misma página. A continuacion te proporcionare el link para el registro de matriculas",
+                    "link_url": "https://juntos.educacion.gob.ec/index.php/costa-extraordinarias/matricula"
+                }
+            ]
+        },
+        {
+            "tag":"gratis",
+            "patterns":["la educacion tiene algun costo","cual es el valor de la matricula","cual es el valor de este", "el proceso de matriculacion es costoso", "el ingreso a una escuela fiscal tiene algun costo"],
+            "responses":["el proceso de este es gratuito en todas sus fases, el ministerio de educacion garantiza el acceso a la educacion"]
+        },
+        {
+            "tag": "procesomatricula",
+            "patterns":["que datos necesito para realizar el proceso de matriculacion", "que datos requiero para el proceso de matriculacion", "datos de matriculacion", "proceso de matriculacion"],
+            "responses":["Es importante que las familias registren estos datos durante el proceso de registro y matrículas dado que facilita el contacto de las instituciones educativas con sus estudiantes. A continuacion el proceso a seguir: para realizar el proceso se requiere el correo electronico del representante, numero de cedula de identidad del representante, numero de cedula de identidad del estudiante y numero de contacto (celular o fijo)"]
+        },
+        {
+            "tag":"consulta",
+            "patterns":["lugar donde esta matriculado el estudiante", "como puedo saber donde esta matriculado el estudiante", "informacion de donde esta matriculado el estudiante"],
+            "responses":[
+                {
+                    "text": "esta se puede obtener via web en donde debes colocar el numero de cedula del estudiante o nombres completos. a continuacion te voy a proporionar el link en donde podras hacer la consulta de este:",
+                    "link_url": "https://juntos.educacion.gob.ec/index.php/consulta-sierra/asignacion"
+                }
+            ]
+        },
+        {
+            "tag":"traslados",
+            "patterns":["como puedo realizar un traslado de institucion fiscal","cual es la ruta de traslado", "como se realiza el traslado de una institucion fiscal", "traslado de institucion fiscal", "como puedo hacer un traslado de institucion"],
+            "responses":[
+                 {
+                "text":"Entre el 28 de marzo y el 9 de abril, se llevarán a cabo los traslados de estudiantes en instituciones educativas fiscales de Costa-Galápagos para el año lectivo 2022-2023. las 24 horas del día. Para aquellos sin acceso a internet, se brindará atención telefónica de lunes a viernes de 08:00 a 17:00 al número 1800 338 222. Al finalizar el proceso, se enviará el certificado de matrícula por correo electrónico o se podrá consultar en la misma página web. Todos los procesos en el sistema educativo fiscal son gratuitos. El Ministerio garantiza el acceso a la educación según la oferta disponible, la ubicación del estudiante y la preferencia familiar. A continuacion te proporcionare un link para que puedas realizar el traslado:",
+                "link_url":"https://juntos.educacion.gob.ec/index.php/costa-traslados/aplicativo"
+            }
+        ]
+        },
+        {
+            "tag": "entr",
+            "patterns":["cual es el horario de entrada", "a que hora entran los estudiantes", "a que hora entran los alumnos", "a que hora entran los chicos", "cual es la hora de entrada de los estudaintes", "cual es el horario a los ques estudiantes entran", "para que hora los estudiantes tienen que ingrsar", "para que hora los alumnos tienen que ingresar", "para que hora los estudiantes suelen ingresar", "para que hora los alumnos suelen ingresar"],
+            "responses":["el horario de ingreso de los estudiantes esta estipulado a las 6:40 am teniendo probabilidad de ingresar hasta las 7:00 am ya que en ese momento se dara inicio al horario de clase (esto puede variar segun eventos, fechas importantes o dispocisiones directas de la autoridad)"]
+        },
+        
+       { "tag": "granja",
+        "patterns": ["Información del colegio eduardo granja gacres", "Qué es el granja?", "Informacion del colegio Granja", "EGG","egg", "Granja", "datos del granja"],
+        "responses":[" El colegio Dr. Eduardo Granja Garcés se encuentra en el cantón Pedro Carbo, Guayas, Ecuador, que ofrece Educación General Básica (EGB) y Bachillerato en régimen escolar de la costa. Tiene jornada matutina y vespertina, con 81 docentes (47 mujeres y 34 varones) y 2,526 estudiantes (1,212 mujeres y 1,314 varones). La escuela es de sostenimiento fiscal, se encuentra en la zona 5 de Guayas, y tiene un edificio propio con acceso terrestre. Su código es 09H04604, y opera bajo la jurisdicción intercultural. "]
+         },
+
+     
+
+      { "tag": "monteverde",
+      "patterns": ["Información del colegio Carlos Monteverde Romero", "Informacion del colegio Monteverde", "Monteverde","CMR", "cmr", "datos del colegio monteverde"],
+      "responses":["La Unidad Educativa Dr. Carlos Monteverde Romero, ubicada en el cantón Pedro Carbo, provincia del Guayas, Ecuador, ofrece educación de Bachillerato en modalidad presencial tanto en jornada matutina como vespertina. La institución, de sostenimiento fiscal, cuenta con aproximadamente 20 docentes y atiende a 391 estudiantes. Está geográficamente situada en la Zona 5 y es un centro educativo urbano con acceso terrestre, disponiendo de su propio edificio."]
+       },
+       
+
+         { "tag": "crespin",
+         "patterns": ["Información del colegio Crespin Cerezo", "Informacion del Crespin ", "Crespin", "datos del colegio Crespin de Cerezo"],
+         "responses":["La Unidad Educativa Crespin Cerezo perteneciente a la provincia de Guayas, en el cantón Pedro Carbo, Ecuador. Ofrece educación regular en los niveles de Inicial, Educación Básica y Bachillerato en modalidad presencial, con jornadas matutina y vespertina. La institución educativa tiene aproximadamente 349 estudiantes y 13 docentes. Además, es de sostenimiento fiscal y opera en un entorno urbano con acceso terrestre, disponiendo de su propio edificio. Su misión es formar ciudadanos íntegros y su visión es ser una institución líder en la formación integral de los estudiantes con excelencia académica y valores éticos que contribuyan al desarrollo sostenible del país."]
+     
+          },
+
+          { "tag": "austriaca",
+          "patterns": ["Información del colegio Austriaco", "Informacion del Austriaco", "Austriaco", "datos del colegio Austriaco"],
+          "responses":["La Unidad Educativa Ecuatoriana Austriaca se encuentra en el cantón Pedro Carbo, provincia de Guayas, Ecuador. Ofrece educación regular en los niveles de Inicial, Educación Básica y Bachillerato en modalidad presencial, con jornada matutina. La institución educativa tiene alrededor de 320 estudiantes y 20 docentes, y su sostenimiento es de carácter particular laico. Se ubica en un entorno urbano con acceso terrestre y dispone de su propio edificio. La misión de la institución es brindar educación humanista e integral, promoviendo valores, conocimientos científicos y tecnología para contribuir al desarrollo sostenible del país. Su visión es ser líder en la formación de estudiantes comprometidos con valores y conocimientos aplicables en su vida diaria."]
+      
+           },
+           { "tag": "amarilis",
+           "patterns": ["Información del colegio ", "Informacion del ", "", "datos del colegio"],
+           "responses":["La Escuela de Educación Básica Amarilis Fuentes Alcivar se encuentra en el cantón Pedro Carbo, provincia de Guayas, Ecuador. Ofrece educación regular en los niveles de Inicial y EGB en modalidad presencial, con jornadas matutina y vespertina. La institución educativa cuenta con aproximadamente 396 estudiantes y 11 docentes, y su sostenimiento es fiscal. Está ubicada en un entorno urbano con acceso terrestre y dispone de su propio edificio."]
+            },
+            { "tag": "pilar",
+           "patterns": ["Información del colegio ", "Informacion del ", "", "datos del colegio"],
+           "responses":["La Escuela de Educación Básica LCDA. PILAR MACIAS DE GAMARA se encuentra en el cantón Pedro Carbo, provincia de Guayas, Ecuador. Ofrece educación regular en los niveles de Inicial y EGB en modalidad presencial, con jornadas matutina y vespertina. La institución educativa cuenta con aproximadamente 11 docentes y 341 estudiantes, y su sostenimiento es fiscal. Está ubicada en un entorno urbano con acceso terrestre y dispone de su propio edificio."]
+            },
+            { "tag": "modesto",
+           "patterns": ["Información del colegio Juan modesto carbo noboa", "Informacion de la modesto ", "MOdesto carbo noboa", "datos del colegio modesto", "MCN", "mcn"],
+           "responses":["La Escuela de Educación Básica Juan Modesto Carbo Noboa se encuentra en el cantón Pedro Carbo, provincia de Guayas, Ecuador. Ofrece educación regular en los niveles de Inicial y EGB en modalidad presencial, con jornadas matutina, vespertina y nocturna. La institución educativa cuenta con aproximadamente 29 docentes y 954 estudiantes, y su sostenimiento es fiscal. Está ubicada en un entorno urbano con acceso terrestre y dispone de su propio edificio."]
+            },
+            { "tag": "señora mercedes",
+           "patterns": ["Información del colegio Señora de las mercedes ", "Informacion de señora de las mercedes ", "SM", "sm", "datos del colegio señora de las mercedes"],
+           "responses":[" La Unidad de Educación Especializada Nuestra Señora de las Mercedes se encuentra en el cantón Pedro Carbo, provincia de Guayas, Ecuador, en la Zona 5, con ubicación geográfica en un entorno urbano. Ofrece educación especial en los niveles de Inicial y EGB, en modalidad presencial y jornada matutina. Con alrededor de 12 docentes y 57 estudiantes, la institución opera en el régimen escolar de la Costa, obteniendo sus recursos de manera particular. El acceso al centro educativo es posible por vía terrestre."]
+            },
+            {"tag": "infdist",
+            "patterns":["a que distrito pertenece el eduardo granja garces", "a que zona pertenece el granja", "a que distrito pertenece el granja", "a que zona distrital pertenece el granja", "a que distrito pertenece el granja", ""],
+            "responses":["El colegio eduardo granja garces pertenece al distrito 09d14 el cual este es parte de la zona 5"]
+            },
+            {
+                "tag":"docentes del granja",
+                "patterns":["lista de docentes del granja", "cuantos profesores tiene el granja","cuantos profesores tiene la unidad educativa eduardo granja garces", "lista de profesores de la unidad educativa eduardo granja garces"],
+                "responses":["la unidad educativa cuenta con varios profesores, a continuacion te dare una lista de estos:"]
+            },
+            {
+            "tag": "jefe distrital",
+            "patterns":[ "¿Quién es el Director distrital  09D14?"],
+             "responses":["El jefe del distrito 09D14 es el MSc. Americo Veintimilla"]
+             },
+            
+             {
+                "tag": "plan amarilis",
+                "patterns": [
+                    "¿Podría proporcionar información detallada sobre el plan de estudios de la institución Amarilis?","amarilis", "Necesito datos detallada sobre el plan de estudios de la unidad educativa Amarilis fuente",
+                    "Me gustaría comprender mejor el enfoque educativo de Amarilis. ¿Podría hablar sobre su plan de estudios?",
+                    "Estoy interesado/a en conocer las etapas educativas y asignaturas ofrecidas en Amarilis. ¿Podría proporcionar más detalles sobre su plan de estudios?",
+                    "¿Podría brindar una descripción detallada de cómo se estructura el plan de estudios en Amarilis?"
+                ],
+                "responses": [
+                    "El sistema educativo de Amarilis abarca varias etapas. La Educación Inicial se centra en el desarrollo integral de los niños mediante estimulación cognitiva y actividades creativas. La Educación Básica consta de tres ciclos, destacando asignaturas fundamentales, introduciendo materias como Inglés y Tecnología, y permitiendo la elección de especialización (Ciencias o Humanidades). El Bachillerato se organiza en tres cursos, con la continuación de materias de especialización, la incorporación de asignaturas como Filosofía y Psicología, y la preparación para el examen nacional. Se subraya la importancia de la Formación Complementaria a través de actividades extracurriculares y proyectos comunitarios."
+                ]
+            },
+            {
+                "tag": "plan eloy alfaro",
+                "patterns": [
+                    "Me gustaría recibir información detallada sobre el plan de estudios de la institución Eloy Alfaro.",
+                    "¿Podría proporcionar detalles sobre cómo se estructura el plan de estudios en Eloy Alfaro?",
+                    "Estoy interesado/a en conocer las etapas educativas y asignaturas ofrecidas en Eloy Alfaro. ¿Podría hablar sobre su plan de estudios?",
+                    "¿Podría brindar una descripción más detallada del enfoque educativo y las asignaturas impartidas en Eloy Alfaro?"
+                ],
+                "responses": [
+                    "El sistema educativo de Eloy Alfaro consta de cinco etapas. La Educación Inicial se enfoca en el desarrollo integral y estimulación en edades tempranas. La Educación Básica incluye asignaturas fundamentales, profundización y especialización. El Bachillerato se divide en tres cursos con continuidad, profundización y preparación para el examen nacional. Además, se destaca la importancia de la Formación Complementaria mediante actividades extracurriculares y proyectos comunitarios."
+                ]
+            },
+            {
+                "tag": "plan señora mercedes",
+                "patterns": [
+                    "¿Podrías ofrecer información detallada sobre el plan de estudios de la institución Nuestra Señora de las Mercedes?",
+                    "Estoy interesado/a en comprender mejor el enfoque educativo de Nuestra Señora de las Mercedes. ¿Podría hablar sobre su plan de estudios?",
+                    "Me gustaría conocer las etapas educativas y asignaturas ofrecidas en Nuestra Señora de las Mercedes. ¿Podría proporcionar más detalles sobre su plan de estudios?",
+                    "¿Podría brindar una descripción detallada de cómo se estructura el plan de estudios en Nuestra Señora de las Mercedes?"
+                ],
+                "responses": [ 
+                    "El sistema educativo de Nuestra Señora de las Mercedes comprende cinco fases. La Educación Inicial se enfoca en el desarrollo integral y la estimulación en edades tempranas. La Educación Básica incluye asignaturas fundamentales, profundización y especialización. El Bachillerato se divide en tres cursos con continuidad, profundización y preparación para el examen nacional. Además, se destaca la importancia de la Formación Complementaria mediante actividades extracurriculares y proyectos comunitarios."
+                ]
+            },
+           
+            {
+                "tag": "plan modesto",
+                "patterns": [
+                    "¿Podría proporcionar información detallada sobre el plan de estudios de la institución Juan Modesto Carbo Noboa?",
+                    "Me gustaría comprender mejor el enfoque educativo de Juan Modesto Carbo Noboa. ¿Podría hablar sobre su plan de estudios?",
+                    "Estoy interesado/a en conocer las etapas educativas y asignaturas ofrecidas en Juan Modesto Carbo Noboa. ¿Podría proporcionar más detalles sobre su plan de estudios?",
+                    "¿Podría brindar una descripción detallada de cómo se estructura el plan de estudios en Juan Modesto Carbo Noboa?"
+                ],
+                "responses": [
+                    "El sistema educativo de Juan Modesto Carbo Noboa se estructura en cinco etapas. La Educación Inicial se centra en el desarrollo integral y la estimulación temprana. La Educación Básica incluye asignaturas fundamentales, profundización y especialización. El Bachillerato, compuesto por tres cursos, continúa con la especialización y se prepara para el examen nacional. También se destaca la Formación Complementaria, que incluye la participación en actividades extracurriculares y proyectos comunitarios."
+                ]
+            },
+            {
+                "tag": "plan pilar macias",
+                "patterns": [
+                    "¿Podría ofrecer información detallada sobre el plan de estudios de la institución LCDA. PILAR MACIAS DE GAMARA?",
+                    "Estoy interesado/a en comprender mejor el enfoque educativo de Pilar Macias de Gamarra. ¿Podría hablar sobre su plan de estudios?",
+                    "Me gustaría conocer las etapas educativas y asignaturas ofrecidas en Pilar Macias de Gamarra. ¿Podría proporcionar más detalles sobre su plan de estudios?",
+                    "¿Podría brindar una descripción detallada de cómo se estructura el plan de estudios en Pilar Macias de Gamarra?"
+                ],
+                "responses": [
+                    "El sistema educativo de la instituciòn LCDA. Pilar Macias de Gamarra abarca cinco fases. La Educación Inicial se enfoca en el desarrollo integral y la estimulación temprana. La Educación Básica incluye asignaturas fundamentales, profundización y especialización. El Bachillerato, estructurado en tres cursos, continúa con la especialización y se prepara para el examen nacional. Además, se destaca la Formación Complementaria, que incluye la participación en actividades extracurriculares y proyectos comunitarios."
+                ]
+            },
+            {
+                "tag": "plan austriaco",
+                "patterns": [
+                    "¿Podría proporcionar información detallada sobre el plan de estudios de la institución Austriaco?",
+                    "Me gustaría comprender mejor el enfoque educativo de Austriaco. ¿Podría hablar sobre su plan de estudios?",
+                    "Estoy interesado/a en conocer las etapas educativas y asignaturas ofrecidas en Austriaco. ¿Podría proporcionar más detalles sobre su plan de estudios?",
+                    "¿Podría brindar una descripción detallada de cómo se estructura el plan de estudios en Austriaco?"
+                ],
+                "responses": [
+                    "El sistema educativo de Austriaco aborda cinco etapas. La Educación Inicial se enfoca en el desarrollo integral y la estimulación temprana. La Educación Básica incluye asignaturas fundamentales, profundización y especialización. El Bachillerato, estructurado en tres cursos, continúa con la especialización y se prepara para el examen nacional. Además, la Formación Complementaria abarca actividades extracurriculares y proyectos comunitarios para una educación integral."
+                ]
+            },
+            {
+                "tag": "plan granja",
+                "patterns": [
+                    "¿Podría proporcionar información detallada sobre el plan de estudios de la Unidad Educativa Dr. Eduardo Granja Garcés?",
+                    "Me gustaría comprender mejor el enfoque educativo de la Unidad Educativa Dr. Eduardo Granja Garcés. ¿Podría hablar sobre su plan de estudios?",
+                    "Estoy interesado/a en conocer las etapas educativas y asignaturas ofrecidas en la Unidad Educativa Dr. Eduardo Granja Garcés. ¿Podría proporcionar más detalles sobre su plan de estudios?",
+                    "¿Podría brindar una descripción detallada de cómo se estructura el plan de estudios en la Unidad Educativa Dr. Eduardo Granja Garcés?"
+                ],
+                "responses": [
+                    "El plan de estudios de la Unidad Educativa Dr. Eduardo Granja Garcés se centra en proporcionar una educación integral. En la Educación General Básica (EGB), los estudiantes consolidan conocimientos en áreas clave y se introducen a la Educación para la Ciudadanía. En el Bachillerato, eligen una especialización, profundizan en áreas específicas, estudian asignaturas como Filosofía y Psicología, y se preparan para el examen nacional. La Formación Complementaria incluye actividades extracurriculares como clubes, deportes y proyectos comunitarios."
+                ]
+            },
+            
+            {
+                "tag": "rector monteverde",
+                "patterns": [
+                    "¿Quién es la persona a cargo de la Unidad Educativa Dr. Carlos Monteverde Romero?",
+                    "¿Podría proporcionar información sobre el director de la institución Carlos Monteverde?",
+                    "Me gustaría saber quién lidera la Unidad Educativa Dr. Carlos Monteverde Romero. ¿Podría decirme quién es?",
+                    "¿Quién desempeña el papel de rector en la institución Carlos Monteverde?"
+                ],
+                "responses": [
+                    "El rector de la Unidad Educativa Dr. Carlos Monteverde Romero es Luis Piguave Terán."
+                ]
+            },
+            {
+                "tag": "rector modesto",
+                "patterns": [
+                    "Quién es la persona a cargo de la Escuela de Educación Básica juan modesto carbo noboa",
+                    "¿Podría proporcionar información sobre el director de la institución Modesto Carbo?",
+                    "Me gustaría saber quién lidera la Escuela de Educación Básica Juan Modesto Carbo Noboa. ¿Podría decirme quién es?",
+                    "¿Quién desempeña el papel de rector en la institución Modesto Carbo?"
+                ],
+                "responses": [
+                    "El rector de la Escuela de Educación Básica Juan Modesto Carbo Noboa es Lcdo. Eduardo Rodríguez Borja."
+                ]
+            },
+            {
+                "tag": "rector amarilis",
+                "patterns": [
+                    "¿Quién es la persona a cargo de la Escuela de Educación Básica Amarilis Fuentes Alcivar?",
+                    "¿Podría proporcionar información sobre el director de la institución Amarilis Fuentes?",
+                    "Me gustaría saber quién lidera la Escuela de Educación Básica Amarilis Fuentes Alcivar. ¿Podría decirme quién es?",
+                    "¿Quién desempeña el papel de rector en la institución Amarilis Fuentes?"
+                ],
+                "responses": [
+                    "El rector de la Escuela de Educación Básica Amarilis Fuentes Alcivar es la Lcda. Johanna Baque."
+                ]
+            },
+            {
+                "tag": "rector austriaco",
+                "patterns": [
+                    "¿Quién es la persona a cargo de la Unidad Educativa Ecuatoriana Austriaca?",
+                    "¿Podría proporcionar información sobre el director de la institución Austriaco?",
+                    "Me gustaría saber quién lidera la Unidad Educativa Ecuatoriana Austriaca. ¿Podría decirme quién es?",
+                    "¿Quién desempeña el papel de rector en la institución Austriaco?"
+                ],
+                "responses": [
+                    "El rector de la Unidad Educativa Ecuatoriana Austriaca es el MSc. Norma Pantaleón."
+                ]
+            },
+            
+            {
+                "tag": "rector granja",
+                "patterns": [
+                    "¿Quién es la persona a cargo de la Unidad Educativa Dr. Eduardo Granja Garcés?",
+                    "¿Podría proporcionar información sobre el rector del Eduardo Granja Garcés?",
+                    "Me gustaría saber quién lidera la Unidad Educativa Dr. Eduardo Granja Garcés. ¿Podría decirme quién es?",
+                    "¿Quién desempeña el papel de rector en el Eduardo Granja Garcés?"
+                ],
+                "responses": [
+                    "El rector de la Unidad Educativa Dr. Eduardo Granja Garcés es MSc. Miguel Peñaherrera Alvarado."
+                ]
+            },
+
+            {"tag": "agradecimiento",
+            "patterns": ["Gracias", "muchas gracias", "te agradezco mucho", "mil gracias"],
+            "responses":["No es nada :)", "Un gusto haberte ayudado", "De nada, espero haberte ayudado", "!Claro¡"]
+            },
+
+            {
+                "tag": "AreaTecnicaAgropecuaria",
+                "patterns": ["¿Cómo se desarrolla el enfoque del bachillerato técnico en el área agropecuaria?",
+        "¿Podría compartir ejemplos específicos de roles profesionales relacionados con el cultivo de peces, moluscos y crustáceos?",
+        "Explique la relevancia de la producción agropecuaria en el marco educativo y laboral.",
+        "¿Cómo se integran los principios de la agroecología dentro del programa de estudios?",
+        "¿Cuáles son las competencias clave que se adquieren en la industrialización de productos alimenticios en este contexto?"
+                  
+                ],
+                "responses": [ "Cultivo de peces, moluscos y custráceos, Produccion agropecuaria, Agroecologia, Conservacion y manejo de recursos naturales, Industrializacion de productos alimenticios"
+                ]
+              },
+               {
+                "tag":  "AreaTecnicaIndustrial",
+                "patterns": ["¿Cuáles son los aspectos esenciales cubiertos en el área industrial del bachillerato técnico?",
+        "¿Podría describir detalladamente la electromecánica automotriz y sus aplicaciones prácticas?",
+        "Proporcione ejemplos específicos de figuras profesionales en la industria de la confección y su contribución al programa educativo.",
+        "¿Cómo se destacan las competencias en mecanizado y construcciones metálicas en la formación industrial?",
+        "¿Cuáles son los enfoques principales en el área de instalaciones, equipos y máquinas eléctricas?"
+                 
+                ],
+                "responses": [ "Electromecanica, Chapisteria, Climatizacion, Electronica de consumo, aplicación de proyectos de construccion, Fabricación y montaje de muebles,  Industria de confecciónConfeccion, Calzado y marroquinería, Mecanizado y Construcciones Metálicas, Instalaciones, Textil, Mecatronica"
+              ]
+              },
+               {
+                "tag": "AreaTecnicaServicios",
+                "patterns": ["¿Cuáles son los aspectos fundamentales cubiertos en el área de servicios del bachillerato técnico?",
+        "Explique la función crítica de la contabilidad en el contexto educativo y profesional.",
+        "¿Podría brindar ejemplos ilustrativos de figuras profesionales en servicios hoteleros y su importancia?",
+        "Comente sobre las habilidades desarrolladas en el área de gestión y desarrollo comunitario."
+                  
+                ],
+                "responses": [
+                 "Comercializacion, Comercio Exterior, Contabilidad, GestionAdministrativa, ServiciosHoteleros, InformacionTuristica, GestionComunitaria"
+                ]
+              },
+              {
+                "tag": "AreaTecnicaTics",
+                "patterns": ["¿Cuáles son los elementos centrales tratados en el área técnica de TICs?",
+        "Analice la importancia de la informática en el bachillerato técnico y su aplicación práctica.",
+        "Proporcione ejemplos concretos de figuras profesionales en dispositivos y conectividad.",
+        "¿Podría hablar sobre las competencias desarrolladas en programación de software?"
+                 
+                ],
+                "responses": [
+                  "Informatica, Dispositivos y conectividad,Programacion de software."
+                ]
+              },
+              {
+                "tag":  "AreaTecnicaArtistica",
+                "patterns": [
+                 "¿Cómo se abordan las disciplinas artísticas dentro del área técnica artística del bachillerato técnico?",
+        "Describa el papel vital de la música en la formación técnica y profesional.",
+        "¿Podría dar ejemplos concretos de figuras profesionales en diseño gráfico y sus responsabilidades?",
+        "Comente sobre las habilidades cultivadas en el área de pintura y cerámica."
+                ],
+                "responses": [
+                "Musica, pintura, escultura, diseño grafico, ebanisteria-tallado."
+                ]
+              },
+      {
+        "tag": "AreaTecnicaDeportiva",
+        "patterns": [
+          "¿Cómo se desarrolla el enfoque del bachillerato técnico en el área deportiva?",
+          "¿Cuáles son las competencias clave que se adquieren en el área técnica deportiva?",
+          "¿Podría compartir ejemplos específicos de roles profesionales en el ámbito de promotor en recreación y deportes?",
+          "Hable sobre la importancia y responsabilidades relacionadas con los deportes de equipo."
+        ],
+        "responses": [
+          "Promotor en Recreación y Deportes (en equipo)"]
+      },
+  
+      {
+        "tag": "culti peces",
+        "patterns": [
+          "Módulo de cultivo de Peces, Moluscos y Crustáceos",
+          "¿Cuáles son los temas abordados en el primer curso del módulo de cultivo de peces, moluscos y crustáceos?",
+          "¿En qué consiste el marisqueo y cuánto tiempo se dedica a este tema en el primer curso?",
+          "¿Qué se estudia en el segundo curso del módulo?",
+          "¿Cuántas horas se asignan a la formación y orientación laboral en el segundo curso?",
+          "¿Cuáles son los parámetros y condiciones de cultivo que se abordan en el segundo curso?",
+          "¿En el tercer curso, cuántas horas se dedican a la formación en centros de trabajo?",
+          "¿Qué temas se tratan en el plan de cultivo durante el tercer curso?",
+          "¿Cuántas horas prácticas se asignan para la formación en centros de trabajo en total?",
+          "¿Cuáles son las áreas específicas de cultivo que se profundizan en el tercer curso?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso incluye 12 horas pedagógicas semanales, abordando instalaciones y equipos de cultivo, técnicas de cultivo de peces (3 horas), moluscos (3 horas), crustáceos (2 horas), marisqueo (3 horas), y cultivos auxiliares (1 hora). En el segundo curso, con las mismas 12 horas semanales, se profundiza en técnicas de cultivo de peces (3 horas), moluscos (3 horas), crustáceos (2 horas), parámetros y condiciones de cultivo (1 hora), dibujo técnico aplicado (2 horas), y formación y orientación laboral (1 hora). Finalmente, en el tercer curso, se asignan 21 horas pedagógicas semanales, abordando técnicas de cultivo de peces (3 horas), crustáceos (3 horas), plan de cultivo (3 horas), dibujo técnico aplicado (2 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas."
+        ]
+      },
+      
+      {
+        "tag": "produ agri",
+        "patterns": [
+          "Módulo de agropecuaria",
+          "¿En qué se enfoca el primer curso del módulo de agropecuaria?",
+          "¿Cuántas horas se dedican a la crianza y manejo de animales mayores en el primer curso?",
+          "¿Qué se estudia en el segundo curso del módulo de agropecuaria?",
+          "¿Cuáles son los temas abordados en el manejo integral de una unidad de producción en el segundo curso?",
+          "¿Cuántas horas se asignan a la agrotecnología en el tercer curso?",
+          "¿En qué consiste la formación y orientación laboral en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "¿Cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?",
+          "En resumen, ¿cuántas horas pedagógicas semanales se asignan en el primer y segundo curso, y cuántas en el tercer curso?"
+        ],
+        "responses": [
+          "En el programa de estudios, el primer curso se enfoca en la crianza y manejo de animales mayores (5 horas), y la crianza y manejo de animales menores (4 horas). En el segundo curso, se continúa con la crianza y manejo de animales menores (5 horas), la producción y propagación de cultivos de ciclo corto a campo abierto y/o bajo cubierta (4 horas), la producción de cultivos perennes y viveros (5 horas), el manejo integral de una unidad de producción (3 horas), y agrotecnología (2 horas). El tercer curso abarca 21 horas pedagógicas semanales e incluye agrotecnología (4 horas), dibujo técnico (4 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+     
+      {
+        "tag": "agroeco",
+        "patterns": [
+          "Módulo de agroecología",
+          "¿En qué se centra el primer curso del módulo de agroecología?",
+          "¿Cuántas horas se dedican a la planificación de la producción agroecológica en el primer curso?",
+          "¿Qué temas se abordan en el segundo curso del módulo de agroecología?",
+          "¿Cuántas horas se asignan a la conservación, industrialización y comercialización en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de agroecología?",
+          "¿Cuántas horas se dedican al dibujo técnico aplicado a la producción agroecológica en el tercer curso?",
+          "¿En qué consiste la formación y orientación laboral en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el programa de estudios, el primer curso se centra en la planificación de la producción agroecológica (4 horas). En el segundo curso, se abordan abonos orgánicos y biocontroladores (2 horas), especies vegetales (4 horas), animales de granja (4 horas), y conservación, industrialización y comercialización (5 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye especies vegetales (6 horas), animales de granja (5 horas), dibujo técnico aplicado a la producción agroecológica (3 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+
+      {
+        "tag": "conservacion y manejo",
+        "patterns": [
+          "Módulo de conservación y manejo de recursos naturales",
+          "¿Cuáles son los temas abordados en el primer curso del módulo de conservación y manejo de recursos naturales?",
+          "¿Cuántas horas se dedican a la calidad ambiental de los recursos naturales en el primer curso?",
+          "En el segundo curso, ¿qué contenidos se estudian además de la conservación de la biodiversidad y ecosistemas y el manejo de recursos naturales?",
+          "¿Cuántas horas se asignan a proyectos de educación e interpretación ambiental en el segundo curso?",
+          "¿Cuáles son los temas abordados en el tercer curso del módulo de conservación y manejo de recursos naturales?",
+          "¿Cuántas horas se dedican a la participación comunitaria en el tercer curso?",
+          "¿En qué consiste la formación y orientación laboral en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso aborda la conservación de la biodiversidad y ecosistemas (3 horas), el manejo de recursos naturales (3 horas), y la calidad ambiental de los recursos naturales (2 horas). En el segundo curso, se continúa con la conservación de la biodiversidad y ecosistemas (3 horas), el manejo de recursos naturales (3 horas), la calidad ambiental de los recursos naturales (2 horas), proyectos de educación e interpretación ambiental (2 horas), y ecología, desarrollo sostenible y sustentable (2 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, se incluyen la conservación de la biodiversidad y ecosistemas (4 horas), el manejo de recursos naturales (4 horas), proyectos de educación e interpretación ambiental (4 horas), ecología, desarrollo sostenible y sustentable (2 horas), participación comunitaria (6 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+
+      {
+        "tag": "industri ali",
+        "patterns": [
+          "Módulo de industrialización de productos alimenticios",
+          "¿En qué se enfoca el primer curso del módulo de industrialización de productos alimenticios?",
+          "¿Cuántas horas se dedican al estudio de nutrientes y métodos de conservación en el primer curso?",
+          "¿Cuáles son los temas abordados en el segundo curso del módulo?",
+          "¿Cuántas horas se asignan al procesamiento de cárnicos en el segundo curso?",
+          "En el tercer curso, ¿cuáles son los contenidos que se estudian además del procesamiento de alimentos?",
+          "¿Cuántas horas se dedican a la formación y orientación laboral en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el programa de estudios, el primer curso se enfoca en nutrientes y métodos de conservación (6 horas). En el segundo curso, se abordan procesamiento de cárnicos (4 horas), procesamiento de lácteos (4 horas), procesamiento de frutas y vegetales (4 horas), y gestión de calidad y seguridad alimentaria (6 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye procesamiento de cárnicos (7 horas), procesamiento de lácteos (7 horas), procesamiento de frutas y vegetales (6 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "electromecanica auto",
+        "patterns": [
+          "Módulo de electromecánica automotriz",
+          "¿Cuáles son los temas abordados en el primer curso del módulo de electromecánica automotriz?",
+          "¿Cuántas horas se dedican a sistemas eléctricos y electrónicos en el primer curso?",
+          "En el segundo curso, ¿en qué se profundiza además de sistemas eléctricos y electrónicos?",
+          "¿Cuántas horas se asignan a electricidad, electromagnetismo y electrónica en el segundo curso?",
+          "En el tercer curso, ¿cuáles son los contenidos que se estudian además de motores de combustión interna y tren de rodaje?",
+          "¿Cuántas horas se dedican a dibujo técnico aplicado a electromecánica automotriz en el tercer curso?",
+          "¿En qué consiste la formación y orientación laboral en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso aborda sistemas eléctricos y electrónicos (2 horas), motores de combustión interna (2 horas), tren de rodaje (4 horas), sistemas de seguridad y confortabilidad (3 horas), y metalmecánica (4 horas). En el segundo curso, se profundiza en sistemas eléctricos y electrónicos (7 horas), motores de combustión interna (7 horas), tren de rodaje (4 horas), y se añade electricidad, electromagnetismo y electrónica (4 horas). En el tercer curso, con un total de 21 horas pedagógicas semanales, se abordan motores de combustión interna (7 horas), tren de rodaje (3 horas), sistemas de seguridad y confortabilidad (3 horas), metalmecánica (4 horas), electricidad, electromagnetismo y electrónica (2 horas), dibujo técnico aplicado a electromecánica automotriz (2 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+
+      {
+        "tag": "chapisteria y pintura",
+        "patterns": [
+          "Módulo de chapistería y pintura",
+          "¿En qué se centra el primer curso del módulo de chapistería y pintura?",
+          "¿Cuántas horas se dedican al mantenimiento y reparación de chasis en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además del mantenimiento y reparación de la carrocería?",
+          "¿Cuántas horas se asignan al pintado del vehículo automotor en el segundo curso?",
+          "¿Qué tareas complementarias se incluyen en el tercer curso del módulo?",
+          "¿Cuántas horas se dedican a formación y orientación laboral en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en mantenimiento y reparación de chasis (7 horas) y pintado del vehículo automotor (5 horas). En el segundo curso, se abordan mantenimiento y reparación de la carrocería (9 horas) y pintado del vehículo automotor (7 horas). El tercer curso incluye tareas complementarias de apoyo a procesos de chapistería y pintura (10 horas), formación y orientación laboral (2 horas), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+
+      {
+        "tag": "climatización",
+        "patterns": [
+          "Módulo de climatización",
+          "¿En qué se enfoca el primer curso del módulo de climatización?",
+          "¿Cuántas horas se dedican a sistemas de refrigeración en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de sistemas de aire acondicionado y redes de servicio?",
+          "¿Cuántas horas se asignan a automatismos en sistemas de climatización en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de climatización?",
+          "¿Cuántas horas se dedican a formación y orientación laboral en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se enfoca en sistemas de refrigeración (3 horas), sistemas de calefacción (5 horas), sistemas de aire acondicionado y redes de servicio de agua, gases y combustibles (3 horas). Además, aborda operaciones de mecanizado en instalaciones de climatización (3 horas) y electrotecnia aplicada a sistemas de climatización (2 horas). En el segundo curso, se continúa con sistemas de refrigeración (3 horas), sistemas de aire acondicionado y redes de servicio de agua, gases y combustibles (2 horas), operaciones de mecanizado en instalaciones de climatización (2 horas), electrotecnia aplicada a sistemas de climatización (2 horas), y automatismos en sistemas de climatización (3 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye sistemas de refrigeración (5 horas), sistemas de aire acondicionado y redes de servicio de agua, gases y combustibles (3 horas), operaciones de mecanizado en instalaciones de climatización (2 horas), electrotecnia aplicada a sistemas de climatización (2 horas), automatismos en sistemas de climatización (3 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "electro de consumo",
+        "patterns": [
+          "Módulo de electrónica de consumo",
+          "¿En qué se centra el primer curso del módulo de electrónica de consumo?",
+          "¿Cuántas horas se dedican a equipos y sistemas electrónicos de audio y video en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de equipos y sistemas microinformáticos?",
+          "¿Cuántas horas se asignan a electrónica digital en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de electrónica de consumo?",
+          "¿Cuántas horas se dedican a formación y orientación laboral en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en equipos y sistemas electrónicos de audio y video (4 horas), equipos y sistemas microinformáticos (3 horas), equipos y sistemas microprocesados (3 horas), equipos y sistemas de telefonía (4 horas), y electrónica general (4 horas). En el segundo curso, se abordan equipos y sistemas microinformáticos (5 horas), equipos y sistemas microprocesados (7 horas), electrónica digital (4 horas), y instalaciones eléctricas básicas (3 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye equipos y sistemas microprocesados (7 horas), electrónica digital (2 horas), instalaciones eléctricas básicas (3 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+
+      {
+        "tag": "apli proyectos y cons",
+        "patterns": [
+          "Módulo de aplicación de proyectos de construcción",
+          "¿En qué se enfoca el primer curso del módulo de aplicación de proyectos de construcción?",
+          "¿Cuántas horas se dedican a la gestión administrativa en la construcción en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de la construcción de elementos estructurales en edificaciones?",
+          "¿Cuántas horas se asignan a trabajos de mampostería, pisos, revestimientos y recubrimientos en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de aplicación de proyectos de construcción?",
+          "¿Cuántas horas se dedican a formación y orientación laboral en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se enfoca en la gestión administrativa en la construcción (4 horas) y la construcción de elementos estructurales en edificaciones (5 horas). En el segundo curso, se abordan la construcción de elementos estructurales en edificaciones (3 horas), trabajos de mampostería, pisos, revestimientos y recubrimientos (2 horas), y la instalación de prefabricados para la construcción (5 horas). El tercer curso incluye trabajos de mampostería, pisos, revestimientos y recubrimientos (7 horas), la instalación de prefabricados para la construcción (5 horas), formación y orientación laboral (2 horas), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+
+      {
+        "tag": "fabri muebles mon",
+        "patterns": [
+          "Módulo de fabricación y montaje de muebles",
+          "¿En qué se centra el primer curso del módulo de fabricación y montaje de muebles?",
+          "¿Cuántas horas se dedican a la definición de soluciones constructivas e instalación de muebles en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además del mecanizado básico e industrial de muebles?",
+          "¿Cuántas horas se asignan al dibujo técnico aplicado en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de fabricación y montaje de muebles?",
+          "¿Cuántas horas se dedican a la seguridad y salud laboral en la industria del mueble en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en la definición de soluciones constructivas e instalación de muebles (3 horas), el control de almacén en industrias de fabricación de carpintería y mecanizado básico e industrial de muebles (2 horas). En el segundo curso, se abordan el mecanizado básico e industrial de muebles (3 horas), el montaje industrial e instalación de muebles (5 horas), el acabado industrial de muebles (5 horas), dibujo técnico aplicado (2 horas), y materiales y productos en industrias de la madera y el mueble (2 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye el montaje industrial e instalación de muebles (5 horas), el acabado industrial de muebles (5 horas), dibujo técnico aplicado (2 horas), materiales y productos en industrias de la madera y el mueble (2 horas), la seguridad y salud laboral en la industria del mueble (2 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+
+      {
+        "tag": "industria de la confección",
+        "patterns": [
+          "Módulo de industria de la confección",
+          "¿En qué se enfoca el primer curso del módulo de industria de la confección?",
+          "¿Cuántas horas se dedican a procesos, técnicas e industrialización de patrones de prendas y complementos del vestir en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de dibujo técnico aplicado?",
+          "¿Cuántas horas se asignan a formación y orientación laboral en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de industria de la confección?",
+          "¿Cuántas horas se dedican a formación y orientación laboral en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se enfoca en procesos, técnicas e industrialización de patrones de prendas y complementos del vestir (3 horas), técnicas de corte de tejidos y pieles (3 horas), técnicas de ensamblaje (4 horas), acabados de confección (4 horas), productos y procesos de confección (2 horas), y materiales textiles, piel y cuero (3 horas). En el segundo curso, se abordan técnicas de corte de tejidos y pieles (3 horas), técnicas de ensamblaje (4 horas), productos y procesos de confección (2 horas), materiales textiles, piel y cuero (3 horas), dibujo técnico aplicado (2 horas), y formación y orientación laboral (1 hora). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye procesos, técnicas e industrialización de patrones de prendas y complementos del vestir (6 horas), técnicas de ensamblaje (6 horas), acabados de confección (4 horas), dibujo técnico aplicado (2 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+
+      {
+        "tag": "CALZADO Y MARROQUINERÍA",
+        "patterns": [
+          "Módulo de calzado y marroquineria",
+          "¿En qué se centra el primer curso del módulo de calzado y marroquinería?",
+          "¿Cuántas horas se dedican a procesos, técnicas e industrialización de patrones de calzado y artículos de marroquinería en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de productos y procesos de calzado y marroquinería?",
+          "¿Cuántas horas se asignan a productos y procesos de calzado y marroquinería en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de calzado y marroquinería?",
+          "¿Cuántas horas se dedican a formación y orientación laboral en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en procesos, técnicas e industrialización de patrones de calzado y artículos de marroquinería (4 horas), técnicas de corte de tejidos y pieles (4 horas), técnicas de ensamblaje (4 horas), técnicas de montado y acabado de calzado y marroquinería (4 horas), anatomía básica del pie (2 horas), materiales textiles, piel y cuero (2 horas), y dibujo técnico aplicado (2 horas). En el segundo curso, se abordan técnicas de corte de tejidos y pieles (4 horas), técnicas de ensamblaje (6 horas), anatomía básica del pie (2 horas), materiales textiles, piel y cuero (2 horas), dibujo técnico aplicado (2 horas), y productos y procesos de calzado y marroquinería (3 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye procesos, técnicas e industrialización de patrones de calzado y artículos de marroquinería (4 horas), técnicas de ensamblaje (6 horas), técnicas de montado y acabado de calzado y marroquinería (4 horas), productos y procesos de calzado y marroquinería (3 horas), formación y orientación laboral (2 horas), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+
+      {
+        "tag": "MECANIZADO Y CONSTRUCCIONES METÁLICAS",
+        "patterns": [
+          "Módulo de mecanizado y construcciones metalicas",
+          "¿En qué se enfoca el primer curso del módulo de mecanizado y construcciones metálicas?",
+          "¿Cuántas horas se dedican a operaciones metalmecánicas básicas en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de mecanizado por arranque de viruta?",
+          "¿Cuántas horas se asignan a seguridad en las industrias de fabricación mecánica en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de mecanizado y construcciones metálicas?",
+          "¿Cuántas horas se dedican a formación y orientación laboral en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se enfoca en operaciones metalmecánicas básicas (4 horas). En el segundo curso, se abordan mecanizado por arranque de viruta (5 horas), soldadura (4 horas), dibujo técnico mecánico (3 horas), fundamentos de metrología y montaje mecánico (2 horas), y seguridad en las industrias de fabricación mecánica (3 horas). En el tercer curso, con un total de 21 horas pedagógicas semanales, se incluyen mecanizado por arranque de viruta (8 horas), soldadura (8 horas), dibujo técnico mecánico (2 horas), fundamentos de metrología y montaje mecánico (2 horas), seguridad en las industrias de fabricación mecánica (3 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+
+      {
+        "tag": "INSTALACIONES, EQUIPOS Y MÁQUINAS ELÉCTRICAS",
+        "patterns": [
+          "Módulo de instalaciones de equipos y maquinas electricas",
+          "¿En qué se centra el primer curso del módulo de instalaciones de equipos y máquinas eléctricas?",
+          "¿Cuántas horas se dedican a la instalación de servicios especiales en edificios en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además del inicio del estudio de la electrotecnia?",
+          "¿Cuántas horas se asignan a mantenimiento de máquinas eléctricas en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de instalaciones de equipos y máquinas eléctricas?",
+          "¿Cuántas horas se dedican a formación y orientación laboral en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en la instalación de servicios especiales en edificios (6 horas). En el segundo curso, se abordan instalaciones automatizadas eléctricas (5 horas), instalaciones de enlace y centros de transformación (4 horas), y mantenimiento de máquinas eléctricas (4 horas). Además, se inicia el estudio de la electrotecnia (5 horas). En el tercer curso, se continúa con electrotecnia (3 horas), instalaciones eléctricas de interior (6 horas), automatismos y tableros eléctricos (4 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": " INDUSTRIA TEXTIL",
+        "patterns": [
+          "Módulo de industria textil",
+          "¿En qué se enfoca el primer curso del módulo de industria textil?",
+          "¿Cuántas horas se dedican a tecnología textil básica en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de maquinaria para la industria textil?",
+          "¿Cuántas horas se asignan a química aplicada a la industria textil en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de industria textil?",
+          "¿Cuántas horas se dedican a seguridad en la industria textil en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se enfoca en tecnología textil básica (4 horas). En el segundo curso, se abordan maquinaria para la industria textil (3 horas), producción de hilatura, tejeduría y telas no tejidas (4 horas), química aplicada a la industria textil (3 horas), y acabados textiles (2 horas). En el tercer curso, con un total de 21 horas pedagógicas semanales, se incluyen producción de hilatura, tejeduría y telas no tejidas (9 horas), química aplicada a la industria textil (3 horas), acabados textiles (7 horas), seguridad en la industria textil (2 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "MECATRÓNICA",
+        "patterns": [
+          "Módulo de mecatronica",
+          "¿En qué se centra el primer curso del módulo de mecatrónica?",
+          "¿Cuántas horas se dedican a procesos de manufactura y CNC en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de sistemas de automatización y control?",
+          "¿Cuántas horas se asignan a electrotecnia y electrónica general en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de mecatrónica?",
+          "¿Cuántas horas se dedican a interfaces de control en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en procesos de manufactura y CNC (5 horas). En el segundo curso, se abordan sistemas de automatización y control (3 horas), sistemas microcontrolados (4 horas), sistemas con servomecanismos (4 horas), electrotecnia y electrónica general (5 horas), electrónica digital (3 horas), interfaces de control (2 horas), y dibujo técnico aplicado (2 horas). En el tercer curso, con un total de 21 horas pedagógicas semanales, se incluyen sistemas de automatización y control (4 horas), sistemas microcontrolados (4 horas), sistemas con servomecanismos (4 horas), electrónica digital (3 horas), interfaces de control (2 horas), dibujo técnico aplicado (2 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": " ELECTROMECÁNICA",
+        "patterns": [
+          "Módulo de electromecanica",
+          "¿En qué se enfoca el primer curso del módulo de electromecánica?",
+          "¿Cuántas horas se dedican a la electricidad básica en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de máquinas eléctricas e instalaciones eléctricas?",
+          "¿Cuántas horas se asignan a seguridad y salud laboral en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de electromecánica?",
+          "¿Cuántas horas se dedican a soldadura eléctrica y autógena en el tercer curso?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el programa de estudios, el primer curso se enfoca en la práctica de la tecnología, abordando la electricidad básica (3 horas). En el segundo curso, se continúa con la práctica de la tecnología, incluyendo máquinas eléctricas e instalaciones eléctricas (4 horas), así como soldadura eléctrica y autógena (3 horas). Además, se introducen contenidos de seguridad y salud laboral (2 horas), dibujo técnico aplicado (1 hora), mantenimiento de máquinas (6 horas), organización del taller (2 horas), investigación y elaboración del proyecto de la FIP (2 horas), y formación y orientación laboral (2 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye práctica de la tecnología, manteniendo el enfoque en la electricidad y máquinas eléctricas (3 horas), soldadura eléctrica y autógena (5 horas), investigación y elaboración del proyecto de la FIP (4 horas), formación y orientación laboral (2 horas), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": " COMERCIALIZACION Y VENTAS",
+        "patterns": [
+          "Módulo de comercialización y ventas",
+          "¿En qué se centra el primer curso del módulo de comercialización y ventas?",
+          "¿Cuántas horas se dedican a operaciones de almacenaje en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de operaciones de venta?",
+          "¿Cuántas horas se asignan a animación en el punto de venta en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de comercialización y ventas?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en operaciones de almacenaje (3 horas). En el segundo curso, se abordan operaciones de venta (3 horas), animación en el punto de venta (4 horas), dibujo técnico aplicado a comercialización y ventas (3 horas), informática aplicada a comercialización y ventas (2 horas), inglés técnico aplicado a comercialización y ventas (3 horas), y formación y orientación laboral (2 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye operaciones de venta (3 horas), animación en el punto de venta (4 horas), dibujo técnico aplicado a comercialización y ventas (3 horas), informática aplicada a comercialización y ventas (2 horas), inglés técnico aplicado a comercialización y ventas (3 horas), formación y orientación laboral (2 horas), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      
+      {
+        "tag": "COMERCIO EXTERIOR",
+        "patterns": [
+          "Módulo de comercio exterior",
+          "¿En qué se enfoca el primer curso del módulo de comercio exterior?",
+          "¿Cuántas horas se dedican a gestión administrativa de las operaciones de comercio en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de operaciones de compraventa?",
+          "¿Cuántas horas se asignan a operaciones de logística en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de comercio exterior?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se enfoca en gestión administrativa de las operaciones de comercio (4 horas). En el segundo curso, se abordan operaciones de compraventa (3 horas), operaciones de logística (3 horas), informática aplicada al comercio exterior (2 horas), inglés técnico aplicado al comercio exterior (2 horas), y entorno micro y macro del comercio exterior (3 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye gestión administrativa de las operaciones de comercio (4 horas), operaciones de compraventa (3 horas), operaciones de logística (5 horas), informática aplicada al comercio exterior (2 horas), inglés técnico aplicado al comercio exterior (2 horas), entorno micro y macro del comercio exterior (3 horas), formación y orientación laboral (2 horas), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "CONTABILIDAD",
+        "patterns": [
+          "Módulo de contabilidad",
+          "¿En qué se enfoca el primer curso del módulo de contabilidad?",
+          "¿Cuántas horas se dedican a contabilidad general en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de contabilidad general?",
+          "¿Cuántas horas se asignan a contabilidad bancaria en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de contabilidad?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se enfoca en contabilidad general (6 horas). En el segundo curso, se abordan contabilidad general (6 horas), contabilidad de costos (5 horas), contabilidad bancaria (4 horas), tributación (3 horas), gestión del talento humano (2 horas), y paquetes contables y tributarios (3 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye contabilidad general (6 horas), contabilidad de costos (5 horas), tributación (3 horas), gestión del talento humano (2 horas), paquetes contables y tributarios (3 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "GESTIÓN ADMINISTRATIVA",
+        "patterns": [
+          "Módulo de gestión administrativa",
+          "¿En qué se centra el primer curso del módulo de gestión administrativa?",
+          "¿Cuántas horas se dedican a comunicación en la gestión administrativa en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de gestión documental y archivo?",
+          "¿Cuántas horas se asignan a contabilidad básica en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de gestión administrativa?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en comunicación en la gestión administrativa (5 horas). En el segundo curso, se abordan gestión documental y archivo (3 horas), procesos de gestión administrativa (3 horas), contabilidad básica (3 horas), informática aplicada a la gestión administrativa (4 horas), bases del derecho (2 horas), e inglés técnico aplicado a la gestión administrativa (3 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye comunicación en la gestión administrativa (4 horas), contabilidad básica (2 horas), informática aplicada a la gestión administrativa (2 horas), bases del derecho (2 horas), inglés técnico aplicado a la gestión administrativa (3 horas), formación y orientación laboral (2 horas), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "SERVICIOS HOTELEROS",
+        "patterns": [
+          "Módulo de servicios hoteleros",
+          "¿En qué se enfoca el primer curso del módulo de servicios hoteleros?",
+          "¿Cuántas horas se dedican a servicios hoteleros de alojamiento en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de adquisiciones y almacenamiento de materia prima?",
+          "¿Cuántas horas se asignan a panadería y pastelería en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de servicios hoteleros?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se enfoca en servicios hoteleros de alojamiento (2 horas). En el segundo curso, se abordan adquisiciones y almacenamiento de materia prima (3 horas), preparaciones culinarias básicas (3 horas), producción culinaria (4 horas), servicio de alimentos y bebidas (2 horas), panadería y pastelería (4 horas), limpieza y sanitización (2 horas), e inglés técnico aplicado (2 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye servicios hoteleros de alojamiento (3 horas), producción culinaria (8 horas), servicio de alimentos y bebidas (4 horas), panadería y pastelería (3 horas), limpieza y sanitización (2 horas), inglés técnico aplicado (2 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "VENTAS E INFORMACIÓN TURÍSTICA",
+        "patterns": [
+          "Módulo de ventas e información turística",
+          "¿En qué se centra el primer curso del módulo de ventas e información turística?",
+          "¿Cuántas horas se dedican a la venta de paquetes y servicios turísticos en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de gestión de servicios de información turística?",
+          "¿Cuántas horas se asignan a organización administrativa-contable en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de ventas e información turística?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en la venta de paquetes y servicios turísticos (3 horas). En el segundo curso, se abordan gestión de servicios de información turística (5 horas), asistencia y mediación de grupos (3 horas), sistema y normativa turística (3 horas), destinos y paquetes turísticos nacionales e internacionales (5 horas), organización administrativa-contable (4 horas), inglés aplicado al turismo (2 horas), y las TIC en la gestión de las agencias de viajes (3 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye venta de paquetes y servicios turísticos (3 horas), gestión de servicios de información turística (5 horas), asistencia y mediación de grupos (2 horas), sistema y normativa turística (3 horas), destinos y paquetes turísticos nacionales e internacionales (5 horas), organización administrativa-contable (4 horas), inglés aplicado al turismo (2 horas), las TIC en la gestión de las agencias de viajes (2 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "GESTIÓN Y DESARROLLO COMUNITARIO",
+        "patterns": [
+          "Módulo de gestión y desarrollo comunitario",
+          "¿En qué se enfoca el primer curso del módulo de gestión y desarrollo comunitario?",
+          "¿Cuántas horas se dedican al diagnóstico comunitario en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de diseño de proyectos?",
+          "¿Cuántas horas se asignan a gestión de proyectos en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de gestión y desarrollo comunitario?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se enfoca en diagnóstico comunitario (6 horas). En el segundo curso, se abordan diseño de proyectos (5 horas), gestión de proyectos (5 horas), organización y gestión comunitaria (4 horas), y recursos naturales y saneamiento ambiental (3 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye organización y gestión comunitaria (5 horas), recursos naturales y saneamiento ambiental (4 horas), formación y orientación laboral (2 horas), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "INFORMÁTICA",
+        "patterns": [
+          "Módulo de informática",
+          "¿En qué se centra el primer curso del módulo de informática?",
+          "¿Cuántas horas se dedican a aplicaciones ofimáticas locales y en línea en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de sistemas operativos y redes?",
+          "¿Cuántas horas se asignan a soporte técnico en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de informática?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en aplicaciones ofimáticas locales y en línea (3 horas). En el segundo curso, se abordan sistemas operativos y redes (3 horas), programación y bases de datos (4 horas), soporte técnico (2 horas), y diseño y desarrollo web (5 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye aplicaciones ofimáticas locales y en línea (2 horas), sistemas operativos y redes (4 horas), programación y bases de datos (5 horas), soporte técnico (4 horas), diseño y desarrollo web (5 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "DISPOSITIVOS Y CONECTIVIDAD",
+        "patterns": [
+          "Módulo de dispositivos y conectividad",
+          "¿En qué se centra el primer curso del módulo de dispositivos y conectividad?",
+          "¿Cuántas horas se dedican a dispositivos inteligentes y periféricos en el primer curso?",
+          "En el segundo curso, ¿cuáles son los temas abordados además de redes de datos?",
+          "¿Cuántas horas se asignan a seguridad de información en el segundo curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de dispositivos y conectividad?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en dispositivos inteligentes y periféricos (5 horas). En el segundo curso, se abordan redes de datos (4 horas), cableado estructurado (3 horas), y seguridad de información (3 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye dispositivos inteligentes y periféricos (5 horas), redes de datos (5 horas), cableado estructurado (5 horas), seguridad de información (5 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "PROGRAMACIÓN DE SOFTWARE",
+        "patterns": [
+          "Módulo de programación de software",
+          "¿En qué se enfoca el primer curso del módulo de programación de software?",
+          "¿Cuántas horas se dedican a programación orientada a objetos en el segundo curso?",
+          "¿Cuáles son los temas abordados en el segundo curso además de programación orientada a objetos?",
+          "¿Cuántas horas se asignan a programación móvil en el tercer curso?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de programación de software?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se enfoca en programación en lenguajes estructurados (10 horas). En el segundo curso, se abordan programación orientada a objetos (6 horas), análisis y diseño de base de datos (3 horas), diseño web (3 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye programación orientada a objetos (4 horas), análisis y diseño de base de datos (6 horas), diseño web (5 horas), programación móvil (6 horas), formación y orientación laboral (2 horas), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "MÚSICA",
+        "patterns": [
+          "Módulo de música",
+          "¿En qué se centra el primer curso del módulo de música?",
+          "¿Cuáles son los contenidos del segundo curso del módulo de música?",
+          "¿Cuántas horas se dedican a informática musical en el segundo curso?",
+          "En el tercer curso, ¿cuántas horas se asignan a ensambles y orquestación?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de música?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en el instrumento principal (3 horas), ensambles (3 horas), orquestación (2 horas), formación corporal (2 horas), historia de la música (2 horas), e instrumento de acompañamiento (2 horas). En el segundo curso, se abordan el instrumento principal (3 horas), ensambles (3 horas), orquestación (2 horas), formación corporal (2 horas), informática musical (3 horas), historia de la música (2 horas), e instrumento de acompañamiento (2 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye el instrumento principal (4 horas), ensambles (3 horas), orquestación (3 horas), formación corporal (2 horas), informática musical (3 horas), historia de la música (2 horas), instrumento de acompañamiento (3 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "PINTURA Y CERÁMICA",
+        "patterns": [
+          "Módulo de pintura y cerámica",
+          "¿En qué se centra el primer curso del módulo de pintura y cerámica?",
+          "¿Cuáles son los contenidos del segundo curso del módulo de pintura y cerámica?",
+          "¿Cuántas horas se dedican a cerámica en el tercer curso?",
+          "En el tercer curso, ¿cuántas horas se asignan a formación y orientación laboral?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de pintura y cerámica?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en dibujo artístico (5 horas), historia del arte (3 horas), fundamentos para la creación artística (4 horas). En el segundo curso, se abordan dibujo artístico (3 horas), cerámica (4 horas), pintura (4 horas), gestión artística (1 hora), y apreciación artística (1 hora). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye cerámica (7 horas), pintura (7 horas), gestión artística (1 hora), apreciación artística (1 hora), formación y orientación laboral (2 horas), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "ESCULTURA Y ARTE GRÁFICO",
+        "patterns": [
+          "Módulo de escultura y arte gráfico",
+          "¿En qué se centra el primer curso del módulo de escultura y arte gráfico?",
+          "¿Cuáles son los contenidos del segundo curso del módulo de escultura y arte gráfico?",
+          "¿Cuántas horas se dedican a escultura en el tercer curso?",
+          "En el tercer curso, ¿cuántas horas se asignan a formación y orientación laboral?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de escultura y arte gráfico?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se enfoca en dibujo artístico (5 horas), historia del arte (3 horas), y fundamentos para la creación artística (4 horas). En el segundo curso, se abordan dibujo artístico (3 horas), escultura (4 horas), arte gráfico (4 horas), gestión artística (1 hora), y apreciación artística (1 hora). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye escultura (8 horas), arte gráfico (8 horas), gestión artística (1 hora), apreciación artística (1 hora), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "DISEÑO GRÁFICO",
+        "patterns": [
+          "Módulo de diseño gráfico",
+          "¿En qué se enfoca el primer curso del módulo de diseño gráfico?",
+          "¿Cuáles son los contenidos del segundo curso del módulo de diseño gráfico?",
+          "En el tercer curso, ¿cuántas horas se dedican a arte final?",
+          "En el tercer curso, ¿cuántas horas se asignan a formación y orientación laboral?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de diseño gráfico?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se enfoca en procesos del diseño gráfico (3 horas), elaboración del arte (3 horas), diseño asistido por el ordenador (DAO) (3 horas), dibujo técnico aplicado (4 horas), y historia del arte gráfico (2 horas). En el segundo curso, se abordan procesos del diseño gráfico (3 horas), elaboración del arte (4 horas), diseño asistido por el ordenador (DAO) (3 horas), dibujo técnico aplicado (2 horas), y historia del arte gráfico (1 hora). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye diseño asistido por el ordenador (DAO) (5 horas), arte final (5 horas), dibujo técnico aplicado (3 horas), historia del arte gráfico (1 hora), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "EBANISTERÍA-TALLADO Y ESCULTURA",
+        "patterns": [
+          "Módulo de ebanisteria-tallado y escultura",
+          "¿En qué se centra el primer curso del módulo de ebanistería, tallado y escultura?",
+          "¿Cuáles son los contenidos del segundo curso del módulo de ebanistería, tallado y escultura?",
+          "En el tercer curso, ¿cuántas horas se dedican a construcción de muebles tallados en madera?",
+          "En el tercer curso, ¿cuántas horas se asignan a modelado y escultura?",
+          "¿Cuáles son los contenidos del tercer curso del módulo de ebanistería, tallado y escultura?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en construcción de muebles tallados en madera (3 horas), modelado y escultura (3 horas), tecnología de la madera (1 hora), historia del arte (2 horas), dibujo técnico aplicado (1 hora), dibujo artístico (2 horas). En el segundo curso, se abordan construcción de muebles tallados en madera (3 horas), modelado y escultura (3 horas), tecnología de la madera (2 horas), historia del arte (2 horas), dibujo técnico aplicado (2 horas), y dibujo artístico (2 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye construcción de muebles tallados en madera (7 horas), modelado y escultura (5 horas), tecnología de la madera (1 hora), historia del arte (2 horas), dibujo técnico aplicado (3 horas), dibujo artístico (3 horas), formación y orientación laboral (1 hora), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "PROMOTOR EN RECREACIÓN Y DEPORTES",
+        "patterns": [
+          "Módulo de promotor en recreación y deportes",
+          "¿En qué se centra el primer curso del módulo de promotor en recreación y deportes?",
+          "¿Cuáles son los temas abordados en el segundo curso del módulo de promotor en recreación y deportes?",
+          "En el tercer curso, ¿cuántas horas se dedican a actividades recreativas?",
+          "En el tercer curso, ¿cuántas horas se asignan a formación y orientación laboral?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el tercer curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en actividades recreativas (3 horas), planificación y evaluación en recreación y deportes (2 horas), entrenamiento deportivo (5 horas), organización de eventos recreativos y/o deportivos (3 horas), bases fisiológicas (2 horas), manejo de grupos (2 horas), seguridad y primeros auxilios (2 horas), y recursos recreativos y deportivos (3 horas). En el segundo curso, se abordan actividades recreativas (3 horas), planificación y evaluación en recreación y deportes (2 horas), bases fisiológicas (2 horas), seguridad y primeros auxilios (2 horas), y recursos recreativos y deportivos (3 horas). El tercer curso, con un total de 21 horas pedagógicas semanales, incluye actividades recreativas (3 horas), planificación y evaluación en recreación y deportes (2 horas), bases fisiológicas (3 horas), seguridad y primeros auxilios (2 horas), recursos recreativos y deportivos (3 horas), formación y orientación laboral (3 horas), y formación en centros de trabajo con un total de 160 horas prácticas. En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+      {
+        "tag": "DEPORTES DE EQUIPO",
+        "patterns": [
+          "Módulo de deportes de equipo",
+          "¿En qué se centra el primer curso del módulo de deportes de equipo?",
+          "¿Cuáles son los temas abordados en el segundo curso del módulo de deportes de equipo?",
+          "En el tercer curso, ¿cuántas horas se dedican a entrenamiento deportivo?",
+          "En el tercer curso, ¿cuántas horas se asignan a formación y orientación laboral?",
+          "¿Cuántas horas prácticas se realizan en formación en centros de trabajo en el segundo curso?",
+          "En resumen, ¿cómo se distribuyen las horas pedagógicas semanales en el programa de estudios?"
+        ],
+        "responses": [
+          "En el plan de estudios, el primer curso se centra en bases fisiológicas y nutrición (1 hora), seguridad y primeros auxilios (1 hora), y planificación del entrenamiento (1 hora). El segundo curso aborda entrenamiento deportivo (9 horas), biomecánica (2 horas), formación y orientación laboral (2 horas), y formación en centros de trabajo con un total de 160 horas prácticas. El tercer curso, con un total de 21 horas pedagógicas semanales, incluye entrenamiento deportivo (15 horas), bases fisiológicas y nutrición (1 hora), seguridad y primeros auxilios (1 hora), formación y orientación laboral (2 horas). En resumen, el programa distribuye 12 horas pedagógicas semanales en el primer y segundo curso, y 21 horas en el tercer curso."
+        ]
+      },
+      
+
+      {
+        "tag": "subnivel básica",
+        "patterns": ["modulos de basica", "basica cronograma de actividades", "que ven los estudintes de basica"],
+        "responses": ["En el nivel de Educación General Básica (EGB) Elemental Media, se establecen diferentes áreas y asignaturas con sus respectivos periodos pedagógicos mínimos sugeridos a la semana. Entre las áreas se encuentran Lengua y Literatura, Matemática, Ciencias Sociales, Ciencias Naturales, Educación Cultural y Artística, Educación Física, así como Lengua Extranjera (Inglés). Además, se destaca la importancia del Acompañamiento Integral en el aula y la Animación a la Lectura, ambos con periodos pedagógicos mínimos sugeridos a la semana. Estas directrices proporcionan una estructura educativa integral para los estudiantes en este nivel, abordando diversas disciplinas y aspectos fundamentales para su desarrollo académico y personal. "]
+      },
+
+
+
+      {
+        "tag": "subnivel básica superior",
+        "patterns": ["modulos de basica superior", "basica superior cronograma de actividades", "que ven los estudintes de basica superior"],
+        "responses": [" En el subnivel de Educación General Básica (EGB) Superior, se establecen las áreas y asignaturas con sus respectivos periodos pedagógicos mínimos sugeridos a la semana. Dichas áreas comprenden Lengua y Literatura con 6 periodos, Matemática con 6 periodos, Ciencias Sociales con 4 periodos, Ciencias Naturales con 4 periodos, Educación Cultural y Artística con 2 periodos, Educación Física con 2 periodos, Lengua Extranjera (Inglés) con 3 periodos, Orientación Vocacional y Profesional con 1 periodo, y finalmente, Acompañamiento Integral en el Aula y Animación a la Lectura, ambas con 1 periodo cada una. Estas asignaturas y sus respectivos periodos pedagógicos conforman una estructura educativa que busca proporcionar a los estudiantes una formación integral abordando distintos aspectos académicos y de desarrollo personal."]
+      },
+
+
+      {
+        "tag": "bachillerato en ciencias",
+        "patterns": ["como es el modulo de tronco común en primero, segundo y tercero de bachillerato en ciencias", "tronco comun ciencias", "1,2 y 3ro de bachillerato en ciencias tronco común"],
+        "responses": [" En el Bachillerato en Ciencias, los cursos de 1.º, 2.º y 3.º año cuentan con áreas y asignaturas del tronco común. Las asignaturas incluyen Matemática (4h), Ciencias Naturales con Física (2h), Química (2h) y Biología (2h), Ciencias Sociales con Historia (3h), Educación Ciudadana y Filosofía (2h), Lengua y Literatura (4h), Lengua Extranjera (Inglés) (3h), Educación Cultural y Artística (2h), Educación Física (2h), y un módulo de Emprendimiento y Gestión (2h). Se destaca el Acompañamiento Integral en el Aula (1h). Estas directrices buscan proporcionar una educación equilibrada en ciencias, humanidades y habilidades interdisciplinarias para una formación especializada y flexible."]
+      },
+
+      {
+        "tag": "bachillerato técnico",
+        "patterns": ["como es el modulo de tronco común en primero, segundo y tercero de bachillerato tecnico", "tronco comun bachillerato", "1,2 y 3ro de bachillerato tecnico tronco común"],
+        "responses": ["En el Bachillerato Técnico, los cursos de 1.º, 2.º y 3.º año cuentan con áreas y asignaturas del tronco común. Las asignaturas incluyen Matemática (3h en 1.º y 2.º, 2h en 3.º), Ciencias Naturales con Física, Química y Biología (2h cada una), Ciencias Sociales con Historia, Educación Ciudadana y Filosofía (2h cada una), Lengua y Literatura (3h en 1.º y 2.º, 2h en 3.º), Lengua Extrajera (Inglés) (3h en 1.º y 2.º, 2h en 3.º), Educación Cultural y Artística (2h en 1.º y 2.º, 2h en 3.º), Educación Física (2h en 1.º y 2.º, 2h en 3.º), y un módulo interdisciplinario de Emprendimiento y Gestión (2h en 1.º y 2.º, 2h en 3.º). Se destaca el Acompañamiento Integral en el Aula (1h). Además, se mencionan periodos pedagógicos adicionales para Bachillerato Técnico (12h en 1.º y 2.º, 21h en 3.º). "]
+      },
+
+      {
+        "tag": "tercero examenes",
+        "patterns": ["porque los terceros de bachillerato hacen sus examenes antes", "tercer bachillerato examenes"],
+        "responses": [" Los estudiantes de tercero rinden sus exámenes antes que el resto por motivos de exámenes de grado por motivos de que ellos salen antes"]
+      },
+
+      {
+        "tag": "exam tercero",
+        "patterns":[ "cúando es la evaluación final en la costa", "evaluacion final fecha", "fecha de evaluación final en la costa y fecha de salida de los estudiantes"],
+        "responses":[ "Evaluación final: 5/9 de febrero, Fecha estimada de salida: 9 de febrero "]
+      },
+
+      {
+        "tag": "graduación de estudiantes",
+        "patterns": ["cuando es la fecha de graduación", "graduación de los estudiantes", "graduación", "incorporación de estudiantes de tercero bachillerato"],
+        "responses": [" Fecha de graduación esperando lineamientos y esperando fecha de graduación"]
+      },
+
+      {
+        "tag": "proyectos de grado 3ro",
+        "patterns": ["en qué fecha se deben llevar a cabo los proyectos de grado", "fecha de realización de fechas de proyectos de grado"],
+        "responses": ["En el mes de enero se desarrollarán los proyectos de grados de todos los terceros"]
+      },
+
+      {
+        "tag": "cupitos",
+        "patterns": ["¿De qué manera se asignarán los cupos?", ""], 
+        "responses": ["Los cupos se asignarán según la  disponibilidad en cada institución educativa. "]
+      },
+
+      {
+        "tag": "matriculitas",
+        "patterns": ["¿cuando se abren las matriculas?", "fecha de matrículas", "matriculas"],
+        "responses": ["Se sobre estima que las matrículas estarán abiertas en la página (mes) porque aún no "]
+      },
+
+      
+
+            {
+                "tag":"infoedai",
+                "patterns":["cual es la informacion que proporcionas","cual es tu funcion", "cual es la  informacion que das", "que informacion das", "para que sirves", "cual es tu funcion", "que informacion proporcionas", "que informacion me podrias dar"],
+                "responses":["mi funcion es ayudarte a tener nociones acerca de los tràmites y direcciones geograficas sobre las instituciones que se llevan a cabo dentro de estas"]
+            },
+            {
+                "tag": "enlace granja",
+                "patterns": ["¿donde está ubicado el eduardo granja garces?","direccion del granja", "mapa del granja", "ubicacion egg","ubicacion del granja", "como puedo llegar al granja", "donde se ubica el granja", "mapa para llegar al granja", "donde esta ubicado el granja"],
+                "responses": [
+                    {
+                        "text": "a continuacion te proporcionare la ubicacion de la unidad educativa Eduardo Granja Garces:",
+                        "link_url": "https://maps.app.goo.gl/8gzNqeFW5L8Joazh8"
+                    }
+                ]
+            },
+            {"tag": "matricula sierra",
+"patterns": ["cuando empiezan las matriculaciones en el régimen sierra-amazonia", "fecha de matriculación sierra", "matricula sierra", "cuando puedo matricularme en el regimn sierra", "cual es el proceso de matrícula en la sierra", "inscripciones sierra", "registro sierra", "matrícula para nuevos estudiantes"],
+"responses": [
+    {
+        "text": "por ahora, solo se habilita la modalidad extraordinaria, la cuál consiste en ingreso al sistema fiscal de manera voluntaria del estudiante. Las matrículas para el periodo académico 2023-2024 estarán abiertas desde el 28 de agosto hasta el 23 de enero. El servicio de atención telefónica estará disponible de lunes a viernes desde las 8:00am  hasta las 17:00. Una vez completado el proceso de matriculación, se enviará el certificado correspondiente al correo electrónico registrado o estará disponible para su consulta en la misma página. Se requieren documentos específicos para la matriculación, incluyendo el correo electrónico del representante, número de contacto (celular o fijo), y opcionalmente, los números de identificación del estudiante y del representante. Además, se establece un cronograma para matrículas extraordinarias, iniciando con la preparatoria 1ro de EGB el 28 de agosto, seguido por la básica elemental de 2do a 4to de EGB el 29 de agosto, y así sucesivamente en distintos niveles hasta el bachillerato el 1 de septiembre. A partir del 2 de septiembre hasta el 24 de enero de 2024, se permitirá la matriculación en todos los niveles y subniveles. El siguiente link es para las matriculaciones ",
+        "link_url": "http://juntos.educacion.gob.ec"
+    }
+]
+},
+
+{"tags": "cambio ins",
+            "patterns": ["¿cómo puedo realizar el cambio de institución particular a fiscal?”, “cambios de particular a fiscal", "cambios de instituciones "],
+            "responses": [
+                {
+                    "text": " para realizar cambios de particular a fiscal (solo está disponible esta opción) debes dirigirte al siguiente enlace y rellenar los campos.",
+                    "link_url": "Inscripción en Línea (educacion.gob.ec)"
+                }
+            ]
+        },
+            {
+                "tag":"ubidistrito",
+                "patterns":["ubicacion del distrito", "mapa para llegar al distrito", "como puedo llegar al distrito", "me podrias proporcionar un mapa para llegar al distrito", "como puedo llegar al distrito 09d14", "direccion del distrito"],
+                "responses":[
+                    {
+                        "text":"a continuacion te proporcionare un mapa para llegar al distrito 09d14",
+                        "link_url":"https://maps.app.goo.gl/mnVFyKgKqLAQitjKA"
+                    }
+                ]
+            },
+            {
+                "tag": "enlace monteverde",
+                "patterns": ["¿donde está ubicada la unidad educativa Dr carlos monteverde romero?", "mapa de la monteverde", "ubicacion monteverde ", "dónde está el colegio monteverde", "como puedo llegar a la monteverde", "de que manera puedo llegar a la monteverde", "mapa para llegar a la monteverde"],
+                "responses": [
+                    {
+                        "text": "a continuacio te proporcionare un mapa para llegar a la unidad educativa Dr Carlos Monteverde Romero:",
+                        "link_url": "https://maps.app.goo.gl/ivnLi8Z7AkNEiXoX9"
+                    }
+                ]
+            },
+            {
+                "tag": "enlace crespin",
+                "patterns": ["¿donde está ubicadla la unidad educativa crespin cerezo ?", "mapa de la crespin","ubicacion de crespin cerezo", "como puedo llegar a la unidad educativa crespin", "mapa para llegar a la crespin", "de que manera puedo llegar a la crespin"],
+                "responses": [
+                    {
+                        "text": " a continuacion te proporcionare un mapa para que llegar a la unidad educativa crespin cerezo:",
+                        "link_url": "https://maps.app.goo.gl/usLjxfyi6HJKThLE9"
+                    }
+                ]
+            },
+            {
+                "tag": "enlace austriaco",
+                "patterns": ["¿donde está ubicado el colegio austriaco?", "ubicacion del austriaco", "mapa del austriaco","como puedo llegar al austriaco", "mapa para llegar al austriaco", "como llego al austriaco"],
+                "responses": [
+                    {
+                        "text": "aqui tienes un mapa para llegar a la unidad educativa austriaca:",
+                        "link_url": "https://maps.app.goo.gl/KHF4GcxWkguxFzSx8"
+                    }
+                ]
+            },
+            {
+                "tag": "enlace amarilis",
+                "patterns": ["¿donde está ubicado el colegio amarilis?", "ubicacion de amarilis fuentes", "mapa de la amarilis","como puedo llegar a la amarilis", "mapa para llegar a las amarilis", "ubicacion de la amarilis"],
+                "responses": [
+                    {
+                        "text": "aqui tienes un mapa para llegar a la amarilis:",
+                        "link_url": "https://maps.app.goo.gl/rCmhP3V3RJ3BEqrn9"
+                    }
+                ]
+            },
+            {
+                "tag": "enlace pilar",
+                "patterns": ["¿donde está ubicada la unidad educativa Pilar macias de gamarra?", ",mapa de la pilar","ubicacion de pilar macias", "como puedo llegar a la pilar marcias", "donde se ubica la pilar marcia", "mapa de la pilar marcia"],
+                "responses": [
+                    {
+                        "text": "a continuacion  te proporcionare un mapa para llegar a la unidad educativa Pilar Marcias de Gamarra:",
+                        "link_url": "https://maps.app.goo.gl/rYLykbMBRjrJJ2679"
+                    }
+                ]
+            },
+            {
+                "tag": "enlace modesto",
+                "patterns": ["¿donde está ubicado la modesto carbo noboa ?", "ubicacion de la modesto", "mapa de la modesto","como puedo llegar a la modesto", "mapa de la modesto", "mapa de como llegar a la modesto", "como llego a la modesto"],
+                "responses": [
+                    {
+                        "text": "a continuacion te proporcionare un mapa para llegar a la unidad educativa Modesto Carbo Noboa:",
+                        "link_url": "https://maps.app.goo.gl/n9AtSgwxTmLCSYZD8"
+                    }
+                ]
+            },
+         
+            {
+                "tag": "enlace señora de las mercedes",
+                "patterns": ["¿donde está ubicada la unidad educativa nuestra señora de las mercedes ?", "mapa de las mercedes","ubicacion de las mercedes", "como puedo llegar a la mercedes", "mapa de la mercedes", "ubicacion de las mercedes"],
+                "responses": [
+                    {
+                        "text": "a continuacion te proporcionare un mapa para llegar a la unidad educativa nuestra señora de las mercedes:",
+                        "link_url": "https://maps.app.goo.gl/1iSEiRTedUEPNYsSA"
+                    }
+                ]
+            },
+            {
+              "tag": "clases",
+              "patterns": ["cuando empiezan las clases"], 
+              "responses": ["Las clases empiezan el 5 de mayo"]
+          },
+          {
+            "tag": "clases 2",
+            "patterns": ["cuando se terminan las clases"],
+            "responses": ["Las clases terminan el 22 de febrero en la costa"]
+        }, 
+        {
+          "tag": "clases 3",
+          "patterns":  ["fechas de clases", "calendario academico", "vacaciones escolares", "dias de descanso", "feriados academicos", "calendario de examenes", "fechas importantes"],
+          "responses":[  "Puedo proporcionarte el calendario academico completo si lo deseas.", "Las vacaciones escolares son...", "Los examenes finales se llevaran a cabo del..."]
+      } 
+]
+}
