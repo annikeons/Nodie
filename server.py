@@ -7,6 +7,9 @@ import difflib
 app = Flask(__name__)
 CORS(app)
 
+from flask_cors import CORS
+CORS(app)
+
 
 responses = {
     "saludo_motivacional": {

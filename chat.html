@@ -236,10 +236,9 @@ async function sendMessage() {
         // se deja false pq soy pobre para comporar la cuota pipipip
         const USE_GPT = false;
 
-        //Decide a qué endpoint conectarte
-        const endpoint = USE_GPT
-            ? "http://127.0.0.1:5000/chat_gpt"
-            : "http://127.0.0.1:5000/chat";
+       
+             const endpoint = "http://127.0.0.1:5000/chat";
+
 
         // Envía el mensaje al backend
         const response = await fetch(endpoint, {
