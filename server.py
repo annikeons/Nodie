@@ -498,7 +498,7 @@ responses = {
         "patterns": [
             "cuentame una aventura", "una historia de aventura", "quiero una historia de aventura",
             "cuéntame una aventura", "dime una aventura", "aventura nodie",
-            "buscame una historia de aventura", "relatame una aventura", "cuenta una aventura corta"
+            "buscame una historia de aventura", "relatame una aventura", "cuenta una aventura corta", "una historia"
         ],
         "answers": [
             "Había una vez un patito curioso que se atrevió a cruzar el lago más grande del bosque. ¿Quieres saber qué encontró? 🌊",
@@ -552,7 +552,7 @@ responses = {
     "historia_graciosa": {
         "patterns": [
             "una historia graciosa", "cuentame algo divertido", "quiero una historia graciosa",
-            "dame una historia para reirme", "cuentame algo chistoso"
+            "dame una historia para reirme", "cuentame algo chistoso","Historia graciosa"
         ],
         "answers": [
             "Una vez quise volar... pero caí en el agua y terminé haciendo surf sin querer 🏄‍♂️🦆",
@@ -670,7 +670,7 @@ def find_response(user_message):
                 best_ratio = ratio
                 best_match = tag
 
-    if best_match and best_ratio >= 0.4:
+    if best_match and best_ratio >= 0.3:
         respuesta = random.choice(responses[best_match]["answers"])
         return respuesta
     else:
