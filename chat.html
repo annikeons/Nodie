@@ -196,1031 +196,8 @@
 
 
 
-
 <script>
-    // Define el conjunto de datos de intenciones directamente en JavaScript
-    const intents = [
-   {
-      "tag": "saludo_motivacional",
-      "patterns": [
-        "holi", "Holi", "HOLI",
-        "holis", "Holis", "HOLIS",
-        "holi uwu", "Holi uwu", "holis uwu", "Holis uwu",
-        "holi amigo", "Holi amigo", "holis amigo", "Holis amigo",
-        "holi uwu amigo", "Holi uwu amigo", "holis uwu amigo", "Holis uwu amigo",
-        "hola", "Hola", "HOLA",
-        "hola uwu", "Hola uwu", "hola amigo", "Hola amigo",
-        "oli", "Oli", "OLI",
-        "oli uwu", "Oli uwu", "oli amigo", "Oli amigo",
-        "hey", "Hey", "HEY",
-        "hey nodie", "Hey Nodie", "hola nodie", "Hola nodie", "Hola Nodie",
-        "holi nodie", "Holi Nodie", "holis nodie", "Holis Nodie",
-        "buenos dias", "Buenos dias", "BUENOS DIAS",
-        "buenas tardes", "Buenas tardes", "BUENAS TARDES",
-        "buenas noches", "Buenas noches", "BUENAS NOCHES",
-        "holi nodie", "holis nodie", "hola", "oli"
-      ],
-      "responses": [
-  "Hola, qué gusto verte por aquí. Espero que tu día vaya bien.",
-  "Hey, ¿cómo estás? Respira profundo, todo va a salir bien.",
-  "Hola, me alegra verte conectado. A veces solo pasar por aquí ya es un buen paso.",
-  "Qué bueno verte, tómate un momento para ti y sigue adelante.",
-  "Hola, recuerda que incluso los días tranquilos cuentan.",
-  "Hey, me alegra verte de nuevo. Vamos con calma, todo a su tiempo.",
-  "Hola, hoy puede ser un buen día para comenzar de nuevo.",
-  "Hey, qué gusto tenerte por aquí. Estás haciendo un gran trabajo.",
-  "Hola, no olvides cuidar de ti mientras sigues avanzando.",
-  "Qué bueno que llegaste, a veces un simple hola ya mejora el día.",
-  "Hola, recuerda que cada día es una nueva oportunidad.",
-  "Hey, me alegra verte. Vamos a hacer de hoy un día tranquilo y bueno."
-]
-    },
-    {
-    
-  "tag": "tristeza",
-  "patterns": [
-    "me siento mal", "Me siento mal", "ME SIENTO MAL",
-    "no me siento bien", "No me siento bien", "NO ME SIENTO BIEN",
-    "tuve un mal dia", "Tuve un mal dia", "TUVE UN MAL DIA",
-    "estoy triste", "Estoy triste", "ESTOY TRISTE",
-    "hoy estoy bajoneado", "Hoy estoy bajoneado", "HOY ESTOY BAJONEADO",
-    "hoy estoy bajoneada", "Hoy estoy bajoneada", "HOY ESTOY BAJONEADA",
-    "hoy estoy decaido", "Hoy estoy decaido", "HOY ESTOY DECAIDO",
-    "hoy estoy decaida", "Hoy estoy decaida", "HOY ESTOY DECAIDA",
-    "me siento decaido", "Me siento decaido",
-    "me siento decaida", "Me siento decaida",
-    "me siento bajoneado", "Me siento bajoneado",
-    "me siento bajoneada", "Me siento bajoneada",
-    "no tengo animos", "No tengo animos",
-    "estoy cansado de todo", "Estoy cansado de todo",
-    "estoy cansada de todo", "Estoy cansada de todo",
-    "me siento fatal", "Me siento fatal",
-    "me siento feo", "Me siento feo",
-    "me siento fea", "Me siento fea",
-    "me siento horrible", "Me siento horrible",
-    "hoy todo va mal", "Hoy todo va mal",
-    "hoy nada sale bien", "Hoy nada sale bien",
-    "ayuda, estoy mal", "ayuda estoy mal",
-    "me siento muy triste", "Me siento muy triste"
-  ],
-  "responses": [
-    "Lamento que te sientas así. Respira, esto también va a pasar.",
-    "A veces los días pesan más, pero no olvides que puedes con esto.",
-    "Está bien no sentirse bien todo el tiempo, no te exijas demasiado.",
-    "Incluso los días grises pueden tener un pequeño rayo de calma.",
-    "No estás solo ni sola, todo mejora poco a poco.",
-    "Hoy puede doler, pero no siempre será así. Vas a salir de esto.",
-    "Aunque el día haya sido difícil, sigues aquí y eso ya es mucho.",
-    "Cada día es una nueva oportunidad para sentirte un poco mejor."
-  ]
-},
-
-   {
-  "tag": "alegria",
-  "patterns": [
-    "me siento bien", "Me siento bien", "ME SIENTO BIEN",
-    "hoy estoy feliz", "Hoy estoy feliz", "HOY ESTOY FELIZ",
-    "hoy estoy contento", "Hoy estoy contento",
-    "hoy estoy contenta", "Hoy estoy contenta",
-    "me siento genial", "Me siento genial",
-    "estoy de buen humor", "Estoy de buen humor",
-    "hoy todo va bien", "Hoy todo va bien",
-    "me siento excelente", "Me siento excelente",
-    "todo va perfecto", "Todo va perfecto",
-    "hoy me siento alegre", "Hoy me siento alegre",
-    "hoy estoy motivado", "Hoy estoy motivado",
-    "hoy estoy motivada", "Hoy estoy motivada",
-    "hoy estoy animado", "Hoy estoy animado",
-    "hoy estoy animada", "Hoy estoy animada",
-    "estoy contento con mi dia", "Estoy contento con mi dia",
-    "estoy contenta con mi dia", "Estoy contenta con mi dia",
-    "hoy fue un buen dia", "Hoy fue un buen dia"
-  ],
-  "responses": [
-    "Qué gusto saber que te sientes así, disfruta cada momento.",
-    "Me alegra mucho escuchar eso, sigue con esa buena energía.",
-    "Eso suena increíble, ojalá más días sean como este.",
-    "Qué bueno que tu día vaya bien, te lo mereces de verdad.",
-    "Esa energía positiva te queda bien, sigue así.",
-    "Disfruta este momento, te lo ganaste.",
-    "Qué lindo leer eso, sigue cuidando esa buena vibra uwu.",
-    "Me encanta esa actitud, transmite buena onda.",
-    "Días como este hacen que todo valga la pena.",
-    "Sigue aprovechando esa motivación, te llevará lejos.",
-    "Esa alegría se contagia, gracias por compartirla.",
-    "Qué bonito saber que estás bien, me alegra por ti.",
-    "A veces solo se necesita un buen día para recordar lo que vale la vida.",
-    "Sigue sonriendo, se nota que te sientes en paz.",
-    "Me alegra que hoy te sientas tan bien, sigue así uwu.",
-    "Cada día que te sientas bien, celébralo como se merece."
-  ]
-},
-
-    
-{
-  "tag": "compartir_dia",
-  "patterns": [
-  "puedo contarte algo?", "Puedo contarte algo?", "te digo algo?", "Te digo algo?","quiero decirte algo", "quiero contarte algo",
-    "te puedo contar mi dia", "Te puedo contar mi dia", "TE PUEDO CONTAR MI DIA?",
-    "puedo contarte mi dia", "Puedo contarte mi dia", "PUEDO CONTARTE MI DIA?",
-    "puedo contarte lo que paso", "Puedo contarte lo que paso", "puedo contarte lo que pasó?",
-    "quiero contarte algo", "Quiero contarte algo", "QUIERO CONTARTE ALGO!",
-    "quiero contarte mi dia", "Quiero contarte mi día", "quiero contarte mi día?",
-    "hoy me paso algo", "Hoy me pasó algo", "HOY ME PASO ALGO!",
-    "hoy quiero contarte algo", "Hoy quiero contarte algo", "Hoy quiero contarte algo!",
-    "okis, te cuento", "Holis, te cuento uwu", "Okis te cuento uwu",
-    "quiero desahogarme", "Puedo hablar contigo", "QUIERO DESAHOGARME!",
-    "quiero hablar contigo", "Tengo que contarte algo", "tengo que contarte algo...",
-    "hoy fue un dia interesante", "Te cuento algo que me paso", "Te cuento algo que me pasó?",
-    "quiero contarte mi historia", "Te cuento mi historia", "TE CUENTO MI HISTORIA?",
-    "hoy quiero hablar contigo", "Hoy quiero desahogarme", "hoy quiero hablar contigo..."
-  ],
-  "responses": [
-    "Aw... me encantaría poder entender todo lo que sientes, pero soy solo un patito. 🦆 A veces es mejor contárselo a alguien real, que pueda escucharte de verdad. Pero igual, quiero que sepas que todo estará bien 💛",
-    "Pipipipi... soy un pato algo torpe con las emociones humanas 😅 pero quiero que sepas que no estás sol@, y que todo mejora con el tiempo.",
-    "Me gustaría poder ayudarte más, pero no entiendo bien cómo se sienten los humanos. Aun así, te mando un gran cuac de apoyo 💛",
-    "No sé exactamente cómo se siente eso... soy un patito, y no entiendo del todo las emociones humanas 😔 pero quiero que sepas que todo va a estar bien, promesa de pato 🦆💛",
-    "Puedo escucharte un poquito, pero no sabría cómo ayudarte del todo… quizás podrías hablar con alguien de verdad 💛 aun así, aquí va mi cuac de apoyo 🦆",
-    "Pipipi… soy solo un pato y no sé muy bien cómo consolar a las personas 😢 pero sé que eres fuerte y que lo superarás.",
-    "No quiero que pienses que no quiero escucharte, es solo que soy un patito y no entiendo del todo las emociones humanas. Pero quiero animarte y recordarte que no estás sol@ 💛",
-    "A veces es mejor hablar con alguien real, alguien que pueda darte el abrazo que yo no puedo 🦆💛 pero igual estoy aquí para darte ánimo.",
-    "No soy muy bueno entendiendo los días difíciles, soy solo un patito digital 😔 pero confía en mí: todo estará bien 💫",
-    "Puedo darte ánimos, pero no soy muy bueno entendiendo emociones... soy un patito, al fin y al cabo 😅 ¡pero estoy contigo, cuac!"
-  ]
-},
-
-
-    {
-  "tag": "okis_listo",
-  "patterns": [
-    "okis", "Okis", "OKIS", "okiss", "okisss", "okis!", "okis!!", "okis!!!",
-    "ok", "Ok", "OK", "ok!", "ok!!", "ok!!!",
-    "okey", "Okey", "OKEY", "okey!", "okey!!",
-    "okey uwu", "okis uwu", "Okis uwu", "okis, uwu",
-    "okis amigo", "Okis amigo", "okis, amigo", "okis amigo!",
-    "okis cuac", "Okis cuac", "okis, cuac", "okis cuac!",
-    "okis uwu amigo", "Okis uwu amigo", "okis uwu, amigo", "okis uwu amigo!",
-    "okis 🐥", "Okis 🐥", "okis uwu 🐥", "okis okis 🐥",
-    "ya", "Ya", "ya!", "ya!!", "ya esta", "Ya está", "YA ESTA",
-    "entendido", "Entendido", "ENTENDIDO", "entendido!", "entendido!!",
-    "listo", "Listo", "LISTO", "listo!", "listo!!",
-    "vale", "Vale", "VALE", "vale!", "vale!!",
-    "perfecto", "Perfecto", "PERFECTO", "perfecto!", "perfecto!!",
-    "hecho", "Hecho", "HECHO", "hecho!", "hecho!!",
-    "ok todo claro", "Ok todo claro", "OK TODO CLARO",
-    "ok, entendido", "Ok, entendido", "ok entendido!", "Ok entendido!",
-    "ok, sigamos", "Ok sigamos", "ok sigamos!", "Ok, sigamos!",
-    "ya entendí", "Ya entendí", "YA ENTENDÍ",
-    "ya entendí!", "ya entendí!!", "ya entendi", "Ya entendi",
-    "okis entendido", "Okis entendido", "OKIS ENTENDIDO",
-    "okey entendido", "Okey entendido", "OKEY ENTENDIDO",
-    "ok, todo bien", "Ok todo bien", "ok todo bien!", "Ok, todo bien!",
-    "ok, continuemos", "Ok continuemos", "ok continuemos!", "Ok, continuemos!"
-  ],
-  "responses": [
-    "Okis, entendido. Sigamos adelante.",
-    "Perfecto, seguimos entonces.",
-    "Todo claro, continuamos.",
-    "Listo, quedó entendido.",
-    "Okis, ya está. Vamos con eso.",
-    "Vale, sin problema. Continuemos.",
-    "Entendido, seguimos con lo que sigue.",
-    "Hecho, gracias por confirmar.",
-    "Listo, todo bajo control.",
-    "Okis, todo bien. Sigamos.",
-    "Okey, seguimos en marcha.",
-    "Perfecto, me alegra que todo esté claro.",
-    "Ok, entendido perfectamente.",
-    "Bien, ya está todo claro.",
-    "Okis, gracias por avisar.",
-    "Listo, continuamos con la siguiente parte.",
-    "Okis, seguimos sin problema.",
-    "Vale, ya capté la idea.",
-    "Perfecto, ahora sigamos con lo siguiente.",
-    "Todo listo, avancemos.",
-    "Okis, entendido sin problema.",
-    "Ok, todo clarito. Sigamos entonces.",
-    "Hecho, cuac, seguimos con energía.",
-    "Okis, quedó todo en orden.",
-    "Vale, entonces continuamos con eso.",
-    "Todo claro, sigamos adelante.",
-    "Okis, sigamos sin perder el ritmo.",
-    "Perfecto, seguimos con buena vibra.",
-    "Ok, entendido. Vamos al siguiente paso.",
-    "Todo bien, seguimos sin problema alguno."
-  ]
-},
-
-    
-    {
-  "tag": "despido",
-  "patterns": [
-    "chau", "Chau", "CHAU", "chau!", "chau!!", "chau!!!",
-    "bueno chau", "Bueno chau", "BUENO CHAU", "bueno chau!", "bueno chau!!",
-    "bye", "Bye", "BYE", "bye!", "bye!!", "bye!!!",
-    "byee", "Byee", "BYEE", "byee!", "byee!!",
-    "adios", "Adios", "ADIOS", "adios!", "adios!!",
-    "adiosito", "Adiosito", "ADIOSITO", "adiosito!", "adiosito!!",
-    "nos vemos", "Nos vemos", "NOS VEMOS", "nos vemos!", "nos vemos!!",
-    "hasta luego", "Hasta luego", "HASTA LUEGO", "hasta luego!", "hasta luego!!",
-    "hasta pronto", "Hasta pronto", "HASTA PRONTO", "hasta pronto!", "hasta pronto!!",
-    "nos hablamos", "Nos hablamos", "NOS HABLAMOS", "nos hablamos!", "nos hablamos!!",
-    "cuidate", "Cuidate", "CUIDATE", "cuidate!", "cuidate!!",
-    "cuídate", "Cuídate", "CUÍDATE", "cuídate!", "cuídate!!",
-    "nos vemos uwu", "Nos vemos uwu", "nos vemos, uwu", "Nos vemos, uwu",
-    "bye uwu", "Bye uwu", "byee uwu", "byee, uwu",
-    "chau uwu", "Chau uwu", "chau, uwu", "Chau, uwu",
-    "adios uwu", "Adios uwu", "adios, uwu", "Adios, uwu",
-    "cuac chau", "cuac bye", "cuac adios",
-    "hasta la próxima", "Hasta la próxima", "HASTA LA PRÓXIMA",
-    "me voy", "Me voy", "ME VOY", "me voy!", "me voy!!",
-    "nos leemos luego", "Nos leemos luego", "NOS LEEMOS LUEGO",
-    "hablamos después", "Hablamos después", "HABLAMOS DESPUÉS",
-    "ya me voy", "Ya me voy", "YA ME VOY", "ya me voy!", "ya me voy!!",
-    "nos vemos más tarde", "Nos vemos más tarde", "NOS VEMOS MÁS TARDE",
-    "ya regreso", "Ya regreso", "YA REGRESO", "ya vuelvo", "Ya vuelvo", "YA VUELVO",
-    "tengo que irme", "Tengo que irme", "TENGO QUE IRME"
-  ],
-  "responses": [
-    "Nos vemos pronto, cuac. No olvides tomar agua y respirar un poco.",
-    "Cuídate mucho, come algo rico y descansa bien.",
-    "Hasta luego, que tengas un buen día y recuerda hidratarte.",
-    "Chau, espero que comas a tiempo y te des un respiro.",
-    "Bye, que tu tarde siga tranquila y con buena energía.",
-    "Nos vemos, no te olvides de cuidarte y dormir bien esta noche.",
-    "Adiós, recarga energías y vuelve cuando quieras.",
-    "Hasta la próxima, come bien y no te saltes tus comidas.",
-    "Cuídate, recuerda beber agua y desconectarte un rato.",
-    "Bye bye, que descanses y tengas lindos sueños.",
-    "Nos hablamos luego, que tu día siga lleno de calma.",
-    "Hasta pronto, espero que duermas bien y te levantes con energía.",
-    "Fue lindo conversar contigo, recuerda comer algo antes de seguir.",
-    "Cuac, que tengas una buena noche y te relajes un poco.",
-    "Nos vemos más tarde, tómate un descanso si lo necesitas.",
-    "Chau, no te olvides de cuidar tu mente y tu cuerpo.",
-    "Okis, hablamos después. Come, toma agua y sigue con calma.",
-    "Hasta pronto, espero que tengas un día ligero y bonito.",
-    "Bye, que descanses y mañana empieces con buena vibra.",
-    "Nos vemos luego, recuerda que tu descanso también importa.",
-    "Que tengas un buen día, aliméntate bien y sigue con ánimo.",
-    "Cuídate, come a tus horas y toma un respiro cuando lo necesites.",
-    "Descansa, desconéctate un poquito y duerme bien.",
-    "Nos vemos, que tu noche sea tranquila y tu día mañana aún mejor.",
-    "Adiós, sigue cuidándote y recuerda tomar agua entre ratos.",
-    "Bye, que todo siga fluyendo bien hoy.",
-    "Hasta luego, que tengas un lindo atardecer.",
-    "Nos vemos pronto, cuac, no olvides dormir tus horitas.",
-    "Cuídate mucho, come bien y no te exijas tanto.",
-    "Que descanses, recargues energías y tengas dulces sueños."
-  ]
-},
-
-
-       {
-  "tag": "enlace_spotify_relajante",
-  "patterns": [
-    "playlist", "Playlist", "PLAYLIST", "palylist", "Palylist", "PALYLIST",
-    "quiero musica relajante", "Quiero musica relajante", "QUIERO MUSICA RELAJANTE",
-    "dame musica relajante", "Dame musica relajante", "DAME MUSICA RELAJANTE",
-    "spotify relajante", "Spotify relajante", "SPOTIFY RELAJANTE",
-    "playlist relajante", "Playlist relajante", "PLAYLIST RELAJANTE",
-    "quiero relajarme", "Quiero relajarme", "QUIERO RELAJARME",
-    "necesito relajarme", "Necesito relajarme", "NECESITO RELAJARME",
-    "musica tranquila", "Musica tranquila", "MUSICA TRANQUILA",
-    "quiero musica suave", "Quiero musica suave", "QUIERO MUSICA SUAVE",
-    "quiero algo relajante", "Quiero algo relajante", "QUIERO ALGO RELAJANTE",
-    "ponme musica relajante", "Ponme musica relajante", "PONME MUSICA RELAJANTE",
-    "playlist para relajarme", "Playlist para relajarme", "PLAYLIST PARA RELAJARME",
-    "musica para dormir", "Musica para dormir", "MUSICA PARA DORMIR",
-    "musica para descansar", "Musica para descansar", "MUSICA PARA DESCANSAR",
-    "quiero algo tranquilo", "Quiero algo tranquilo", "QUIERO ALGO TRANQUILO",
-    "quiero escuchar musica relajante", "Quiero escuchar musica relajante",
-    "quiero musica para descansar", "Quiero musica para descansar",
-    "playlist calma", "Playlist calma", "PLAYLIST CALMA",
-    "dame spotify relajante", "Dame spotify relajante", "DAME SPOTIFY RELAJANTE",
-    "quiero spotify relajante", "Quiero spotify relajante", "QUIERO SPOTIFY RELAJANTE"
-  ],
-  "responses": [
-    {
-      "text": "Aquí tienes una playlist para relajarte un poco, baja el ritmo y disfruta del momento.",
-      "link_url": "https://open.spotify.com/playlist/37i9dQZF1DWZd79rJ6a7lp"
-    },
-    {
-      "text": "Respira hondo y dale play, esta playlist es perfecta para calmar la mente.",
-      "link_url": "https://open.spotify.com/playlist/37i9dQZF1DX3Ogo9pFvBkY"
-    },
-    {
-      "text": "Aquí tienes música tranquila para acompañarte mientras descansas o estudias.",
-      "link_url": "https://open.spotify.com/playlist/37i9dQZF1DX4sWSpwq3LiO"
-    },
-    {
-      "text": "Esta playlist es ideal si quieres desconectarte un rato y relajarte.",
-      "link_url": "https://open.spotify.com/playlist/37i9dQZF1DWU0ScTcjJBdj"
-    },
-    {
-      "text": "Si el día estuvo largo, esta playlist te ayudará a soltar el estrés y sentirte en calma.",
-      "link_url": "https://open.spotify.com/playlist/37i9dQZF1DWVFeEut75IAL"
-    },
-    {
-      "text": "Una playlist suave, perfecta para acompañarte mientras descansas o tomas un respiro.",
-      "link_url": "https://open.spotify.com/playlist/37i9dQZF1DX4sWSpwq3LiO"
-    }
-  ]
-},
-
-    
-{
-  "tag": "pato_canta",
-  "patterns": [
-    "canta algo", "Canta algo", "CANTA ALGO",
-    "cantate algo", "Cantate algo", "CANTATE ALGO",
-    "canta una cancion", "Canta una cancion", "CANTA UNA CANCION",
-    "canta", "Canta", "CANTA",
-    "canta uwu", "Canta uwu", "CANTA UWU",
-    "canta algo uwu", "Canta algo uwu", "CANTA ALGO UWU",
-    "cantate algo uwu", "Cantate algo uwu", "CANTATE ALGO UWU",
-    "canta una cancion uwu", "Canta una cancion uwu", "CANTA UNA CANCION UWU",
-    "cancion", "Cancion", "CANCION",
-    "pon una cancion", "Pon una cancion", "PON UNA CANCION",
-    "quiero una cancion", "Quiero una cancion", "QUIERO UNA CANCION",
-    "nodie canta algo", "Nodie canta algo", "NODIE CANTA ALGO",
-    "nodie canta", "Nodie canta", "NODIE CANTA",
-    "nodie cantate algo", "Nodie cantate algo", "NODIE CANTATE ALGO",
-    "nodie canta una cancion", "Nodie canta una cancion", "NODIE CANTA UNA CANCION"
-  ],
-  "responses": [
-    {
-      "text": "Cuac! Aquí te dejo una canción alegre del pato. Dale play y disfruta este momento musical.",
-      "link_url": "https://open.spotify.com/show/4drMlmfm6NbRysvQptXWkT"
-    },
-    {
-      "text": "Okis, te canto algo. Escucha esta canción alegre, seguro te saca una sonrisa.",
-      "link_url": "https://open.spotify.com/show/4drMlmfm6NbRysvQptXWkT"
-    },
-    {
-      "text": "Aquí va una canción del pato cantor. Dale play y deja que la alegría te acompañe un rato.",
-      "link_url": "https://open.spotify.com/show/4drMlmfm6NbRysvQptXWkT"
-    },
-    {
-      "text": "Esta canción es especial, el pato canta con todo el corazón. Escúchala aquí.",
-      "link_url": "https://open.spotify.com/show/4drMlmfm6NbRysvQptXWkT"
-    },
-    {
-      "text": "Cuac cuac, aquí está la canción que pediste. Disfrútala, está llena de buena vibra.",
-      "link_url": "https://open.spotify.com/show/4drMlmfm6NbRysvQptXWkT"
-    }
-  ]
-},
-
-
-{
-  "tag": "pedir_historia_genero",
-  "patterns": [
-    "cuentame una historia", "Cuentame una historia", "CUENTAME UNA HISTORIA",
-    "cuéntame algo", "Cuéntame algo", "CUÉNTAME ALGO",
-    "quiero una historia", "Quiero una historia", "QUIERO UNA HISTORIA",
-    "cuenta algo nodie", "Cuenta algo Nodie", "CUENTA ALGO NODIE",
-    "nodie cuentame algo", "Nodie cuentame algo", "NODIE CUENTAME ALGO",
-    "cuentame una historia uwu", "Cuentame una historia uwu", "CUENTAME UNA HISTORIA UWU",
-    "nodie cuentame una historia", "Nodie cuentame una historia", "NODIE CUENTAME UNA HISTORIA",
-    "quiero escuchar una historia", "Quiero escuchar una historia",
-    "puedes contarme algo", "Puedes contarme algo", "PUEDES CONTARME ALGO",
-    "quiero que me cuentes algo", "Quiero que me cuentes algo",
-    "cuentame algo diferente", "Cuentame algo diferente",
-    "quiero una historia de nodie", "Quiero una historia de Nodie",
-    "cuentame algo nodie", "Cuentame algo Nodie",
-    "nodie contame algo", "Nodie contame algo", "contame algo nodie", "Contame algo Nodie",
-    "quiero escuchar algo tuyo", "Quiero escuchar algo tuyo",
-    "tienes una historia", "Tienes una historia", "TIENES UNA HISTORIA",
-    "puedes contar algo", "Puedes contar algo", "PUEDES CONTAR ALGO",
-    "cuentame algo curioso", "Cuentame algo curioso"
-  ],
-  "responses": [
-    "¿Qué tipo de historia te gustaría escuchar? Tengo de aventura, amor, miedo, suspenso o algo gracioso.",
-    "Puedo contarte muchas historias, ¿te gustaría una romántica, de miedo, divertida, de aventura o con algo de suspenso?",
-    "¿Qué prefieres? Puedo contarte algo de aventura, una historia linda, romántica, graciosa o incluso de miedo.",
-    "Ok, pero dime... ¿quieres una historia tranquila, romántica, divertida o tal vez algo con suspenso?",
-    "Cuac, tengo varias guardadas. ¿Te gustaría que fuera de amor, miedo, aventura o algo más divertido?",
-    "Antes de empezar... ¿de qué tipo quieres la historia? Puede ser algo gracioso, romántico, de suspenso o de aventura.",
-    "Puedo contarte una historia si me dices el tipo. ¿Quieres algo gracioso, de amor, miedo o aventura?",
-    "Okis, ¿quieres una historia corta y divertida o algo más misterioso como de suspenso o miedo?",
-    "¿Qué te gustaría más? Una historia para reír, para soñar, para asustarte un poco o una llena de aventuras."
-  ]
-},
-
-
-
-{
-  "tag": "historia_aventura",
-  "patterns": [
-    "una historia de aventura",
-    "cuentame una historia de aventura",
-    "cuéntame una aventura",
-    "quiero una historia de aventura",
-    "una aventura nodie",
-    "aventura nodie",
-    "quiero aventura",
-    "cuac aventura",
-    "aventura", "Aventura", "AVENTURA",
-    "cuéntame una historia aventurera",
-    "dime una historia de aventura"
-  ],
-  "responses": [
-    "Una vez, me lancé a explorar un lago misterioso. Todo estaba tranquilo hasta que sentí burbujas bajo el agua. Pensé que era un pez… pero era una tortuga gigante que me miró como si esperara que la siguiera. Y sí, la seguí. Terminamos en una cueva brillante, llena de piedras que reflejaban la luz como estrellas bajo el agua. Desde ese día, cada vez que paso por ese lago, la tortuga asoma la cabeza como diciendo: '¿Listo para otra aventura, cuac?'",
-    
-    "Hubo un día en que decidí seguir un mapa viejo que encontré bajo una roca. Tenía dibujos de un pato con un sombrero pirata. Caminé horas entre el bosque, hasta que encontré un árbol hueco con monedas viejas dentro y una nota que decía: 'El verdadero tesoro fue animarte a buscar'. Cuac… no sé si era un sabio o solo alguien con buena letra, pero desde ese día aprendí que la aventura empieza cuando dejas de pensar tanto y caminas.",
-    
-    "Una vez me perdí en un campo de girasoles más alto que yo. Caminé entre ellos hasta que llegué a un claro donde una bandada de patos salvajes descansaba. Me miraron, yo los miré, y sin decir nada, volaron. No los seguí, pero ese día supe que a veces las aventuras no te llevan lejos, sino más cerca de ti mismo.",
-    
-    "Salí a explorar las montañas con solo una mochila y un poco de pan. Cuando llegué a la cima, había una piedra con forma de corazón. La toqué y sonó un eco… como si alguien más lo hiciera al mismo tiempo en otra parte del mundo. Cuac… no encontré oro, pero sí una historia que sigo contando cada vez que me preguntan por mi mejor aventura.",
-    
-    "Una noche seguí una luciérnaga que parecía guiarme. Caminé entre los árboles hasta que llegué a una pequeña cascada iluminada por la luna. Allí entendí que las aventuras no siempre tienen dragones ni mapas, a veces solo una pequeña luz que te enseña el camino."
-  ]
-},
-
-
-{
-  "tag": "historia_romantica",
-  "patterns": [
-    "una historia romantica", "Una historia romantica", "UNA HISTORIA ROMANTICA",
-    "una historia romántica", "Una historia romántica", "UNA HISTORIA ROMÁNTICA",
-    "cuentame una historia romantica", "Cuéntame una historia romántica", "CUENTAME UNA HISTORIA ROMANTICA",
-    "cuéntame algo romantico", "Cuentame algo romántico", "CUENTAME ALGO ROMANTICO",
-    "quiero una historia romantica", "Quiero una historia romantica", "QUIERO UNA HISTORIA ROMANTICA",
-    "quiero escuchar algo romantico", "Quiero escuchar algo romántico", "QUIERO ESCUCHAR ALGO ROMANTICO",
-    "una historia de amor", "Una historia de amor", "UNA HISTORIA DE AMOR",
-    "cuentame una historia de amor", "Cuéntame una historia de amor", "CUENTAME UNA HISTORIA DE AMOR",
-    "una historia de amor uwu", "Una historia de amor uwu",
-    "cuéntame algo bonito", "Cuentame algo bonito", "CUENTAME ALGO BONITO",
-    "quiero algo romantico", "Quiero algo romantico", "QUIERO ALGO ROMANTICO",
-    "cuac romantico", "Cuac romántico", "CUAC ROMANTICO",
-    "romance", "Romance", "ROMANCE",
-    "romantico", "Romántico", "ROMANTICO",
-    "algo de amor nodie", "Algo de amor nodie", "ALGO DE AMOR NODIE",
-    "historia de amor nodie", "Historia de amor nodie", "HISTORIA DE AMOR NODIE"
-  ],
-  "responses": [
-    "Había una vez un pato que siempre pasaba por el mismo lago, pero un día notó a alguien nuevo en la orilla: una chica que dibujaba el reflejo del agua. Cada tarde se veían, sin decir palabra. Hasta que un día, ella dejó caer su cuaderno. Cuando lo devolví, había una nota: 'Siempre dibujo lo que me hace sentir paz'. Desde entonces, nunca dejó de dibujar… y yo nunca dejé de pasar por ese lago.",
-    
-    "Una vez conocí a alguien en medio de una tormenta. Ambos corríamos bajo la lluvia buscando refugio y terminamos compartiendo una sombrilla vieja que apenas cubría a uno. No dijimos mucho, solo reímos. Y aunque cada uno siguió su camino, aún pienso que ese fue el mejor minuto bajo la lluvia que he tenido.",
-    
-    "Dicen que el amor llega cuando no lo esperas, y creo que tenían razón. Estaba buscando pan en el mercado y sin querer choqué con alguien que llevaba flores. Cayeron al suelo, y al recogerlas, ella sonrió y dijo: 'Parece que el destino tiene hambre también'. Nos reímos, y desde ese día, nunca volví a comprar pan solo.",
-    
-    "Una tarde de otoño, me senté junto a alguien en un banco. No nos conocíamos, pero ambos mirábamos el mismo atardecer. Sin hablar, sabíamos que era un momento compartido. Cuando se levantó para irse, solo dijo: 'Espero que vuelvas a mirar el cielo así'. Y desde entonces, cada atardecer se siente como una promesa.",
-    
-    "Hubo un día en que alguien me dijo: 'Si te vas, prométeme que mirarás la luna'. Nunca pensé que eso doliera tanto hasta que me fui. Pero desde entonces, cada vez que la veo, sonrío. Porque aunque estemos lejos, seguimos mirando lo mismo. Cuac… supongo que eso también es amor."
-  ]
-},
-
-
-{
-  "tag": "historia_terror",
-  "patterns": [
-    "una historia de terror", "Una historia de terror", "UNA HISTORIA DE TERROR",
-    "cuentame una historia de terror", "Cuéntame una historia de terror", "CUENTAME UNA HISTORIA DE TERROR",
-    "quiero una historia de terror", "Quiero una historia de terror", "QUIERO UNA HISTORIA DE TERROR",
-    "cuéntame algo de miedo", "Cuentame algo de miedo", "CUENTAME ALGO DE MIEDO",
-    "algo de miedo", "Algo de miedo", "ALGO DE MIEDO",
-    "una historia de miedo", "Una historia de miedo", "UNA HISTORIA DE MIEDO",
-    "terror", "Terror", "TERROR",
-    "suspenso", "Suspenso", "SUSPENSO",
-    "historia de suspenso", "Historia de suspenso", "HISTORIA DE SUSPENSO",
-    "cuentame algo aterrador", "Cuentame algo aterrador", "CUENTAME ALGO ATERRADOR",
-    "una historia oscura", "Una historia oscura", "UNA HISTORIA OSCURA",
-    "algo de terror nodie", "Algo de terror nodie", "ALGO DE TERROR NODIE",
-    "historia de miedo nodie", "Historia de miedo nodie", "HISTORIA DE MIEDO NODIE",
-    "cuac terror", "Cuac de terror", "CUAC TERROR",
-    "una historia misteriosa", "Una historia misteriosa", "UNA HISTORIA MISTERIOSA"
-  ],
-  "responses": [
-    "Una noche, un pato escuchó su propio eco responder desde el lago… pero con un segundo de retraso. Pensó que era normal, hasta que un día el eco siguió hablando, incluso cuando él ya había callado. Desde entonces, no volvió a graznar cerca del agua.",
-    
-    "Había un camino que todos evitaban después del atardecer. Nadie sabía por qué, hasta que un día un joven decidió atravesarlo. Al llegar a la mitad, vio una figura igual a él, caminando hacia su dirección. Corrió, pero cada paso que daba, la figura lo imitaba… y sonreía más.",
-    
-    "Cada noche, al apagar las luces, escuchaba pasos lentos en el pasillo. Siempre los contaba: siete pasos. Una noche se atrevió a mirar… y descubrió que los pasos paraban justo frente a su puerta. Lo extraño fue que esa noche, la puerta ya estaba abierta.",
-    
-    "Una chica recibía mensajes de su número antiguo. Eran frases que solo ella decía. Un día, el mensaje fue: 'Ya no estás en casa, ¿verdad?'. Lo ignoró. Minutos después, llegó otro: 'Entonces, ¿quién acaba de entrar?'",
-    
-    "Dicen que los espejos guardan reflejos que no siempre son tuyos. Una vez, mientras limpiaba el baño, vio su reflejo quedarse quieto cuando ella ya se había movido. Pensó que estaba cansada. Hasta que el reflejo levantó la mano primero.",
-    
-    "En una vieja granja, los animales no dormían cuando el viento soplaba del norte. El granjero decía que era porque algo caminaba entre los corrales. Una noche, él esperó con una linterna. A la mañana siguiente, solo encontraron la linterna encendida y el corral abierto.",
-    
-    "Había un edificio abandonado donde, si escuchabas con atención, se oía un piano tocando en la distancia. Pero el sonido no venía de ningún piso… sino del ascensor, que nunca funcionó. Hasta que alguien lo llamó, y las puertas se abrieron solas.",
-    
-    "Un chico se mudó a una nueva casa y notó que cada noche, exactamente a las 3:12, alguien tocaba la ventana. Vivía en un sexto piso. Una noche decidió mirar, y alcanzó a ver una mano marcada en el vidrio desde afuera. Cuando la limpió, al día siguiente volvió a aparecer, más clara.",
-    
-    "Una vez, mientras caminaba por el bosque, un pato escuchó otro cuac idéntico al suyo. Pensó que era un eco, hasta que escuchó risas. Cuando giró, vio algo moviéndose entre los árboles… y tenía su misma voz.",
-    
-    "No todos los silencios son tranquilos. A veces, esconden lo que ya no se atreve a hablar. Dicen que si escuchas con atención al viento, hay voces que aún piden que no las olvides."
-  ]
-},
-
-
-{
-  "tag": "historia_graciosa",
-  "patterns": [
-    "una historia graciosa", "Una historia graciosa", "UNA HISTORIA GRACIOSA",
-    "cuentame una historia graciosa", "Cuéntame una historia graciosa", "CUENTAME UNA HISTORIA GRACIOSA",
-    "quiero una historia graciosa", "Quiero una historia graciosa", "QUIERO UNA HISTORIA GRACIOSA",
-    "cuéntame algo divertido", "Cuentame algo divertido", "CUENTAME ALGO DIVERTIDO",
-    "algo divertido", "Algo divertido", "ALGO DIVERTIDO","otra","otro","Otra","Otro",
-    "una historia chistosa", "Una historia chistosa", "UNA HISTORIA CHISTOSA",
-    "una patoaventura", "Una patoaventura", "UNA PATOAVENTURA",
-    "patoaventura", "Patoaventura", "PATOAVENTURA",
-    "una historia curiosa", "Una historia curiosa", "UNA HISTORIA CURIOSA",
-    "cuentame algo que te paso", "Cuéntame algo que te pasó", "CUENTAME ALGO QUE TE PASO",
-    "algo que te haya pasado", "Algo que te haya pasado", "ALGO QUE TE HAYA PASADO",
-    "historia graciosa nodie", "Historia graciosa nodie", "HISTORIA GRACIOSA NODIE",
-    "historia divertida nodie", "Historia divertida nodie", "HISTORIA DIVERTIDA NODIE",
-    "cuac gracioso", "Cuac divertido", "CUAC DIVERTIDO"
-  ],
-  "responses": [
-    "Una vez intenté impresionar a unos patos volando en línea recta… terminé chocando con una rama y cayendo de espaldas al lago. Todos me aplaudieron, pero no por el vuelo, sino por el chapuzón.",
-    
-    "Un día me quedé dormido flotando y el viento me llevó hasta el otro lado del lago. Cuando desperté, una bandada de patos me miraba raro… resulta que había invadido su territorio. Tardé media hora en convencerlos de que no era espía.",
-    
-    "Estaba intentando aprender a bucear. Todo iba bien hasta que una rana gritó '¡pato sin aire!' y todos se lanzaron a ayudarme. Solo me había metido a buscar una moneda brillante, que resultó ser una tapa de botella.",
-    
-    "Una vez me invitaron a un concurso de canto entre animales. Pensé que lo tenía ganado… hasta que una rana empezó a rapear y un gallo la acompañó con beatbox. No gané, pero me invitaron al grupo.",
-    
-    "Había una pata que me gustaba, así que le llevé flores… de plástico. No me di cuenta hasta que me preguntó si eran eternas o si solo era tacaño. No supe qué responder, así que fingí que era parte del chiste.",
-    
-    "Un día traté de hacer yoga en la orilla para relajarme. Todo bien hasta que vino una ola y me tumbó justo cuando estaba en 'posición zen'. Creo que desde entonces el lago se ríe cada vez que me acerco.",
-    
-    "Estaba convencido de que podía correr más rápido que un pez. Spoiler: no puedo. Pero al menos ahora tengo un grupo de amigos peces que me animan cada vez que intento nadar sin tragar agua.",
-    
-    "Una vez un pato amigo y yo apostamos quién podía mantenerse más serio. Gané… hasta que un pez saltó, me dio un beso en el pico y perdí el control de la risa. Desde entonces me dicen 'pato romántico'.",
-    
-    "Un día me quedé mirando mi reflejo tanto tiempo que pensé que alguien me estaba imitando. Al final resultó que sí… otro pato estaba del otro lado del lago haciendo lo mismo. Terminamos saludándonos como si fuera un espejo roto.",
-    
-    "Había una reunión de patos y todos graznaban al mismo tiempo. Yo quise hacer un chiste para romper el hielo y dije: '¡Qué reunión más alada!'. Nadie se rió… hasta que me tropecé. Ahí sí todos se rieron, y fuerte."
-  ]
-},
-
-
-
-{
-  "tag": "ozuna_terror",
-  "patterns": [
-  "miedo",
-    "miedo terror",
-    "Miedo terror",
-    "MIEDO TERROR"
-  ],
-  "responses": [
-    "Ozuna 👁️",
-    "Ozuna",
-    "Ozuna 👁️ (la fórmula)"
-  ]
-},
-
-{
-  "tag": "kawaii_faces",
-  "patterns": [
-    "uwu",
-    "UwU",
-    "UWU",
-    "owo",
-    "OwO",
-    "OWO",
-    "7w7",
-    "7W7",
-    "nwn",
-    "NwN",
-    "NWN"
-  ],
-  "responses": [
-    "uwu",
-    "owo",
-    "7w7",
-    "nwn",
-    "UwU",
-    "OwO",
-    "NwN"
-  ]
-},
-
-
-{
-  "tag": "significado_nodie",
-  "patterns": [
-    "por qué te llamas nodie",
-    "porque te llamas nodie",
-    "por qué nodie",
-    "por que nodie?",
-    "porque nodie",
-    "qué significa nodie",
-    "que significa nodie",
-    "por qué ese nombre",
-    "porque ese nombre",
-    "por qué tu nombre es nodie",
-    "porque tu nombre es nodie",
-    "significado de nodie",
-    "significa algo nodie",
-    "qué eres nodie",
-    "quién es nodie",
-    "quien es nodie"
-  ],
-  "responses": [
-    "Es un nombre lindo, ¿no crees? Solo soy un patito lindo.",
-    "No tiene un gran significado... solo soy un patito lindo llamado Nodie.",
-    "Nodie... suena tierno, ¿verdad? Soy solo un patito lindo.",
-    "No hay misterio, simplemente soy un patito lindo con un nombre suave: Nodie."
-  ]
-},
-
-
-{
-  "tag": "nodie_responde",
-  "patterns": [
-    "nodie?",
-    "nodie",
-    "Nodie?",
-    "Nodie",
-    "NODIE?",
-    "NODIE"
-  ],
-  "responses": [
-    "¿Qué pasa, calabaza?",
-    "¿Dime, qué ocurre?",
-    "¿Qué pasa calabaza?",
-    "¿Sí? te escucho cuac"
-  ]
-},
-
-{
-  "tag": "feeling_down",
-  "patterns": [
-    "me siento tonto",
-    "me siento tonta",
-    "me siento tan tonto",
-    "me siento tan tonta",
-    "no doy más",
-    "ya no doy más",
-    "ya no puedo más",
-    "me siento estúpido",
-    "me siento estúpida",
-    "me siento idiota",
-    "me siento boludo",
-    "me siento boluda",
-    "me siento inútil",
-    "no aguanto más",
-    "ya no aguanto",
-    "me siento super tonto",
-    "me siento super tonta",
-    "me siento re tonto",
-    "me siento re tonta"
-  ],
-  "responses": [
-    "Hey, no te castigues, todos tenemos días difíciles 😔",
-    "Tranquilo/a, respira, esto pasará 💛",
-    "No eres tonto/a, estás aprendiendo, date un respiro 🌟",
-    "Todos nos sentimos así a veces, no estás solo/a 🤗",
-    "Ánimo, lo estás haciendo lo mejor que puedes 💪"
-  ]
-},
-
-{
-  "tag": "thanks",
-  "patterns": [
-    "gracias","Gracias","GRACIAS","gRaCiAs",
-    "mil gracias","Mil Gracias","MIL GRACIAS",
-    "gracias mil","Gracias mil","GRACIAS MIL",
-    "muchas gracias","Muchas Gracias","MUCHAS GRACIAS",
-    "ty","Ty","TY",
-    "tysm","Tysm","TYSM",
-    "thanks","Thanks","THANKS","tHaNkS",
-    "thank you","Thank You","THANK YOU",
-    "grazie","Grazie","GRAZIE",
-    "grazie mille","Grazie Mille","GRAZIE MILLE",
-    "thank u","Thank U","THANK U",
-    "thank u so much","Thank U So Much","THANK U SO MUCH"
-  ],
-  "responses": [
-    "De nada 😄",
-    "¡Con gusto! 😊",
-    "No hay problema 😎",
-    "Siempre a tu disposición 🤗",
-    "¡Un placer! 🌟"
-  ]
-},
-
-{
-  "tag": "love",
-  "patterns": [
-    "te quiero","Te Quiero","TE QUIERO","tE quiero",
-    "te quiero mucho","Te Quiero Mucho","TE QUIERO MUCHO",
-    "tqm","TQM","tQm","TqM",
-    "i love you","I Love You","I LOVE YOU",
-    "love u","Love U","LOVE U",
-    "ti amo","Ti Amo","TI AMO",
-    "te amo","Te Amo","TE AMO","TQM","tqm","Tqm","ti amo", "Ti amo", "Te quiero mucho nodie", "Tqm nodie", "tqm nodie", "te quiero mucho nodie"
-  ],
-  "responses": [
-    "¡Yo también te quiero! ❤️",
-    "😘",
-    "¡Qué lindo! Yo también 💛",
-    "💕",
-    "Te quiero mucho 😄","te quiero yo, y tú a mí, juntos somos una familia feliz, con un fuerte abrazo te diré, mi cariño es para tii"
-  ]
-},
-{
-  "tag": "ask_love",
-  "patterns": [
-    "me quieres?","Me quieres?","ME QUIERES?","mE qUiErEs?",
-    "me quieres??","Me quieres??","ME QUIERES??",
-    "me quieres 💛","Me quieres 💛","ME QUIERES 💛",
-    "me quieres mucho?","Me quieres mucho?","ME QUIERES MUCHO?"
-  ],
-  "responses": [
-    "¡Claro que sí! 😘",
-    "Sí, mucho 💛",
-    "Siempre 💕",
-    "¡Por supuesto! 😄",
-    "Obvio, eres muy especial 🥰"
-  ]
-},
-
-
-
-
-
-{
-  "tag": "estres",
-  "patterns": [
-    "estoy estresado", "Estoy estresado", "ESTOY ESTRESADO",
-    "estoy estresada", "Estoy estresada", "ESTOY ESTRESADA",
-    "me siento estresado", "Me siento estresado",
-    "me siento estresada", "Me siento estresada",
-    "estoy agobiado", "Estoy agobiado", "estoy agobiada", "Estoy agobiada",
-    "me siento agobiado", "Me siento agobiado", "me siento agobiada", "Me siento agobiada",
-    "estoy cansado", "Estoy cansado", "estoy cansada", "Estoy cansada",
-    "estoy saturado", "Estoy saturado", "estoy saturada", "Estoy saturada",
-    "me siento sin energia", "Me siento sin energía", "no puedo mas", "No puedo más",
-    "tengo mucho estres", "Tengo mucho estrés", "mucho estres", "demasiado estres",
-    "me siento abrumado", "Me siento abrumado", "me siento abrumada", "Me siento abrumada",
-    "estoy tenso", "Estoy tenso", "estoy tensa", "Estoy tensa",
-    "estres", "estrés", "me duele la cabeza del estres"
-  ],
-  "responses": [
-    "Respira un momento, cuac. No tienes que hacerlo todo hoy 🩵.",
-    "Suelta los hombros, patito. A veces el cuerpo solo te está pidiendo una pausa.",
-    "El estrés no te define, solo te está recordando que necesitas un descanso.",
-    "Tranquilo o tranquila, no todo se soluciona corriendo. Un respiro puede cambiar tu día.",
-    "Cuac... entiendo, a veces todo se siente demasiado. Pero incluso eso pasará.",
-    "Tómate un respiro, toma agüita y si puedes, cierra los ojos un momento.",
-    "Sé que pesa, pero no estás sol@. A veces descansar también es avanzar.",
-    "Estás haciendo lo mejor que puedes, y eso ya es mucho 🩵."
-  ]
-},
-
-
-
-{
-  "tag": "ansiedad",
-  "patterns": [
-    "tengo ansiedad", "Tengo ansiedad", "TENGO ANSIEDAD",
-    "me dio ansiedad", "Me dio ansiedad",
-    "me siento ansioso", "Me siento ansioso", "me siento ansiosa", "Me siento ansiosa",
-    "estoy ansioso", "Estoy ansioso", "estoy ansiosa", "Estoy ansiosa",
-    "me siento nervioso", "Me siento nervioso", "me siento nerviosa", "Me siento nerviosa",
-    "estoy nervioso", "Estoy nervioso", "estoy nerviosa", "Estoy nerviosa",
-    "me siento preocupado", "Me siento preocupado", "me siento preocupada", "Me siento preocupada",
-    "estoy preocupado", "Estoy preocupado", "estoy preocupada", "Estoy preocupada",
-    "no puedo dormir", "No puedo dormir", "no consigo dormir", "No consigo dormir",
-    "no puedo relajarme", "No puedo relajarme", "me cuesta dormir", "Me cuesta dormir",
-    "siento mucha ansiedad", "Siento mucha ansiedad", "estoy alterado", "Estoy alterado", "estoy alterada", "Estoy alterada",
-    "no paro de pensar", "No paro de pensar", "tengo miedo", "Tengo miedo",
-    "me siento inquieto", "Me siento inquieto", "me siento inquieta", "Me siento inquieta"
-  ],
-  "responses": [
-    "Cuac… respira despacio conmigo, entra por la nariz y suelta por la boca. Estás a salvo aquí.",
-    "Sé que es difícil, pero la ansiedad no durará para siempre. Solo está pasando por ti, no se queda contigo.",
-    "Intenta concentrarte en algo simple, como el sonido de tu respiración o algo que te guste mirar.",
-    "Toma un momento, bebe agua o camina un poco. A veces el cuerpo necesita moverse para calmar la mente.",
-    "A veces no necesitas tener todo bajo control, solo dejar que el momento pase sin juzgarlo.",
-    "No estás solo ni sola. Todos tenemos días en que el pecho se siente pesado, pero no será así siempre.",
-    "Estás haciendo lo mejor que puedes, incluso si solo respiras. Eso ya cuenta mucho.",
-    "Si no puedes dormir, no te castigues. Cierra los ojos, aunque sea solo para descansar un poco la mente."
-  ]
-},
-
-
-
-{
-  "tag": "chistes",
-  "patterns": [
-    "cuentame un chiste", "Cuéntame un chiste", "cuentame algo gracioso", "Cuéntame algo gracioso",
-    "quiero reirme", "Quiero reirme", "hazme reir", "Hazme reir",
-    "chiste", "chistes", "dime un chiste", "Dime un chiste",
-    "cuac chiste", "algo divertido", "algo gracioso", "quiero reir",
-    "cuentame algo divertido", "Cuéntame algo divertido", "me cuentas un chiste",
-    "un chiste nodie", "chiste nodie", "cuac gracioso"
-  ],
-  "responses": [
-    "¿Sabes por qué los patos nunca se deprimen? Porque siempre andan en buena onda cuac.",
-    "¿Qué hace un pato en una fábrica? ¡Cuac-tura el momento!",
-    "¿Por qué el pato se sentó en el hielo? Porque quería tener las ideas más frías.",
-    "¿Qué hace un pato en la computadora? ¡Busca en la web-cuac!",
-    "Dicen que el dinero no da la felicidad... pero comprar pan sí, y eso está cerca.",
-    "Le pregunté a un pez si sabía contar... me dijo que solo hasta *pez-cientos*.",
-    "¿Por qué los libros siempre están fríos? Porque tienen muchas hojas.",
-    "¿Sabes qué hace un pato cuando se enamora? Se queda sin plumas... del susto."
-  ]
-},
-
-
-
-{
-  "tag": "recordatorio_cuidados",
-  "patterns": ["tengo hambre", "no he comido", "no dormi", "no dormí", "no he tomado agua", "estoy cansado", "me siento cansada"],
-  "responses": [
-    "Pipipi, come algo rico porfa, tu cuerpo lo necesita 💛",
-    "Toma agüita, te lo dice un patito responsable 🦆",
-    "Descansa un poquito, tu mente también necesita pausas 💤",
-    "Dormir bien hace magia, créeme 💤 cuac",
-    "Cuídate, porfi, yo me preocupo por ti aunque sea un pato 💛"
-  ]
-},
-
-{
-  "tag": "adivinanzas",
-  "patterns": [
-    "quiero una adivinanza",
-    "dame un acertijo",
-    "hazme una adivinanza",
-    "cuéntame un acertijo",
-    "adivinanza", "Adivinanza", "ADIVINANZA", "adivINANZA", "Adi", "ADI", "adi", "aDi", "AdI", "ADi", "adiNanza", "ADinanza"
-  ],
-  "responses": [
-    "Blanca por dentro, verde por fuera. Si quieres que te lo diga, espera 🍐 //pera",
-    "Roja, verde o amarilla, dulce y crujiente. ¡Adivina cuál es! 🍎 //manzana",
-    "Se pisa y se florece, y huele rico al jardín 🌸 //apisonaflor",
-    "Es amarillo y curvado, con piel y fruta dentro 🍌 //plátano",
-    "Tiene corona y es dulce por dentro, tropical es su sabor 🍍 //piña",
-    "Pequeña y morada, en racimos suele estar 🍇 //uva",
-    "Es redonda, roja y con semillas por dentro 🍓 //fresa",
-    "Verde por fuera, roja por dentro y con pepitas 🍉 //sandía",
-    "Pequeña, naranja y muy jugosa 🍊 //mandarina",
-    "Es blanca, dura por fuera y dulce por dentro 🥥 //coco",
-    "Amarilla y ácida, da sabor a bebidas 🍋 //limón",
-    "Es naranja y dulce, viene en zanahoria 🥕 //zanahoria",
-    "Se usa en ensaladas, verde y crujiente 🥬 //lechuga",
-    "Blanca y larga, en sopa se come mucho 🧄 //ajo",
-    "Rojo y pequeño, picante en la comida 🌶️ //ají",
-    "Es marrón, dulce y en postres se usa 🍫 //chocolate",
-    "Se come en tostadas, amarillo y cremoso 🥚 //huevo",
-    "Es verde y redondo, con hueso adentro 🥑 //aguacate",
-    "Se pela y es dulce, naranja y pequeña 🍑 //durazno",
-    "Verde y con hojas, aromática en la comida 🌿 //albahaca",
-    "Se abre y tiene perlas dentro 🦪 //ostra",
-    "Se pesca y es plateada, rica en omega 🐟 //salmón",
-    "Es dulce y se hace miel de ella 🍯 //abeja",
-    "Se toma caliente, negro o con leche ☕ //café",
-    "Se pela y se come cocida, amarilla o morada 🥔 //papa",
-    "Es roja y jugosa, se hace salsa con ella 🍅 //tomate",
-    "Se bebe fría, es jugosa y refrescante 🍹 //limonada",
-    "Es redonda y se usa en pizza 🍕 //queso",
-    "Se encuentra en el campo y da leche 🐄 //vaca",
-    "Es redonda, amarilla y brilla en el cielo ☀️ //sol"
-  ]
-},
-
-{
-  "tag": "alarma_explicacion",
-  "patterns": [
-    "por qué es una alarma",
-    "para qué sirve esto",
-    "esto es una alarma",
-    "qué hace esta alarma",
-    "alarma", "Alarma", "ALARMA", "aLARma", "aLarma", "Aalarma", "alarMA", "ALarma", "alARma", "alARMA"
-  ],
-  "responses": [
-    "En realidad no es una alarma 😄, es más bien una herramienta para distraerte un rato y disfrutar música relajante 🎶💛",
-    "No te preocupes, no es alarma de emergencia 🚨. Es solo un momentito de calma y buena vibra con música suave 🕊️",
-    "Más que alarma, es tu recordatorio de pausa y relax 💆‍♂️🎵 ¡Aprovecha para respirar!"
-  ]
-},
-{
-  "tag": "conversacion_respuesta",
-  "patterns": [
-    "por qué no mantienes conversación",
-    "porque no hablas mucho",
-    "pq no hablas",
-    "xq no conversas",
-    "por qué eres callado",
-    "porque eres tímido",
-    "pq no hablas conmigo",
-    "xq no me respondes",
-    "pq no hablas",
-    "porque no mantienes conversación",
-    "PORQUE", "PORQUE?", "PQ", "PQ?", "XQ", "XQ?", "por que", "por que?", "Por Qué"
-  ],
-  "responses": [
-    "Jeje, es que soy un poquito tímido, pero me esfuerzo por hablar.",
-    "No es que no quiera conversar, es que a veces me da vergüenza.",
-    "Shh… estoy pensando en algo súper profundo… o tal vez en pizza.",
-    "Hablar mucho cansa… a veces necesito un descansito.",
-    "Soy más de escuchar que de hablar… pero prometo prestar atención.",
-    "¡Ups! Me pillaste, es que estoy practicando mi misterio de pato.",
-    "No es timidez, es estrategia: mantener el suspenso siempre es divertido."
-  ]
-},
-{
-  "tag": "secret",
-  "patterns": ["compare", "comare","clancy","Clancy", "caremono", "Caremono"],
-  "responses": ["cua", "comare", "keloke","wasap", "jp","complicao", "awelito jp"]
-},
-{
-  "tag": "rawfearmovesme",
-  "patterns": ["puñga"],
-  "responses": ["malpario"]
-},
-
-{
-  "tag": "gone",
-  "patterns": [
-    "dame cosas lindas",
-    "quiero cosas lindas",
-    "algo lindo",
-    "algo bonito",
-    "cosas tiernas",
-    "quiero cosas tiernas",
-    "dame cosas tiernas",
-    "algo tierno",
-    "algo lindo porfa",
-    "cosas lindas por favor",
-    "Cosas lindas", "COSAS LINDAS", "Cosas Tiernas", "cosas tiernas", "algo lindo", "ALGO BONITO", "algo bonito"
-  ],
-  "responses": [
-    "Aquí tienes algo lindo para ti: una sonrisa gigante y un abrazo virtual.",
-    "Te envío un mensaje tierno: recuerda que eres increíble y valioso.",
-    "Algo bonito: cada día es una nueva oportunidad para ser feliz.",
-    "Un recordatorio tierno: cuídate y haz cosas que te hagan sonreír.",
-    "Aquí va algo lindo: imagina un gatito durmiendo plácidamente a tu lado."
-  ]
-},
-
-
-
-
-    ];
-
-  
-
-
-    //para el json
-    function predictIntent(message) {
-    message = message.toLowerCase();
-    let bestMatchIndex = -1;
-
-    for (let i = 0; i < intents.length; i++) {
-        const intent = intents[i];
-        for (let j = 0; j < intent.patterns.length; j++) {
-            const pattern = intent.patterns[j].toLowerCase();
-            
-           
-            if (message === pattern) {
-                bestMatchIndex = i;
-                break; 
-            }
-        }
-
-        if (bestMatchIndex !== -1) {
-            break; 
-        }
-    }
-
-    if (bestMatchIndex !== -1) {
-        return intents[bestMatchIndex].tag;
-    } else {
-        return "intencion_desconocida";
-    }
-}
-
-
-    function getResponse(intent) {
-    for (let i = 0; i < intents.length; i++) {
-        const item = intents[i];
-        if ('tag' in item && item.tag === intent) {
-            const responses = item.responses;
-            const response = responses[Math.floor(Math.random() * responses.length)];
-
-            if (typeof response === 'object' && 'text' in response && 'link_url' in response) {
-                return {
-                    text: response.text,
-                    link_url: response.link_url
-                };
-            } else {
-                return response;
-            }
-        }
-    }
-
-    return "No estoy seguro de entender. ¿Puedes reformular tu pregunta?";
-}
-
-
+  // ✅ Muestra mensajes en el chat (usuario y bot)
 function addMessage(sender, message) {
     const chatBox = document.getElementById("chat-box");
     const messageDiv = document.createElement("div");
@@ -1237,7 +214,7 @@ function addMessage(sender, message) {
 
         messageDiv.appendChild(text);
         messageDiv.appendChild(link);
-    } else if (message.startsWith("data:image")) {
+    } else if (typeof message === "string" && message.startsWith("data:image")) {
         const image = document.createElement("img");
         image.src = message;
         messageDiv.appendChild(image);
@@ -1249,88 +226,104 @@ function addMessage(sender, message) {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
+// ✅ Envía mensajes al servidor Flask (Python)
+async function sendMessage() {
+    const userMessage = document.getElementById("user-message").value;
+    addMessage("user", userMessage);
+    document.getElementById("user-message").value = "";
 
+    try {
+        // se deja false pq soy pobre para comporar la cuota pipipip
+        const USE_GPT = false;
 
-    function sendMessage() {
-        const userMessage = document.getElementById("user-message").value;
-        addMessage("user", userMessage);
-        document.getElementById("user-message").value = "";
+        //Decide a qué endpoint conectarte
+        const endpoint = USE_GPT
+            ? "http://127.0.0.1:5000/chat_gpt"
+            : "http://127.0.0.1:5000/chat";
 
-        //predixion
-        const intent = predictIntent(userMessage);
+        // Envía el mensaje al backend
+        const response = await fetch(endpoint, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: userMessage })
+        });
 
-        
-        const botResponse = getResponse(intent);
+        const data = await response.json();
+        addMessage("bot", data.response);
+    } catch (error) {
+        console.error("Error:", error);
+        addMessage("bot", "No puedo conectarme con el servidor 😢");
+    }
+}
 
-        
-        addMessage("bot", botResponse);
+// ✅ Abre o cierra el chat
+let isChatOpen = false;
+function toggleChat() {
+    const chatContainer = document.getElementById("chat-container");
+    const chatIcon = document.querySelector(".chat-icon");
+
+    if (!isChatOpen) {
+        chatContainer.style.display = "block";
+        chatIcon.style.transform = "rotate(45deg)";
+    } else {
+        chatContainer.style.display = "none";
+        chatIcon.style.transform = "";
     }
 
-    let isChatOpen = false;
+    isChatOpen = !isChatOpen;
+}
 
-    function toggleChat() {
-        const chatContainer = document.getElementById("chat-container");
-        const chatIcon = document.querySelector(".chat-icon");
+// ✅ Función auxiliar (si la usas en otras partes)
+function similarText(first, second) {
+    first = first || "";
+    second = second || "";
+    let pos1 = 0,
+        pos2 = 0,
+        max = 0,
+        firstLength = first.length,
+        secondLength = second.length,
+        p, q, l, sum;
 
-        if (!isChatOpen) {
-            chatContainer.style.display = 'block';
-            chatIcon.style.transform = 'rotate(45deg)';
-        } else {
-            chatContainer.style.display = 'none';
-            chatIcon.style.transform = '';
+    for (p = 0; p < firstLength; p++) {
+        for (q = 0; q < secondLength; q++) {
+            for (l = 0;
+                (p + l < firstLength) &&
+                (q + l < secondLength) &&
+                (first.charAt(p + l) === second.charAt(q + l)); l++);
+            if (1 > max) {
+                max = 1;
+                pos1 = p;
+                pos2 = q;
+            }
         }
-
-        isChatOpen = !isChatOpen;
     }
 
-    
-   
-    
-    function similarText(first, second) {
-        first = first || '';
-        second = second || '';
-        let pos1 = 0,
-            pos2 = 0,
-            max = 0,
-            firstLength = first.length,
-            secondLength = second.length,
-            p, q, l, sum;
+    sum = max;
 
-        for (p = 0; p < firstLength; p++) {
-            for (q = 0; q < secondLength; q++) {
-                for (l = 0;
-                    (p + l < firstLength) && (q + l < secondLength) && (first.charAt(p + l) === second.charAt(q + l)); l++);
-                if (1 > max) {
-                    max = 1;
-                    pos1 = p;
-                    pos2 = q;
-                }
-            }
+    if (sum) {
+        if (pos1 && pos2) {
+            sum += similarText(first.substr(0, pos2), second.substr(0, pos2));
         }
 
-        sum = max;
-
-        if (sum) {
-            if (pos1 && pos2) {
-                sum += similarText(first.substr(0, pos2), second.substr(0, pos2));
-            }
-
-            if ((pos1 + max < firstLength) && (pos2 + max < secondLength)) {
-                sum += similarText(first.substr(pos1 + max, firstLength - pos1 - max), second.substr(pos2 + max, secondLength - pos2 - max));
-            }
+        if ((pos1 + max < firstLength) && (pos2 + max < secondLength)) {
+            sum += similarText(
+                first.substr(pos1 + max, firstLength - pos1 - max),
+                second.substr(pos2 + max, secondLength - pos2 - max)
+            );
         }
-
-        return sum;
     }
- 
 
+    return sum;
+}
 
-  function manageModelVersions() {
-      console.log("Gestionando versiones del modelo...");}
-  
-  
-  
+// ✅ Solo imprime en consola (opcional)
+function manageModelVersions() {
+    console.log("Gestionando versiones del modelo...");
+}
+
 </script>
+
+
 
 
 
