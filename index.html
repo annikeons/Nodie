@@ -47,9 +47,9 @@
                 <option value="sound1">Sonido 1 (elf meditation)</option>
                 <option value="sound2">Sonido 2 (forest)</option>
                 <option value="sound3">Sonido 3 (a very brady special)</option>
-                <option value="sound3">Sonido 4 (ancient wonds)</option>
-                <option value="sound3">Sonido 5 (isolation waltz)</option>
-                <option value="sound3">Sonido 6 (connecting rainbows)</option>
+                <option value="sound4">Sonido 4 (ancient wonds)</option>
+                <option value="sound5">Sonido 5 (isolation waltz)</option>
+                <option value="sound6">Sonido 6 (connecting rainbows)</option>
             </select>
             <label><input type="checkbox" id="alarmActive"> Activar alarma</label>
             <button id="addAlarm">Agregar alarma</button>
@@ -184,7 +184,7 @@
 
 
 
-<div id="alarmMessage"></div>
+<div id="alarmMessage" style="margin-top:10px; font-weight:bold; color:#b30000;"></div>
 
 <script>
 
@@ -193,10 +193,8 @@ function showSection(id){
     document.getElementById(id).classList.add('active');
 }
 
-
 const themeSelect=document.getElementById('themeSelect');
 themeSelect.addEventListener('change',()=>{ document.body.classList.toggle('dark',themeSelect.value==='dark'); });
-
 
 let alarms=[], activeAudios={};
 const alarmList=document.getElementById('alarmList');
@@ -212,19 +210,23 @@ document.getElementById('addAlarm').addEventListener('click',()=>{
 });
 
 function playSound(alarmId,sound){
-    if(activeAudios[alarmId]) return;
+    // ✅ CORRECCIÓN: detener audio previo y recargar sonido nuevo
+    stopAlarm(alarmId);
+
     const audio=new Audio();
     switch(sound){
         case 'sound1': audio.src='https://freepd.com/music/Wind%20of%20the%20Rainforest.mp3'; break;
         case 'sound2': audio.src='https://freepd.com/music/Elf%20Meditation.mp3'; break;
         case 'sound3': audio.src='https://freepd.com/music/A%20Very%20Brady%20Special.mp3'; break;
         case 'sound4': audio.src='https://freepd.com/music/Ancient%20Winds.mp3'; break;
-         case 'sound5': audio.src='https://freepd.com/music/Isolation%20Waltz.mp3'; break;
-          case 'sound6': audio.src='https://freepd.com/music/Connecting%20Rainbows.mp3'; break;
+        case 'sound5': audio.src='https://freepd.com/music/Isolation%20Waltz.mp3'; break;
+        case 'sound6': audio.src='https://freepd.com/music/Connecting%20Rainbows.mp3'; break;
     }
 
     audio.loop=true;
+    audio.load(); // fuerza recarga del archivo para evitar cache
     audio.play().catch(e=>console.log("Error audio:",e));
+
     activeAudios[alarmId]=audio;
 }
 
@@ -240,6 +242,7 @@ function renderAlarms(){
     alarms.forEach(alarm=>{
         const div=document.createElement('div');
         div.className='alarm-item';
+        div.style.marginBottom='10px'; // CORRECCIÓN PARA NO QUEDAR FEAS
         div.innerHTML=`
             <span>${alarm.time} - ${alarm.sound} - ${alarm.active?'Activada':'Desactivada'}</span>
             <button onclick="removeAlarm(${alarm.id})">Quitar</button>
@@ -272,7 +275,6 @@ function showAlarmMessage(msg){
     setTimeout(()=>div.style.display='none',30000); 
 }
 
-
 setInterval(()=>{
     const now=new Date();
     const currentTime=now.toTimeString().slice(0,5);
@@ -289,13 +291,11 @@ setInterval(()=>{
 const eventList = document.getElementById('eventList');
 const addBtn = document.getElementById('addEvent');
 
-
 function loadEvents() {
     const events = JSON.parse(localStorage.getItem('events')) || [];
     eventList.innerHTML = ''; 
     events.forEach((ev, index) => addEventCard(ev, index));
 }
-
 
 function addEventCard(ev, index) {
     const div = document.createElement('div');
@@ -307,7 +307,6 @@ function addEventCard(ev, index) {
     `;
     eventList.appendChild(div);
 }
-
 
 addBtn.addEventListener('click', () => {
     const name = document.getElementById('eventName').value.trim();
@@ -327,7 +326,6 @@ addBtn.addEventListener('click', () => {
     document.getElementById('eventEnd').value = '';
 });
 
-
 eventList.addEventListener('click', (e) => {
     if (!e.target.classList.contains('delete-btn')) return;
     const index = e.target.getAttribute('data-index');
@@ -337,10 +335,10 @@ eventList.addEventListener('click', (e) => {
     loadEvents();
 });
 
-
 loadEvents();
 
 </script>
+
 
 <style>
     
