@@ -16,17 +16,17 @@
     <div class="content">
     <div id="home" class="section active">
         <h1 class="animated-text"> ¡Que gusto verte! </h1>
-        <p style="text-align:center; font-size: 25px"> Nodie, tu pausa ideal para relajarte <br> <br>
+        <p  class="clancy"> Nodie, tu pausa ideal para relajarte <br> <br>
          </p>
           <h1 class="animated-text"> Palabras Para Ti: </h1>
         <div class="cards" class="consejo-box" class="consejo-card" >
-            <div class="card"><img src="sleeper duck.png"><p id="consejo-texto">Las alarmas no solo son para cuando duermes, también cuando estás activo y quieres sonidos relajantes (revisa ayuda antes de hablar con nodie)</p></div>
+            <div class="card"><img src="sleeper duck.png"><p id="consejo-texto">Las alarmas no solo son para cuando duermes, también cuando estás activo y quieres sonidos relajantes</p></div>
             
         </div>
     </div>
     
     <div id="nodie" class="section">
-    <h1> Nodie</h1>
+    <h1 class="uwu"> Nodie</h1>
     <iframe 
         src="chat.html" 
         style="width:100%; height:440px; border:none; border-radius:15px;" 
@@ -38,7 +38,7 @@
 
  
     <div id="alarm" class="section">
-        <h1> Alarmas</h1>
+        <h1 class="wapi"> Alarmas</h1>
         <div class="alarm-container">
             <label>Hora:</label>
             <input type="time" id="alarmTime">
@@ -175,12 +175,14 @@
 
 
 <div class="menu">
-    <button onclick="showSection('home')"><span>Inicio</span></button>
-    <button onclick="showSection('alarm')"><span>Alarmas</span></button>
-    <button onclick="showSection('events')"><span>Pendientes</span></button>
-    <button onclick="showSection('settings')"><span>Ayuda</span></button>
-    <button onclick="showSection('nodie')"><span>Nodie</span></button>
+    <button onclick="showSection('home')">🏚️<span>Inicio</span></button>
+    <button onclick="showSection('alarm')">🕜<span>Alarmas</span></button>
+    <button onclick="showSection('events')">📋<span>Pendientes</span></button>
+    <button onclick="showSection('settings')">⚙️<span>Ayuda</span></button>
+    <button onclick="showSection('nodie')">🦆<span>Nodie</span></button>
 </div>
+
+
 
 <div id="alarmMessage"></div>
 
@@ -348,7 +350,7 @@ loadEvents();
             }
 
             .lower_navbar .logo {
-                margin-bottom: 10px;
+                margin-bottom: px;
             }
 
             .dropdown-menu {
@@ -362,11 +364,12 @@ loadEvents();
   const consejos = [
 
    "Si solo tienes 30 minutos libres, es mejor relajarte y no dormir",
+   "Si quieres chatear con Nodie, revisa *Ayuda*",
+   "Si solo tienes 30 minutos libres, es mejor relajarte y no dormir",
 "Nada se compara con contarle tu día a una persona real",
 "Evita dormir justo antes de tus actividades, podrías sentirte más cansado después",
 "Un descanso corto puede ayudarte a recuperar energía y concentración",
-"Lo estás haciendo bien",
-"Eres valiente",
+"Eres valiente,lo estás haciendo bien",
 "Si te sientes agotado, una pausa breve puede marcar la diferencia",
 "Recuerda que descansar también es avanzar",
 "Tómate un momento para respirar y pensar en ti",
@@ -375,7 +378,7 @@ loadEvents();
 "A veces lo mejor que puedes hacer es detenerte un momento",
 "No se trata de hacer más, sino de hacerlo con calma",
 "Descansar no es perder el tiempo, es recuperarlo",
-"Tu bienestar también es importante",
+"     Tu bienestar también es importante",
 "Una mente tranquila puede con cualquier reto",
 "Hoy también cuenta, aunque solo hayas avanzado un poco",
 "Permítete un momento de silencio, te hará bien",
@@ -396,17 +399,17 @@ loadEvents();
 "Buscar compañía cuando lo necesitas es una forma de cuidarte",
 "Hablar con alguien de confianza puede aclarar tu mente",
 "Las palabras compartidas alivian el corazón",
-"No te guardes todo, hablar también libera",
-"A veces solo necesitas que alguien te escuche de verdad",
-"Conectar con alguien puede traer calma a tu día",
-"Tu voz también merece ser escuchada",
-"No estás sola, hay personas que se preocupan por ti",
-"Compartir lo que vives hace más ligero el camino",
-"Una charla sincera puede devolverte la paz",
-"Hablar con alguien real te recuerda que no todo se resuelve sola",
-"A veces el mejor descanso es una buena conversación",
-"Hablar también es una forma de sanar",
-"No tienes que cargar sola con todo lo que sientes"
+"       No te guardes todo, hablar también libera",
+" A veces solo necesitas que alguien te escuche de verdad",
+"   Conectar con alguien puede traer calma a tu día",
+"      Tu voz también merece ser escuchada",
+" No estás sola/solo, hay personas que se preocupan por ti",
+" Compartir lo que vives hace más ligero el camino",
+" Una charla sincera puede devolverte la paz",
+" Hablar con alguien real te recuerda que no todo se resuelve sola",
+"  A veces el mejor descanso es una buena conversación",
+"  Hablar también es una forma de sanar",
+"  No tienes que cargar sola con todo lo que sientes"
   ];
 
   let indice = 0;
@@ -418,11 +421,11 @@ loadEvents();
       indice = (indice + 1) % consejos.length;
       texto.textContent = consejos[indice];
       texto.style.opacity = 1;
-    }, 400);
+    }, 300);
   }
 
   
-  setInterval(cambiarConsejo, 9000);
+  setInterval(cambiarConsejo, 6000);
 </script>
 <script>
 if ('serviceWorker' in navigator) {
@@ -432,7 +435,45 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 
+ <div class="menu">
+      <button onclick="showSection('home', event)" class="active">🏚️<span>Inicio</span></button>
+      <button onclick="showSection('alarm', event)">🕜<span>Alarmas</span></button>
+      <button onclick="showSection('events', event)">📋<span>Pendientes</span></button>
+      <button onclick="showSection('settings', event)">⚙️<span>Ayuda</span></button>
+      <button onclick="showSection('nodie', event)">🦆<span>Nodie</span></button>
+  </div>
 
+  <script>
+    function showSection(sectionId, event) {
+      // Oculta todas las secciones
+      document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
+
+      // Muestra la seleccionada
+      document.getElementById(sectionId).style.display = 'block';
+
+      // Quita la clase activa de todos los botones
+      document.querySelectorAll('.menu button').forEach(btn => btn.classList.remove('active'));
+
+      // Añade la clase activa al botón clicado
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+  
+<script>
+  // Evita desplazamiento si no hay contenido suficiente
+  function checkScroll() {
+    const doc = document.documentElement;
+    if (doc.scrollHeight <= window.innerHeight) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }
+  window.addEventListener('load', checkScroll);
+  window.addEventListener('resize', checkScroll);
+</script>
+
+  
 </body>
 
 </html>
