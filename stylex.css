@@ -365,32 +365,14 @@ body.dark li {
 }
 
 
-/* === Evitar desplazamiento cuando no hay más contenido === */
-html, body {
-  height: 100%;
-  overflow-y: auto;
-}
-
-body.no-scroll {
-  overflow: hidden;
-}
-
-.section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* === Modo oscuro mejorado === */
+/* === Modo oscuro mejorado (versión optimizada y responsiva) === */
 body.dark {
   background: linear-gradient(to bottom, #121212, #0c0c0c);
   color: #f2f2f2;
-  transition: background 0.4s, color 0.4s;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Botones del menú en modo oscuro */
+/* Menú en modo oscuro */
 body.dark .menu {
   background: rgba(30, 30, 30, 0.9);
   border-top: 2px solid #333;
@@ -415,7 +397,7 @@ select {
   border-radius: 8px;
   padding: 8px 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 /* Botones en modo oscuro */
@@ -430,7 +412,31 @@ body.dark button:hover {
   background-color: #3b3b3b;
 }
 
-/* Transición general */
-* {
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* Transiciones suaves solo en elementos principales */
+body, button, select, .menu, .card {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Ajuste responsive mejorado */
+@media (max-width: 600px) {
+  .menu {
+    height: 58px;
+    font-size: 14px;
+    padding: 4px 0;
+  }
+
+  .menu button {
+    flex: 1;
+    font-size: 15px;
+    padding: 4px;
+  }
+
+  .menu button span {
+    font-size: 12px;
+  }
+
+  button, select {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
 }

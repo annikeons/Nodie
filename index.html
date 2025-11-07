@@ -459,19 +459,6 @@ if ('serviceWorker' in navigator) {
     }
   </script>
   
-<script>
-  // Evita desplazamiento si no hay contenido suficiente
-  function checkScroll() {
-    const doc = document.documentElement;
-    if (doc.scrollHeight <= window.innerHeight) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
-  }
-  window.addEventListener('load', checkScroll);
-  window.addEventListener('resize', checkScroll);
-</script>
 
   
 </body>
